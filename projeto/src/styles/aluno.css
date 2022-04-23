@@ -1,5 +1,5 @@
 html {
-		scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -22,10 +22,18 @@ aside {
 	overflow-x: hidden;
 	padding: 20px 15px;
 }
+
 nav {
-	position: relative;
-	display: inline-block;
+	position: sticky;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	height: 95%;
 }
+.logoEscola {
+	width: 125px;
+}
+
 aside p {
 	padding-bottom: 15px;
 }
@@ -49,10 +57,10 @@ aside ul {
 
 .subnav-content {
 	display: none;
-	position: absolute;
 }
 
-aside ul:hover .subnav-content {
+.expandeLi:hover + .subnav-content,
+.subnav-content:hover {
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -60,8 +68,13 @@ aside ul:hover .subnav-content {
 	font-size: smaller;
 }
 
-.navIcon {
-	display: block;
+#navIconOpen,
+#navIconClose {
+	display: none;
+}
+
+.divEspaco {
+	display: none;
 }
 
 /*área principal*/
@@ -78,9 +91,9 @@ section {
 }
 
 /*estilo do conteudo e forum */
-ul{
+ul {
 	list-style-type: none;
-	padding:0;
+	padding: 0;
 }
 .disciplinaTitulo {
 	font-size: 16px;
@@ -95,7 +108,8 @@ ul{
 	line-height: 2;
 }
 
-.forumSection a, .forumSection p,
+.forumSection a,
+.forumSection p,
 .sectionConteudo a {
 	text-decoration: none;
 	color: #001219;
@@ -132,7 +146,7 @@ fieldset {
 .sectionMatricula label {
 	margin-bottom: 5px;
 }
-.sectionMatricula select{
+.sectionMatricula select {
 	margin-bottom: 15px;
 }
 
@@ -228,14 +242,44 @@ h4 {
 	aside {
 		width: 15px;
 	}
-
+	nav {
+		align-items: center;
+	}
 	nav ul,
 	nav p {
 		display: none;
 	}
+	.logoEscola {
+		width: 47px;
+	}
 
-	.navIcon {
-		transform: translateY(75vh);
+	.divEspaco {
+		display: block;
+		height: 100%;
+	}
+
+	#navIconOpen {
+		display: block;
+		color: #001219;
+		background-color: #ee9b00;
+		margin: 0;
+		padding: 0;
+		width: auto;
+		position: absolute;
+		bottom: 10px;
+	}
+
+	#navIconClose {
+		color: #001219;
+		background-color: #ee9b00;
+		margin: 0;
+		padding: 0;
+		width: auto;
+	}
+
+	#navIconOpen:hover,
+	#navIconClose:hover {
+		color: #003c4a;
 	}
 
 	/*Seção principal*/
