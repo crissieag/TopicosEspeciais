@@ -33,14 +33,17 @@
 		<title>Evolvere | Área do aluno</title>
 	</head>
 	<body>
-		<aside>
+		<aside id="menuLateral">
 			<nav>
 				<div>
-					<img src="LOGO" alt="Logo da escola" />
-					<p>Evolvere</p>
+					<img
+						class="logoEscola"
+						src="./assets/images/logoEvolvere.png"
+						alt="Logo Evolvere"
+					/>
 				</div>
-				<ul>
-					<li>
+				<ul id="navUl">
+					<li class="expandeLi">
 						<a href="#consultas">Consultas</a>
 					</li>
 					<div class="subnav-content">
@@ -48,7 +51,7 @@
 						<a href="#aulas">Aulas</a>
 						<a href="#atividadesExtra">Atividades Extra</a>
 					</div>
-					<li>
+					<li class="expandeLi">
 						<a href="#conteudo">Conteúdos</a>
 					</li>
 					<div class="subnav-content">
@@ -64,12 +67,16 @@
 						<a href="#matricula">Matrícula</a>
 					</li>
 				</ul>
-				<div class="navIcon">
-					<i class="fa-solid fa-angle-right"></i>
-				</div>
+				<div class="divEspaco">&nbsp;</div>
+				<button id="navIconOpen">
+					<i class="fa-solid fa-angle-right" alt="botão para expandir menu"></i>
+				</button>
+				<button id="navIconClose">
+					<i class="fa-solid fa-angle-left" alt="botão para fechar menu"></i>
+				</button>
 			</nav>
 		</aside>
-		<main>
+		<main id="main">
 			<section>
 				<h3 id="consultas">Consultas</h3>
 				<div class="flexCard">
@@ -302,6 +309,6 @@
 				</div>
 			</section>
 		</main>
-		<script src="src/scripts/aluno.js"></script>
+		<script src="src/scripts/menuLateral.js"></script>
 	</body>
 </html>
