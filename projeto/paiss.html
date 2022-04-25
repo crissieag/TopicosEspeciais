@@ -51,7 +51,7 @@
 						<a href="#provas">Agenda de Provas</a>
 						<a href="#aulas">Aulas</a>
 						<a href="#atividadesExtra">Atividades Extra</a>
-						<a href="#financeiro">Financeiro</a>
+					
 					</div>
 					<li class="expandeLi">
 						<a href="#conteudo">Conteúdos</a>
@@ -67,6 +67,9 @@
 					</li>
 					<li>
 						<a href="#matricula">Matrícula</a>
+					</li>
+					<li>
+						<a href="#financeiro">Financeiro</a>
 					</li>
 				</ul>
 				<div class="divEspaco">&nbsp;</div>
@@ -357,7 +360,7 @@
 								<option value="2">15:00 - 16:00</option>
 								<option value="3">20:00 - 21:00</option>
 							</select>
-							<button type="button">Enviar</button>
+							<button type="button" id="botao1">Enviar</button>
 						</form>
 					</fieldset>
 				</div>
@@ -397,15 +400,35 @@
                                 <option value="1">Celular</option>
 							</select>
 
-							<button type="button">Enviar </button>
+							<button type="button" id="botao2">Enviar Fatura</button>
 						</form>
 					</fieldset>
 				</div>
 			</section>
-
-
-
 		</main>
+
+		<div id="modal1" class="modal">
+
+			<!-- Modal content -->
+			<div class="modal-content">
+			  <span class="close">&times;</span>
+			  <p>Solicitação enviada!</p>
+			</div>
+		  
+		</div>	
+		
+		<div id="modal2" class="modal">
+
+			<!-- Modal content -->
+			<div class="modal-content">
+			  <span class="close">&times;</span>
+			  <p>Fatura enviada!</p>
+			</div>
+		  
+		</div>
+		  
+
 		<script src="src/scripts/menuLateral.js"></script>
+		<script src="src/scripts/pais.js"></script>
 	</body>
 </html>
