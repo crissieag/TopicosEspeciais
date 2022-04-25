@@ -16,7 +16,7 @@
 			sizes="16x16"
 			href="assets/images/favicon-16x16.png"
 		/>
-		<link rel="stylesheet" href="src/styles/pais.css" />
+		<link rel="stylesheet" href="src/styles/pais.css"/>
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,110 +33,103 @@
 		<title>Evolvere | Área do aluno</title>
 	</head>
 	<body>
-		<aside>
+		<aside id="menuLateral">
 			<nav>
 				<div>
-					<img src="LOGO" alt="Logo da escola" />
-					<p>Evolvere</p>
+					<img
+						class="logoEscola"
+						src="./assets/images/logoEvolvere.png"
+						alt="Logo Evolvere"
+					/>
 				</div>
-				<ul>
-					<li>
-						<a href="#chat">Chat</a>
-					</li>
-					<li>
+				<ul id="navUl">
+					<li class="expandeLi">
 						<a href="#consultas">Consultas</a>
 					</li>
 					<div class="subnav-content">
+                        <a href="#notasefaltas">Notas e Faltas</a>
 						<a href="#provas">Agenda de Provas</a>
 						<a href="#aulas">Aulas</a>
 						<a href="#atividadesExtra">Atividades Extra</a>
-                        <a href="#faltas">Faltas</a>
-                        <a href="#Notas">Notas</a>
+						<a href="#financeiro">Financeiro</a>
 					</div>
-					<li>
+					<li class="expandeLi">
 						<a href="#conteudo">Conteúdos</a>
 					</li>
-
 					<div class="subnav-content">
 						<a href="#disciplinai">Disciplina I</a>
 						<a href="#disciplinaii">Disciplina II</a>
 						<a href="#disciplinaiii">Disciplina III</a>
+						<a href="#disciplinaiv">Disciplina IV</a>
 					</div>
+					<li>
+						<a href="#forum">Fórum</a>
+					</li>
 					<li>
 						<a href="#matricula">Matrícula</a>
 					</li>
-                    <li>
-						<a href="#financeiro">Financeiro</a>
-					</li>
 				</ul>
-				<div class="navIcon">
-					<i class="fa-solid fa-angle-right"></i>
-				</div>
+				<div class="divEspaco">&nbsp;</div>
+				<button id="navIconOpen">
+					<i class="fa-solid fa-angle-right" alt="botão para expandir menu"></i>
+				</button>
+				<button id="navIconClose">
+					<i class="fa-solid fa-angle-left" alt="botão para fechar menu"></i>
+				</button>
 			</nav>
 		</aside>
-		<main>
+		<main id="main">
 			<section>
 				<h3 id="consultas">Consultas</h3>
-				<div class="flexCard">
-                    <div class="cardsGlass">
-						<h4 id="provas">Faltas:</h4>
-						<p class="descriptionOpt">
-                        <div class="containerGrid2"></div>
-							<p>Total Geral:</p>
-                            <h1 class="h1-centralizado">10</h1>
-						</p>
-                        
-                        <p class="descriptionOpt">Total por Disciplina:</p>
-						<div class="containerGrid2">
-							<p class="titleGrid">Disciplina</p>
-							<p class="titleGrid">Faltas</p>
-							<p>Disciplina I</p>
-							<p>2</p>
-							<p>Disciplina II</p>
-							<p>2</p>
-							<p>Disciplina III</p>
-							<p>2</p>
-							<p>Disciplina IV</p>
-							<p>4</p>
-						</div>
-					</div>
 
-                    <div class="cardsGlass">
-						<h4 id="provas">Notas:</h4>
+                <div class="flexCard">
+                    <div class="cardsGlass cardFull">
+						<h4 id="notasefaltas">Notas e Faltas:</h4>
 						<p class="descriptionOpt">
-                            <div class="containerGrid2">
-							
+                            <div class="containerGrid3">
+
+								<div>
+                                    <p>Resultado:</p>
+                                    <h1>Aprovado!</h1>
+                                </div>
+								
                                 <div>
-                                    <p>Média Geral:</p>
+                                    <p>Média Geral de Notas:</p>
                                     <h1 class="h1-centralizado">10</h1>
                                     </p>
                                 </div>
 
                                 <div>
-                                    <p>Resultado:</p>
-                                    <h1>Aprovado!</h1>
+									<p>Total de Faltas:</p>
+									<h1 class="h1-centralizado">10</h1>
                                 </div>
                             </div>
 
-                        <p class="descriptionOpt">Total pokkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkr Disciplina:</p>
-						    <div class="containerGrid2">
+                        <p class="descriptionOpt">Resultado por Disciplinas:</p>
+						    <div class="containerGrid3">
                                 <p class="titleGrid">Disciplina</p>
                                 <p class="titleGrid">Notas</p>
+								<p class="titleGrid">Faltas</p>
                                 <p>Disciplina I</p>
                                 <p>2</p>
+								<p>2</p>
                                 <p>Disciplina II</p>
                                 <p>2</p>
+								<p>2</p>
                                 <p>Disciplina III</p>
                                 <p>2</p>
+								<p>2</p>
                                 <p>Disciplina IV</p>
-                                <p>4</p> 
+                                <p>4</p>
+								<p>2</p> 
                             </div>
                         </div>
 					</div> 
 
                 </div>
 
-                    <div class="flexCard">
+
+				<div class="flexCard">
 					<div class="cardsGlass">
 						<h4 id="provas">Agenda de provas</h4>
 						<p class="descriptionOpt">
@@ -155,11 +148,10 @@
 							<p>02/05/2022</p>
 						</div>
 					</div>
-                    
 					<div class="cardsGlass">
 						<h4 id="atividadesExtra">Atividades Extra</h4>
 						<p class="descriptionOpt">
-							Essas são as atividades extra que você está matriculada :)
+							Essas são as atividades extra que XXXXXX está matriculado(a) :)
 						</p>
 						<div class="containerGrid2">
 							<p class="titleGrid">Atividade</p>
@@ -173,13 +165,11 @@
 						</div>
 					</div>
 				</div>
-                
-
 				<div class="cardsGlass cardFull">
 					<h4 id="aulas">Horário de aulas</h4>
 					<p class="descriptionOpt">
 						Sua grade horária está abaixo! Qualquer dúvida, você pode entrar em
-						contanto com seu professor através do <a href="#chat">chat</a>!
+						contanto com seu professor através do <a href="#forum">fórum</a>!
 					</p>
 					<div class="containerGrid5">
 						<p class="titleGrid">Segunda</p>
@@ -210,8 +200,124 @@
 					</div>
 				</div>
 			</section>
-			<section class="sectionChat">
-				<h3 id="chat">Chat</h3>
+			<section class="sectionConteudo">
+				<h3 id="conteudo">Conteúdos</h3>
+				<div class="cardsGlass cardFull">
+					<h4>Acesse os conteúdos das disciplinas cursadas</h4>
+					<p class="descriptionOpt">
+						Aqui você pode acessar todos os conteúdos disponibilizados pelos
+						professores. Em caso de dúvida, você pode em contato com o professor
+						através do <a href="#forum">fórum</a>. Ele tem até 48hrs para te
+						responder.
+					</p>
+					<h5 class="disciplinaTitulo" id="disciplinai">Disciplina I</h5>
+					<ul>
+						<li>
+							<a href="#" class="infodisciplina">• Aula 01: Conteúdo </a>
+						</li>
+						<li>
+							<a href="#" class="infodisciplina">• Aula 02: Conteúdo </a>
+						</li>
+						<li>
+							<a href="#" class="infodisciplina">• Aula 03: Conteúdo </a>
+						</li>
+					</ul>
+					<h5 class="disciplinaTitulo" id="disciplinaii">Disciplina II</h5>
+					<ul>
+						<li>
+							<a href="#" class="infodisciplina">• Aula 01: Conteúdo </a>
+						</li>
+						<li>
+							<a href="#" class="infodisciplina">• Aula 02: Conteúdo </a>
+						</li>
+						<li>
+							<a href="#" class="infodisciplina">• Aula 03: Conteúdo </a>
+						</li>
+					</ul>
+					<h5 class="disciplinaTitulo" id="disciplinaiii">Disciplina III</h5>
+					<ul>
+						<li>
+							<a href="#" class="infodisciplina">• Aula 01: Conteúdo </a>
+						</li>
+						<li>
+							<a href="#" class="infodisciplina">• Aula 02: Conteúdo </a>
+						</li>
+						<li>
+							<a href="#" class="infodisciplina">• Aula 03: Conteúdo </a>
+						</li>
+					</ul>
+					<h5 class="disciplinaTitulo" id="disciplinaiv">Disciplina IV</h5>
+					<ul>
+						<li>
+							<a href="#" class="infodisciplina">• Aula 01: Conteúdo </a>
+						</li>
+						<li>
+							<a href="#" class="infodisciplina">• Aula 02: Conteúdo </a>
+						</li>
+						<li>
+							<a href="#" class="infodisciplina">• Aula 03: Conteúdo </a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="sectionForum">
+				<h3 id="forum">Fórum</h3>
+				<div class="cardsGlass cardFull">
+					<h4>Comunique-se com professores e a secretaria</h4>
+					<p class="descriptionOpt">
+						Caro pai ou responsável, aproveite o fórum para interagir com os professores e a secretaria. Não fique com dúvidas!
+					</p>
+					<div class="forumSection">
+						<h5 class="disciplinaTitulo">Disciplina I</h5>
+						<ul>
+							<li>
+								<a href="#" class="infodisciplina"
+									>• Aula 05: Ajuda no exercício 04
+									<span
+										><i class="fa-regular fa-comment"></i> 2 comentários</span
+									>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="infodisciplina"
+									>• Aula 08: Não consigo acessar o material
+									<span
+										><i class="fa-regular fa-comment"></i> 1 comentário</span
+									>
+								</a>
+							</li>
+						</ul>
+						<h5 class="disciplinaTitulo">Disciplina II</h5>
+						<p class="infodisciplina">• Não há postagens no momento</p>
+						<h5 class="disciplinaTitulo">Disciplina III</h5>
+						<p class="infodisciplina">• Não há postagens no momento</p>
+						<h5 class="disciplinaTitulo">Disciplina IV</h5>
+						<ul>
+							<li>
+								<a href="#" class="infodisciplina"
+									>• Aula 02: Não consigo encontrar o livro recomendado
+									<span
+										><i class="fa-regular fa-comment"></i> Sem comentários</span
+									>
+								</a>
+							</li>
+						</ul>
+
+                        <h5 class="disciplinaTitulo">Secretaria</h5>
+                        <ul>
+							<li>
+								<a href="#" class="infodisciplina"
+									>• Emissão do comprovante de matrícula
+									<span
+										><i class="fa-regular fa-comment"></i> 1 comentário</span
+									>
+								</a>
+							</li>
+                        </ul>
+
+						<button type="button">Enviar nova pergunta</button>
+					</div>
+				</div>
 			</section>
 			<section class="sectionMatricula">
 				<h3 id="matricula">Matrícula</h3>
@@ -244,8 +350,8 @@
 								<option value="4">Quinta</option>
 								<option value="5">Sexta</option>
 							</select>
-							<label for="horárioAtividad">Selecione o horário</label>
-							<select name="horárioAtividad" id="horárioAtividad">
+							<label for="horarioAtividade">Selecione o horário</label>
+							<select name="horarioAtividade" id="horarioAtividade">
 								<option value="" disabled selected hidden>Horários</option>
 								<option value="1">13:00 - 14:00</option>
 								<option value="2">15:00 - 16:00</option>
@@ -256,7 +362,50 @@
 					</fieldset>
 				</div>
 			</section>
+
+			<section class="sectionFinanceiro">
+				<h3 id="financeiro">Financeiro</h3>
+				<div class="cardsGlass cardFull">
+					<h4>Financeiro</h4>
+					<p class="descriptionOpt">
+						Selecione o mês desejado para receber sua fatura.
+                        Você pode enviá-la para seu e-mail e/ou celular cadastrado na secretaria.
+					</p>
+					<fieldset>
+						<form action="">
+
+							<label for="mensalidade">Escolha o mês desejado:</label>
+							<select name="mensalidade" id="mensalidade">
+								<option value="" disabled selected hidden>Mês</option>
+								<option value="1">Janeiro</option>
+								<option value="2">Fevereiro</option>
+								<option value="3">Março</option>
+								<option value="4">Abril</option>
+								<option value="5">Junho</option>
+                                <option value="5">Julho</option>
+                                <option value="5">Agosto</option>
+                                <option value="5">Setembro</option>
+                                <option value="5">Outubro</option>
+                                <option value="5">Novembro</option>
+                                <option value="5">Dezembro</option>
+							</select>
+
+							<label for="envio">Escolha aonde deseja receber a fatura:</label>
+							<select name="envio" id="envio">
+								<option value="" disabled selected hidden>Enviar para</option>
+								<option value="1">E-mail</option>
+                                <option value="1">Celular</option>
+							</select>
+
+							<button type="button">Enviar </button>
+						</form>
+					</fieldset>
+				</div>
+			</section>
+
+
+
 		</main>
-		<script src="src/scripts/aluno.js"></script>
+		<script src="src/scripts/menuLateral.js"></script>
 	</body>
 </html>
