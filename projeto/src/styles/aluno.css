@@ -1,3 +1,7 @@
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: "Raleway", sans-serif;
 	margin: 0;
@@ -18,10 +22,18 @@ aside {
 	overflow-x: hidden;
 	padding: 20px 15px;
 }
-nav { 
-position: relative;
-display: inline-block;
+
+nav {
+	position: sticky;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	height: 95%;
 }
+.logoEscola {
+	width: 125px;
+}
+
 aside p {
 	padding-bottom: 15px;
 }
@@ -45,10 +57,10 @@ aside ul {
 
 .subnav-content {
 	display: none;
-	position: absolute;
 }
 
-aside ul:hover .subnav-content {
+.expandeLi:hover + .subnav-content,
+.subnav-content:hover {
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -56,8 +68,13 @@ aside ul:hover .subnav-content {
 	font-size: smaller;
 }
 
-.navIcon{
-	display:block;
+#navIconOpen,
+#navIconClose {
+	display: none;
+}
+
+.divEspaco {
+	display: none;
 }
 
 /*área principal*/
@@ -73,8 +90,49 @@ section {
 	margin-bottom: 70px;
 }
 
+/*estilo do conteudo e forum */
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+.disciplinaTitulo {
+	font-size: 16px;
+
+	background-color: #dbe9e4;
+	padding: 15px 8px;
+	border-radius: 10px;
+}
+
+.infodisciplina {
+	padding-left: 0px;
+	line-height: 2;
+}
+
+.forumSection a,
+.forumSection p,
+.sectionConteudo a {
+	text-decoration: none;
+	color: #001219;
+}
+
+.forumSection span {
+	font-size: 12px;
+}
+
+.infodisciplina {
+	margin-left: 15px;
+	display: flex;
+	flex-direction: column;
+}
+
+.infodisciplina:hover {
+	color: #003c4a;
+	max-width: fit-content;
+	cursor: pointer;
+}
+
 /*estilo do form*/
-fieldset{
+fieldset {
 	border: none;
 	margin: 0;
 	padding: 0;
@@ -87,6 +145,9 @@ fieldset{
 }
 .sectionMatricula label {
 	margin-bottom: 5px;
+}
+.sectionMatricula select {
+	margin-bottom: 15px;
 }
 
 select {
@@ -103,14 +164,14 @@ button {
 	background-color: #001219;
 	border: none;
 	font-weight: 600;
-	padding: 5px;
+	padding: 10px;
+	margin-top: 40px;
 }
 
 button:hover {
 	color: #fffefe;
 	background-color: black;
 	cursor: pointer;
-
 }
 
 /*estilo aplicado em cada card*/
@@ -122,13 +183,13 @@ button:hover {
 	border: 1px solid rgba(255, 255, 255, 0.057);
 	border-radius: 10px;
 	margin: 0 auto;
-	padding:20px;
+	padding: 20px;
 	margin-bottom: 25px;
 	max-width: 850px;
 }
 
-.cardFull{
-	max-width:960px;
+.cardFull {
+	max-width: 960px;
 }
 
 h3 {
@@ -156,48 +217,78 @@ h4 {
 	font-weight: bold;
 }
 
-.containerGrid2 p, .containerGrid5 p {
+.containerGrid2 p,
+.containerGrid5 p {
 	margin: 5px 10px;
 	letter-spacing: 0.4px;
 }
-
 
 .flexCard {
 	display: flex;
 	margin: 0 auto;
 }
 
-.containerGrid5{
+.containerGrid5 {
 	display: grid;
-	grid-template-columns: auto auto auto  auto auto;
+	grid-template-columns: auto auto auto auto auto;
 	align-items: center;
 	justify-items: center;
 	justify-content: center;
 }
 
-
 /*media query: responsividade*/
-@media screen and (max-width:1024px){
+@media screen and (max-width: 1024px) {
 	/*menu lateral*/
-	aside{
+	aside {
 		width: 15px;
 	}
-
-	ul, nav p { 
-		display:none;
+	nav {
+		align-items: center;
+	}
+	nav ul,
+	nav p {
+		display: none;
+	}
+	.logoEscola {
+		width: 47px;
 	}
 
-	.navIcon{
-		transform: translateY(75vh);
+	.divEspaco {
+		display: block;
+		height: 100%;
+	}
+
+	#navIconOpen {
+		display: block;
+		color: #001219;
+		background-color: #ee9b00;
+		margin: 0;
+		padding: 0;
+		width: auto;
+		position: absolute;
+		bottom: 10px;
+	}
+
+	#navIconClose {
+		color: #001219;
+		background-color: #ee9b00;
+		margin: 0;
+		padding: 0;
+		width: auto;
+	}
+
+	#navIconOpen:hover,
+	#navIconClose:hover {
+		color: #003c4a;
 	}
 
 	/*Seção principal*/
-	main{
-	padding: 12px;
-	margin-left: 50px;
+	main {
+		padding: 12px;
+		margin-left: 50px;
 	}
 	/*Cards*/
-	.flexCard{
+	.flexCard {
 		flex-direction: column;
 	}
 
@@ -206,12 +297,15 @@ h4 {
 	.titleGrid,
 	.descriptionOpt,
 	.containerGrid2 p,
-	.containerGrid5 p {
-		font-size:smaller;
+	.containerGrid5 p,
+	.forumSection p,
+	.forumSection a,
+	.forumSection h5 {
+		font-size: smaller;
 	}
 
-	.cardFull{
-		max-width:359px;
+	.cardFull {
+		max-width: 359px;
 	}
 
 	.containerGrid5 {
