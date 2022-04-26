@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="assets/images/favicon-32x32.png"
+    />
+    <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="assets/images/favicon-16x16.png"
+    />
+    <link rel="stylesheet" href="src/styles/aluno.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,500;0,600;1,100&display=swap"
+        rel="stylesheet"
+    />
+    <script
+        src="https://kit.fontawesome.com/278520f492.js"
+        crossorigin="anonymous"
+    ></script>
+    <title>Evolvere | Área do professor</title>
+</head>
+<body>
+    <aside id="menuLateral">
+        <nav>
+            <div>
+                <img
+                    class="logoEscola"
+                    src="./assets/images/logoEvolvere.png"
+                    alt="Logo Evolvere"
+                />
+            </div>
+            <ul id="navUl">
+                <li class="expandeLi">
+                    <a href="#agendamentos">Agendamentos</a>
+                </li>
+                    <a href="#matricula">Consulta de Matrícula</a>
+                </li>
+                <li class="expandeLi">
+                    <a href="#aluno">Aluno</a>
+                </li>
+                <div class="subnav-content">
+                    <a href="#AprovaMatricula=">Aprovar matriculas</a>
+                    <a href="#cargaHora">Carga horario do aluno</a>                   
+                </div>
+                <li>
+                </li>
+            </ul>
+            <div class="divEspaco">&nbsp;</div>
+            <button id="navIconOpen">
+                <i class="fa-solid fa-angle-right" alt="botão para expandir menu"></i>
+            </button>
+            <button id="navIconClose">
+                <i class="fa-solid fa-angle-left" alt="botão para fechar menu"></i>
+            </button>
+        </nav>
+    </aside>
+    <main id="main">
+        <div class="flexCard">
+            <form>
+                <h3>Agendamentos:</h3>
+                <div class="opcoesAgendamento">
+                    <label for="prova">
+                        <input type="checkbox" id="prova">
+                        Prova</label>
+                    <label for="atividade">
+                        <input type="checkbox" id="atividade">
+                        Atividade</label>
+                    <label for="aula">
+                        <input type="checkbox" id="aula">
+                        Aulas</label>
+                </div>
+                <input type="date" name="data" id="data">
+                <input type="button" name="marcar" id="marcar">
+                
+            </form>
+        </div>
+        </main>
+    
+
+</body>
+</html>
