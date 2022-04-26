@@ -90,8 +90,71 @@ section {
 	margin-bottom: 70px;
 }
 
+/*estilo aplicado em cada card*/
+.cardsGlass {
+	background-color: #ffffff;
+	box-shadow: 0 20px 51px 0 rgba(97, 98, 108, 0.15);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+	border: 1px solid rgba(255, 255, 255, 0.057);
+	border-radius: 10px;
+	margin: 0 auto;
+	padding: 20px;
+	margin-bottom: 25px;
+	max-width: 850px;
+}
+
+.cardFull {
+	max-width: 960px;
+}
+
+h3 {
+	font-size: larger;
+	margin-bottom: 35px;
+}
+
+h4 {
+	text-decoration: underline;
+}
+
+.containerGrid2 {
+	display: grid;
+	grid-template-columns: auto auto;
+	align-items: center;
+	justify-items: center;
+	justify-content: center;
+}
+
+.titleGrid {
+	font-weight: bolder;
+	background-color: #dbe9e4;
+	padding: 15px 5px;
+	border-radius: 10px;
+	font-weight: bold;
+}
+
+.containerGrid2 p,
+.containerGrid5 p {
+	margin: 5px 10px;
+	letter-spacing: 0.4px;
+}
+
+.flexCard {
+	display: flex;
+	margin: 0 auto;
+}
+
+.containerGrid5 {
+	display: grid;
+	grid-template-columns: auto auto auto auto auto;
+	align-items: center;
+	justify-items: center;
+	justify-content: center;
+}
+
 /**/
 .opcoesAgendamento {
     display: inline-block;
     margin: center;
 }
+
