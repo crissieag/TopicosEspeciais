@@ -66,19 +66,64 @@
 					<li>
 						<a href="#matricula">Matrícula</a>
 					</li>
+					<li>
+						<a href="#notas">Notas</a>
+					</li>
 				</ul>
+				<button id="logoutBtn">
+					<i class="fa-solid fa-arrow-right-from-bracket" alt="botão para sair da área logada"> </i>
+				</button>
 				<div class="divEspaco">&nbsp;</div>
+
 				<button id="navIconOpen">
 					<i class="fa-solid fa-angle-right" alt="botão para expandir menu"></i>
 				</button>
 				<button id="navIconClose">
 					<i class="fa-solid fa-angle-left" alt="botão para fechar menu"></i>
 				</button>
+				
 			</nav>
 		</aside>
 		<main id="main">
 			<section>
 				<h3 id="consultas">Consultas</h3>
+				 <div class="cardsGlass cardFull">
+						<h4 id="notasefaltas">Notas e Faltas:</h4>
+						<p class="descriptionOpt">
+                            <div class="containerGrid3">
+								<div class="resultadoNota">
+                                    <p>Resultado:</p>
+                                    <h1>Aprovado!</h1>
+                                </div>								
+                                <div>
+                                    <p>Média Geral de Notas:</p>
+                                    <h1 class="h1-centralizado">10</h1>
+                                    </p>
+                                </div>
+                                <div>
+									<p>Total de Faltas:</p>
+									<h1 class="h1-centralizado">10</h1>
+                                </div>
+                            </div>
+                        <p class="descriptionOpt">Resultado por Disciplinas:</p>
+						    <div class="containerGrid3">
+                                <p class="titleGrid">Disciplina</p>
+                                <p class="titleGrid">Notas</p>
+								<p class="titleGrid">Faltas</p>
+                                <p>Disciplina I</p>
+                                <p>2</p>
+								<p>2</p>
+                                <p>Disciplina II</p>
+                                <p>2</p>
+								<p>2</p>
+                                <p>Disciplina III</p>
+                                <p>2</p>
+								<p>2</p>
+                                <p>Disciplina IV</p>
+                                <p>4</p>
+								<p>2</p> 
+                            </div>
+					</div> 
 				<div class="flexCard">
 					<div class="cardsGlass">
 						<h4 id="provas">Agenda de provas</h4>
@@ -279,17 +324,17 @@
 						<form action="">
 							<label for="atividade">Selecione a atividade desejada</label>
 							<select name="atividade" id="atividade">
-								<option value="" disabled selected hidden>Opções</option>
-								<option value="ballet">Ballet</option>
-								<option value="teatro">Teatro</option>
-								<option value="judo">Judo</option>
-								<option value="capoeira">Capoeira</option>
-								<option value="ingles">Inglês</option>
-								<option value="espanhol">Espanhol</option>
+								<option value="0" disabled selected>Opções</option>
+								<option value="1">Ballet</option>
+								<option value="2">Teatro</option>
+								<option value="3">Judo</option>
+								<option value="4">Capoeira</option>
+								<option value="5">Inglês</option>
+								<option value="6">Espanhol</option>
 							</select>
 							<label for="diaSemana">Escolha a data desejada</label>
 							<select name="diaSemana" id="diaSemana">
-								<option value="" disabled selected hidden>Dias</option>
+								<option value="0" disabled selected>Dias</option>
 								<option value="1">Segunda</option>
 								<option value="2">Terça</option>
 								<option value="3">Quarta</option>
@@ -298,17 +343,35 @@
 							</select>
 							<label for="horarioAtividade">Selecione o horário</label>
 							<select name="horarioAtividade" id="horarioAtividade">
-								<option value="" disabled selected hidden>Horários</option>
+								<option value="0" disabled selected>Horários</option>
 								<option value="1">13:00 - 14:00</option>
 								<option value="2">15:00 - 16:00</option>
 								<option value="3">20:00 - 21:00</option>
 							</select>
-							<button type="button">Enviar</button>
+							<button
+								type="button"
+								id="enviaMatricula"
+								onclick="feedbackMatricula()"
+							>
+								Enviar
+							</button>
+							<span class="errorMsg"
+								>* Você deve selecionar as opções de matrícula antes de submeter
+								a solicitação!</span
+							>
 						</form>
 					</fieldset>
 				</div>
 			</section>
 		</main>
+		<div id="modal" class="modal">
+			<div class="modal-content">
+				<span class="close" onclick="fechaModal()">&times;</span>
+				<p><strong> Solitação enviada com sucesso! </strong></p>
+				<br />
+			</div>
+		</div>
 		<script src="src/scripts/menuLateral.js"></script>
+		<script src="src/scripts/aluno.js"></script>
 	</body>
 </html>
