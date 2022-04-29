@@ -2,32 +2,54 @@ const database = [
     {
         alunoMatricula: "0001",
         alunoNome: "Maria Francisca",
-        alunoSerie: "2ª série",
-        alunoDisciplina1: "Ballet",
-        alunoDisciplina2: "Judo"
-        
+        alunoDisciplinas: [
+            {
+                disciplinaNome: "Judô",
+                disciplinaValor: 100
+            },
+            {
+                disciplinaNome: "Ballet",
+                disciplinaValor: 200
+            }
+        ]
     },
 
     {
         alunoMatricula: "0002",
         alunoNome: "João Victor",
-        alunoSerie: "2ª série",
-        alunoDisciplina1: "Ballet",
-        alunoDisciplina2: "Inglês"
-        
+        alunoDisciplinas: [
+            {
+                disciplinaNome: "Ballet",
+                disciplinaValor: 200
+            }
+        ]
+
     },
 
     {
         alunoMatricula: "0003",
         alunoNome: "Mateus Garrido",
-        alunoSerie: "2ª série",
-        alunoDisciplina1: "Ballet",
-        alunoDisciplina2: "Inglês",
-        alunoDisciplina3: "Espanhol"
+        alunoDisciplinas: [
+            {
+                disciplinaNome: "Judô",
+                disciplinaValor: 100
+            },
+            {
+                disciplinaNome: "Inglês",
+                disciplinaValor: 300
+            },
+            {
+                disciplinaNome: "Espanhol",
+                disciplinaValor: 300
+            }
+        ]
         
     },
     
 ];
+
+
+
 
 // Seleciona elemento 
 function selectElement(selector){
@@ -55,14 +77,44 @@ function buscaResultados(){
                 database[i].alunoNome.toLocaleLowerCase().includes(search.toLocaleLowerCase())
             ){
                 selectElement('.search-results').innerHTML +=  `
-                <div class ="search-results-item">
-                <span class="search-item">${database[i].alunoMatricula}</span>
-                <span class="search-item">${database[i].alunoNome}</span>
-                </div>`;
+                
+                <div class="containerGrid2">
+                <div class="resultadoNota">
+                    <p>Matrícula</p>
+                    <h1><span class="search-item">${database[i].alunoMatricula}</span></h1>
+                </div>								
+                <div>
+                    <p>Nome:</p>
+                    <h1><span class="search-item">${database[i].alunoNome}</span></h1>
+                    </p>
+                </div>
 
+            </div>
+                <div class ="search-results-item">
+                <div class="flexCard">
+					<div class="cardsGlass">
+						<div class="containerGrid2">
+                            <p class="titleGrid">Atividade Extra</p>
+                            <p class="titleGrid">Valor Total</p>
+                            ${montaDisciplina(database[i].alunoDisciplinas)}
+						</div>
+					</div>
+				</div>
+                </div>`;
             }
         }
     }
+}
+
+function montaDisciplina(disciplinas) {
+    let htmlDisciplinas = '';
+    for (let index = 0; index < disciplinas.length; index++) {
+        const disciplina = disciplinas[index];
+        htmlDisciplinas = htmlDisciplinas + 
+        `<p>${disciplina.disciplinaNome}</p>
+        <p>${disciplina.disciplinaValor}</p>`;
+    }
+    return htmlDisciplinas;
 }
 
 selectElement('.searchbar').addEventListener('keyup', buscaResultados);
