@@ -73,6 +73,19 @@ aside ul {
 	display: none;
 }
 
+#logoutBtn {
+	display: block;
+	color: #001219;
+	background-color: #ee9b00;
+	margin: 0;
+	padding: 0;
+	width: auto;
+	position: absolute;
+	bottom: 10px;
+	transform:rotate(180deg);
+}
+
+
 .divEspaco {
 	display: none;
 }
@@ -174,6 +187,50 @@ button:hover {
 	cursor: pointer;
 }
 
+.errorMsg {
+	color: rgb(158, 0, 0);
+	margin-top: 10px;
+	font-size: smaller;
+	display: none;
+}
+
+
+/*modal*/
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+	background-color: #fae8c4;
+	border-radius: 5px;
+	margin: 0 auto 0 190px;
+	padding: 20px;
+	width: 80%;
+}
+
+.close {
+	color: #001219;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #005f73;
+	text-decoration: none;
+	cursor: pointer;
+}
+
 /*estilo aplicado em cada card*/
 .cardsGlass {
 	background-color: #ffffff;
@@ -208,6 +265,23 @@ h4 {
 	justify-items: center;
 	justify-content: center;
 }
+.containerGrid3 {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	align-items: center;
+	justify-items: center;
+	justify-content: space-evenly;
+
+}
+
+.containerGrid4 {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	align-items: center;
+	justify-items: center;
+	justify-content: space-evenly;
+
+}
 
 .titleGrid {
 	font-weight: bolder;
@@ -218,7 +292,9 @@ h4 {
 }
 
 .containerGrid2 p,
-.containerGrid5 p {
+.containerGrid3 p,
+.containerGrid6 p,
+.containerGrid4 p {
 	margin: 5px 10px;
 	letter-spacing: 0.4px;
 }
@@ -228,12 +304,22 @@ h4 {
 	margin: 0 auto;
 }
 
-.containerGrid5 {
+
+
+.containerGrid6 {
 	display: grid;
 	grid-template-columns: auto auto auto auto auto;
 	align-items: center;
 	justify-items: center;
 	justify-content: center;
+}
+
+.h1-centralizado {
+	text-align: center;
+}
+
+.resultadoNota p{
+	margin:0;
 }
 
 /*media query: responsividade*/
@@ -265,7 +351,7 @@ h4 {
 		margin: 0;
 		padding: 0;
 		width: auto;
-		position: absolute;
+		position: relative;
 		bottom: 10px;
 	}
 
@@ -275,6 +361,10 @@ h4 {
 		margin: 0;
 		padding: 0;
 		width: auto;
+	}
+
+	#logoutBtn{
+		display: none;
 	}
 
 	#navIconOpen:hover,
@@ -297,33 +387,43 @@ h4 {
 	.titleGrid,
 	.descriptionOpt,
 	.containerGrid2 p,
-	.containerGrid5 p,
+	.containerGrid3 p,
+    .containerGrid4 p,
+	.containerGrid6 p,
 	.forumSection p,
 	.forumSection a,
-	.forumSection h5 {
+	.forumSection h5,
+	.h1-centralizado,
+	.containerGrid3 h1{
 		font-size: smaller;
 	}
 
 	.cardFull {
 		max-width: 359px;
 	}
-
-	.containerGrid5 {
+	
+    .containerGrid4 {
 		overflow-x: auto;
 		justify-content: normal;
 	}
+
+
+	.containerGrid6 {
+		overflow-x: auto;
+		justify-content: normal;
+	}
+	/*form*/
+	.modal-content {
+		border-radius: 5px;
+		margin: 0 auto ;
+	}
 }
 
-.container{
-    max-width: 120rem;
-    margin: 0 auto;
-    padding: 1.5rem;
-    text-align: center;
-}
-
+/* ///////////////////////// Página Financeiro */
 .searchbar-label{
     display: block;
     margin: 10rem 0 2.5 rem;
+
 
 }
 
@@ -334,6 +434,7 @@ input[type="text"] {
     border: none;
     outline: 2px solid #7c2af1;
     color: #f8f4f9;
+    
 }
   
 input[type="text"]:focus {
@@ -354,7 +455,6 @@ input[type="text"]:focus {
 }
   
 .search-results-item {
-    background-color: #151630;
     padding: 1rem;
     border-radius: 0.8rem;
     animation: fadeIn 0.5s ease-in-out;
