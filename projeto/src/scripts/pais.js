@@ -1,50 +1,90 @@
-/*Interação Botão 1 */ 
+////Botão 1 Matricula
 
-// Get the modal
-var modal1 = document.getElementById("modal1");
+let btn = document.getElementById("enviaMatricula");
+let modal = document.getElementById("modal");
+let close = document.getElementById("close");
 
-// Get the button that opens the modal
-var btn1 = document.getElementById("botao1");
+let modalContent = document.querySelector(".modal-content");
+let errorMsg = document.querySelector(".errorMsg");
 
-// When the user clicks the button, open the modal 
+let atividade = document.getElementById("atividade");
+let diaSemana = document.getElementById("diaSemana");
+let horarioAtividade = document.getElementById("horarioAtividade");
 
-btn1.onclick = function() {
-    modal1.style.display = "block";
+let novoParagrafo = document.createElement("p");
+
+function feedbackMatricula() {
+	if (
+		atividade.value > 0 &&
+		diaSemana.value > 0 &&
+		horarioAtividade.value > 0
+	) {
+		modal.style.display = "block";
+		errorMsg.style.display = "none";
+
+		modalContent.appendChild(novoParagrafo);
+
+		novoParagrafo.innerText = `A solicitação para matrícula na atividade extra ${
+			atividade.options[atividade.value].text
+		}, no dia ${diaSemana.options[diaSemana.value].text} - às: ${
+			horarioAtividade.options[horarioAtividade.value].text
+		} foi realizada. Em até 48hrs o professor irá analisar o pedido.`;
+	} else {
+		errorMsg.style.display = "block";
+	}
 }
 
-// Get the <span> element that closes the modal
-var span1 = document.getElementsByClassName("close1")[0];
-
-// When the user clicks on <span> (x), close the modal
-span1.onclick = function() {
-  modal1.style.display = "none";
+function fechaModal() {
+	modal.style.display = "none";
 }
 
+window.onclick = (event) => {
+	if (event.target == modal) {
+		modal.style.display = "none";
+	}
+};
+
+////Botão 2 - Financeiro
+let btn2 = document.getElementById("enviaFatura");
+let modal2 = document.getElementById("modal2");
+let close2 = document.getElementById("close2");
+
+let modal2Content = document.querySelector(".modal2-content");
+let errorMsg2 = document.querySelector(".errorMsg2");
+
+let mensalidade = document.getElementById("mensalidade");
+let envio = document.getElementById("envio");
 
 
-/*Interação Botão 2 */ 
+let novoParagrafo2 = document.createElement("p");
 
-var modal2 = document.getElementById("modal2");
-var btn2 = document.getElementById("botao2");
-btn2.onclick = function() {
-    modal2.style.display = "block";
+function feedbackFatura() {
+	if (
+		mensalidade.value > 0 &&
+		envio.value > 0 
+	) {
+		modal2.style.display = "block";
+		errorMsg2.style.display = "none";
+
+		modal2Content.appendChild(novoParagrafo2);
+
+		novoParagrafo2.innerText = `A fatura do mês ${
+			mensalidade.options[mensalidade.value].text}
+		 será enviada para o seu ${envio.options[envio.value].text} 
+		 `;
+	
+
+	} else {
+		errorMsg2.style.display = "block";
+	}
 }
 
-var span2 = document.getElementsByClassName("close2")[0];
-
-span2.onclick = function() {
-  modal2.style.display = "none";
+function fechaModal2() {
+	modal2.style.display = "none";
 }
 
-/*Usado em ambos*/ 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal1) {
-    modal1.style.display = "none";
-  }
-  
-  if (event.target == modal2) {
-    modal2.style.display = "none";
-  }
-
-}
+window.onclick = (event) => {
+	if (event.target == modal2) {
+		modal2.style.display = "none";
+	}
+};
