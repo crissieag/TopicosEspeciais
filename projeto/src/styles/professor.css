@@ -11,6 +11,7 @@ body {
 }
 
 
+
 /*área principal*/
 main {
 	margin-left: 50px;
@@ -22,6 +23,134 @@ main {
 /*estilo das seções/sections*/
 section {
 	margin-bottom: 70px;
+}
+
+/*estilo do conteudo e forum */
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+.disciplinaTitulo {
+	font-size: 16px;
+
+	background-color: #dbe9e4;
+	padding: 15px 8px;
+	border-radius: 10px;
+}
+
+.infodisciplina {
+	padding-left: 0px;
+	line-height: 2;
+}
+
+.forumSection a,
+.forumSection p,
+.sectionConteudo a {
+	text-decoration: none;
+	color: #001219;
+}
+
+.forumSection span {
+	font-size: 12px;
+}
+
+.infodisciplina {
+	margin-left: 15px;
+	display: flex;
+	flex-direction: column;
+}
+
+.infodisciplina:hover {
+	color: #003c4a;
+	max-width: fit-content;
+	cursor: pointer;
+}
+
+/*estilo do form*/
+fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+	margin-top: 20px;
+}
+
+.sectionMatricula form {
+	display: flex;
+	flex-direction: column;
+}
+.sectionMatricula label {
+	margin-bottom: 5px;
+}
+.sectionMatricula select {
+	margin-bottom: 15px;
+}
+
+select {
+	border: none;
+	border-bottom: 1px solid #005f73;
+	margin-bottom: 15px;
+}
+
+button {
+	color: #fffefe;
+	width: 100%;
+	margin-top: 15px;
+	border-radius: 3px;
+	background-color: #001219;
+	border: none;
+	font-weight: 600;
+	padding: 10px;
+	margin-top: 40px;
+}
+
+button:hover {
+	color: #fffefe;
+	background-color: black;
+	cursor: pointer;
+}
+
+.errorMsg {
+	color: rgb(158, 0, 0);
+	margin-top: 10px;
+	font-size: smaller;
+	display: none;
+}
+
+
+/*modal*/
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+	background-color: #fae8c4;
+	border-radius: 5px;
+	margin: 0 auto 0 190px;
+	padding: 20px;
+	width: 80%;
+}
+
+.close {
+	color: #001219;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #005f73;
+	text-decoration: none;
+	cursor: pointer;
 }
 
 /*estilo aplicado em cada card*/
@@ -58,6 +187,14 @@ h4 {
 	justify-items: center;
 	justify-content: center;
 }
+.containerGrid3 {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	align-items: center;
+	justify-items: center;
+	justify-content: space-evenly;
+
+}
 
 .titleGrid {
 	font-weight: bolder;
@@ -68,6 +205,7 @@ h4 {
 }
 
 .containerGrid2 p,
+.containerGrid3 p,
 .containerGrid5 p {
 	margin: 5px 10px;
 	letter-spacing: 0.4px;
@@ -86,10 +224,130 @@ h4 {
 	justify-content: center;
 }
 
+.h1-centralizado {
+	text-align: center;
+}
+
+.resultadoNota p{
+	margin:0;
+}
+
+/*media query: responsividade*/
+@media screen and (max-width: 1024px) {
+	/*menu lateral*/
+	aside {
+		width: 15px;
+	}
+	nav {
+		align-items: center;
+	}
+	nav ul,
+	nav p {
+		display: none;
+	}
+	.logoEscola {
+		width: 47px;
+	}
+
+	.divEspaco {
+		display: block;
+		height: 100%;
+	}
+
+	#navIconOpen {
+		display: block;
+		color: #001219;
+		background-color: #ee9b00;
+		margin: 0;
+		padding: 0;
+		width: auto;
+		position: relative;
+		bottom: 10px;
+	}
+
+	#navIconClose {
+		color: #001219;
+		background-color: #ee9b00;
+		margin: 0;
+		padding: 0;
+		width: auto;
+	}
+
+	#logoutBtn{
+		display: none;
+	}
+
+	#navIconOpen:hover,
+	#navIconClose:hover {
+		color: #003c4a;
+	}
+
+	/*Seção principal*/
+	main {
+		padding: 12px;
+		margin-left: 50px;
+	}
+	/*Cards*/
+	.flexCard {
+		flex-direction: column;
+	}
+
+	h4,
+	label,
+	.titleGrid,
+	.descriptionOpt,
+	.containerGrid2 p,
+	.containerGrid3 p,
+	.containerGrid5 p,
+	.forumSection p,
+	.forumSection a,
+	.forumSection h5,
+	.h1-centralizado,
+	.containerGrid3 h1{
+		font-size: smaller;
+	}
+
+	.cardFull {
+		max-width: 359px;
+	}
+
+	.containerGrid5 {
+		overflow-x: auto;
+		justify-content: normal;
+	}
+	/*form*/
+	.modal-content {
+		border-radius: 5px;
+		margin: 0 auto ;
+	}
+}
+
+
 /*coisas diversas*/
 .opcoesAgendamento {
 	display: inline-block;
 	font: 18px;
+}
+
+.box {
+	border-radius: 7px;
+	border: #000000 solid;
+	border-style: groove;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+}
+
+::placeholder{
+	text-align: center;
+}
+
+.botaoLado {
+	display: inline-block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	vertical-align: middle;
 }
 
 
