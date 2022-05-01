@@ -75,6 +75,7 @@
 
 					<button type="button"
 						id="Exportar"
+						onclick="exportar()"
 				
 					>
 						Exportar
@@ -83,6 +84,15 @@
 			</section>
 		</main>
 
+		<div id="modal" class="modal">
+			<div class="modal-content">
+				<span class="close" onclick="fechaModal()">&times;</span>
+			 
+				<p><strong>Exportação realizada!</strong></p>
+			  
+			  <br />
+			</div>
+		</div>		
 
 
 		<script src="src/scripts/menuLateral.js"></script>

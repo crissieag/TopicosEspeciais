@@ -124,3 +124,20 @@ selectElement('.searchbar').addEventListener('keyup', buscaResultados);
 
 
 
+/* Modal */
+let modal = document.getElementById("modal");
+
+function exportar() {
+	modal.style.display = "block";
+
+}
+
+function fechaModal() {
+	modal.style.display = "none";
+}
+
+window.onclick = (event) => {
+	if (event.target == modal) {
+		modal.style.display = "none";
+	}
+};
