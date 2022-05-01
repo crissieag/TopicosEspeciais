@@ -247,6 +247,7 @@ button:hover {
 
 .cardFull {
 	max-width: 960px;
+	text-align: center;
 }
 
 h3 {
@@ -261,27 +262,14 @@ h4 {
 .containerGrid2 {
 	display: grid;
 	grid-template-columns: auto auto;
+	column-gap: 2rem;
 	align-items: center;
 	justify-items: center;
 	justify-content: center;
-}
-.containerGrid3 {
-	display: grid;
-	grid-template-columns: auto auto auto;
-	align-items: center;
-	justify-items: center;
-	justify-content: space-evenly;
-
+	
 }
 
-.containerGrid4 {
-	display: grid;
-	grid-template-columns: auto auto auto auto;
-	align-items: center;
-	justify-items: center;
-	justify-content: space-evenly;
 
-}
 
 .titleGrid {
 	font-weight: bolder;
@@ -292,9 +280,7 @@ h4 {
 }
 
 .containerGrid2 p,
-.containerGrid3 p,
-.containerGrid6 p,
-.containerGrid4 p {
+{
 	margin: 5px 10px;
 	letter-spacing: 0.4px;
 }
@@ -304,15 +290,6 @@ h4 {
 	margin: 0 auto;
 }
 
-
-
-.containerGrid6 {
-	display: grid;
-	grid-template-columns: auto auto auto auto auto;
-	align-items: center;
-	justify-items: center;
-	justify-content: center;
-}
 
 .h1-centralizado {
 	text-align: center;
@@ -387,14 +364,11 @@ h4 {
 	.titleGrid,
 	.descriptionOpt,
 	.containerGrid2 p,
-	.containerGrid3 p,
-    .containerGrid4 p,
-	.containerGrid6 p,
 	.forumSection p,
 	.forumSection a,
 	.forumSection h5,
 	.h1-centralizado,
-	.containerGrid3 h1{
+	.containerGrid2 h1{
 		font-size: smaller;
 	}
 
@@ -402,16 +376,7 @@ h4 {
 		max-width: 359px;
 	}
 	
-    .containerGrid4 {
-		overflow-x: auto;
-		justify-content: normal;
-	}
 
-
-	.containerGrid6 {
-		overflow-x: auto;
-		justify-content: normal;
-	}
 	/*form*/
 	.modal-content {
 		border-radius: 5px;
@@ -422,7 +387,8 @@ h4 {
 /* ///////////////////////// Página Financeiro */
 .searchbar-label{
     display: block;
-    margin: 10rem 0 2.5 rem;
+    /* margin: 10rem 0 2.5 rem; */
+	
 
 
 }
@@ -430,21 +396,25 @@ h4 {
 input[type="text"] {
     width: 100%;
     padding: 0.8rem 0.5rem;
-    background-color: #0d0c1d;
+    background-color: #ffffff;
     border: none;
-    outline: 2px solid #7c2af1;
-    color: #f8f4f9;
+    outline: 2px solid #f1ab2a;
+    color: #818181;
+	
     
 }
   
 input[type="text"]:focus {
     border: none;
     outline-color: #f3414e;
+	
 }
   
 .searchbar {
     max-width: 25rem;
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
+
+
 }
   
 .search-results {
@@ -458,37 +428,21 @@ input[type="text"]:focus {
     padding: 1rem;
     border-radius: 0.8rem;
     animation: fadeIn 0.5s ease-in-out;
+
+	
 }
   
 .search-item {
     display: block;
     margin-bottom: 1rem;
+	
 }
   
 .search-item:last-child {
     margin-bottom: 0;
 }
   
-  /* width */
-::-webkit-scrollbar {
-    width: 10px;
-}
-  
-  /* Track */
-::-webkit-scrollbar-track {
-    background: #151630;
-}
-  
-  /* Handle */
-::-webkit-scrollbar-thumb {
-    background: #7c2af1;
-    border-radius: 0.8rem;
-}
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
+
 
 @keyframes fadeIn {
     from {
@@ -510,3 +464,26 @@ input[type="text"]:focus {
           font-size: 92.5%;
         }
 }
+
+
+/*Botão*/
+
+button {
+	color: #fffefe;
+	width: 100%;
+	margin-top: 15px;
+	border-radius: 3px;
+	background-color: #001219;
+	border: none;
+	font-weight: 600;
+	padding: 10px;
+	margin-top: 40px;
+}
+
+button:hover {
+	color: #fffefe;
+	background-color: black;
+	cursor: pointer;
+}
+
+

@@ -79,27 +79,30 @@ function buscaResultados(){
                 selectElement('.search-results').innerHTML +=  `
                 
                 <div class="containerGrid2">
-                <div class="resultadoNota">
-                    <p>Matrícula</p>
-                    <h1><span class="search-item">${database[i].alunoMatricula}</span></h1>
-                </div>								
-                <div>
-                    <p>Nome:</p>
-                    <h1><span class="search-item">${database[i].alunoNome}</span></h1>
-                    </p>
-                </div>
+                    <div class="resultadoNota">
+                        <p>Matrícula</p>
+                        <h1><span class="search-item">${database[i].alunoMatricula}</span></h1>
+                    </div>
+                	
 
-            </div>
+                    <div class="containerGrid2">
+                        <div class="resultadoNota">
+                            <p>Nome:</p>
+                            <h1><span class="search-item">${database[i].alunoNome}</span></h1>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class ="search-results-item">
-                <div class="flexCard">
-					<div class="cardsGlass">
-						<div class="containerGrid2">
-                            <p class="titleGrid">Atividade Extra</p>
-                            <p class="titleGrid">Valor Total</p>
-                            ${montaDisciplina(database[i].alunoDisciplinas)}
-						</div>
-					</div>
-				</div>
+                    <div class="flexCard">
+                        <div class="cardsGlass">
+                            <div class="containerGrid2">
+                                <p class="titleGrid">Atividade Extra</p>
+                                <p class="titleGrid">Valor Total</p>
+                                ${montaDisciplina(database[i].alunoDisciplinas)}
+                            </div>
+                        </div>
+                    </div>
                 </div>`;
             }
         }
@@ -118,3 +121,6 @@ function montaDisciplina(disciplinas) {
 }
 
 selectElement('.searchbar').addEventListener('keyup', buscaResultados);
+
+
+
