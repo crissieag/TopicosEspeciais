@@ -189,6 +189,16 @@ h4 {
 	
 }
 
+.containerGrid3 {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	column-gap: 2rem;
+	align-items: center;
+	justify-items: center;
+	justify-content: center;
+	
+}
+
 
 
 .titleGrid {
@@ -197,6 +207,12 @@ h4 {
 	padding: 15px 5px;
 	border-radius: 10px;
 	font-weight: bold;
+}
+
+.containerGrid3 p
+{
+	margin: 5px 10px;
+	letter-spacing: 0.4px;
 }
 
 .containerGrid2 p

@@ -78,9 +78,9 @@ function buscaResultados(){
             ){
                 selectElement('.search-results').innerHTML +=  `
                 
-                <div class="containerGrid2">
+                <div class="containerGrid3">
                     <div class="resultadoNota">
-                        <p>Matrícula</p>
+                        <p>Matrícula:</p>
                         <h1><span class="search-item">${database[i].alunoMatricula}</span></h1>
                     </div>
                 	
@@ -91,6 +91,14 @@ function buscaResultados(){
                             <h1><span class="search-item">${database[i].alunoNome}</span></h1>
                         </div>
                     </div>
+
+                    <div class="containerGrid2">
+                        <div class="resultadoNota">
+                            <p>Valor total:</p>
+                            <h1><span class="search-item">R$ ${somarValores(database[i].alunoDisciplinas)}</span></h1>
+                        </div>
+                    </div>
+                
                 </div>
                 
                 <div class ="search-results-item">
@@ -98,7 +106,7 @@ function buscaResultados(){
                         <div class="cardsGlass">
                             <div class="containerGrid2">
                                 <p class="titleGrid">Atividade Extra</p>
-                                <p class="titleGrid">Valor Total</p>
+                                <p class="titleGrid">Valor</p>
                                 ${montaDisciplina(database[i].alunoDisciplinas)}
                             </div>
                         </div>
@@ -109,13 +117,25 @@ function buscaResultados(){
     }
 }
 
+function somarValores(disciplinas){
+    let valorTotal = 0;
+    for (let index = 0; index < disciplinas.length; index++) {
+        valorTotal = valorTotal + disciplinas[index].disciplinaValor;
+        
+    }
+
+    return valorTotal;
+
+
+}
+
 function montaDisciplina(disciplinas) {
     let htmlDisciplinas = '';
     for (let index = 0; index < disciplinas.length; index++) {
         const disciplina = disciplinas[index];
         htmlDisciplinas = htmlDisciplinas + 
         `<p>${disciplina.disciplinaNome}</p>
-        <p>${disciplina.disciplinaValor}</p>`;
+        <p>R$ ${disciplina.disciplinaValor}</p>`;
     }
     return htmlDisciplinas;
 }
