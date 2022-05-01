@@ -152,9 +152,11 @@ h4 {
 	justify-content: center;
 }
 
-/**/
+/*coisas diversas*/
 .opcoesAgendamento {
-    display: inline-block;
-    margin: center;
+	display: inline-block;
+	font: 18px;
 }
+
+
 
