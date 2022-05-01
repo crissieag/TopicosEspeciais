@@ -72,6 +72,9 @@
 						<a href="#financeiro">Financeiro</a>
 					</li>
 				</ul>
+				<button id="logoutBtn">
+					<i class="fa-solid fa-arrow-right-from-bracket" alt="botão para sair da área logada"> </i>
+					</button>
 				<div class="divEspaco">&nbsp;</div>
 				<button id="navIconOpen">
 					<i class="fa-solid fa-angle-right" alt="botão para expandir menu"></i>
@@ -85,7 +88,7 @@
 			<section>
 				<h3 id="consultas">Consultas</h3>
 
-                <div class="flexCard">
+                <!-- <div class="flexCard"> -->
                     <div class="cardsGlass cardFull">
 						<h4 id="notasefaltas">Notas e Faltas:</h4>
 						<p class="descriptionOpt">
@@ -99,37 +102,36 @@
                                 <div>
                                     <p>Média Geral de Notas:</p>
                                     <h1 class="h1-centralizado">10</h1>
-                                    </p>
-                                </div>
+								</div>
 
                                 <div>
 									<p>Total de Faltas:</p>
 									<h1 class="h1-centralizado">10</h1>
                                 </div>
                             </div>
+						</p>
 
-                        <p class="descriptionOpt">Resultado por Disciplinas:</p>
-						    <div class="containerGrid3">
-                                <p class="titleGrid">Disciplina</p>
-                                <p class="titleGrid">Notas</p>
-								<p class="titleGrid">Faltas</p>
-                                <p>Disciplina I</p>
-                                <p>2</p>
-								<p>2</p>
-                                <p>Disciplina II</p>
-                                <p>2</p>
-								<p>2</p>
-                                <p>Disciplina III</p>
-                                <p>2</p>
-								<p>2</p>
-                                <p>Disciplina IV</p>
-                                <p>4</p>
-								<p>2</p> 
-                            </div>
-                        </div>
-					</div> 
+						<p class="descriptionOpt">Resultado por Disciplinas:</p>
+						<div class="containerGrid3">
+							<p class="titleGrid">Disciplina</p>
+							<p class="titleGrid">Notas</p>
+							<p class="titleGrid">Faltas</p>
+							<p>Disciplina I</p>
+							<p>2</p>
+							<p>2</p>
+							<p>Disciplina II</p>
+							<p>2</p>
+							<p>2</p>
+							<p>Disciplina III</p>
+							<p>2</p>
+							<p>2</p>
+							<p>Disciplina IV</p>
+							<p>4</p>
+							<p>2</p> 
+						</div>
+					</div>
 
-                </div>
+                <!-- </div> -->
 
 
 				<div class="flexCard">
@@ -336,17 +338,17 @@
 						<form action="">
 							<label for="atividade">Selecione a atividade desejada</label>
 							<select name="atividade" id="atividade">
-								<option value="" disabled selected hidden>Opções</option>
-								<option value="ballet">Ballet</option>
-								<option value="teatro">Teatro</option>
-								<option value="judo">Judo</option>
-								<option value="capoeira">Capoeira</option>
-								<option value="ingles">Inglês</option>
-								<option value="espanhol">Espanhol</option>
+								<option value="0" disabled selected>Opções</option>
+								<option value="1">Ballet</option>
+								<option value="2">Teatro</option>
+								<option value="3">Judo</option>
+								<option value="4">Capoeira</option>
+								<option value="5">Inglês</option>
+								<option value="6">Espanhol</option>
 							</select>
 							<label for="diaSemana">Escolha a data desejada</label>
 							<select name="diaSemana" id="diaSemana">
-								<option value="" disabled selected hidden>Dias</option>
+								<option value="0" disabled selected>Dias</option>
 								<option value="1">Segunda</option>
 								<option value="2">Terça</option>
 								<option value="3">Quarta</option>
@@ -355,12 +357,22 @@
 							</select>
 							<label for="horarioAtividade">Selecione o horário</label>
 							<select name="horarioAtividade" id="horarioAtividade">
-								<option value="" disabled selected hidden>Horários</option>
+								<option value="0" disabled selected>Horários</option>
 								<option value="1">13:00 - 14:00</option>
 								<option value="2">15:00 - 16:00</option>
 								<option value="3">20:00 - 21:00</option>
 							</select>
-							<button type="button" id="botao1">Enviar</button>
+							<button
+								type="button"
+								id="enviaMatricula"
+								onclick="feedbackMatricula()"
+							>
+								Enviar
+							</button>
+							<span class="errorMsg"
+								>* Você deve selecionar as opções de matrícula antes de submeter
+								a solicitação!</span
+							>
 						</form>
 					</fieldset>
 				</div>
@@ -379,52 +391,64 @@
 
 							<label for="mensalidade">Escolha o mês desejado:</label>
 							<select name="mensalidade" id="mensalidade">
-								<option value="" disabled selected hidden>Mês</option>
+								<option value="0" disabled selected hidden>Mês</option>
 								<option value="1">Janeiro</option>
 								<option value="2">Fevereiro</option>
 								<option value="3">Março</option>
 								<option value="4">Abril</option>
-								<option value="5">Junho</option>
-                                <option value="5">Julho</option>
-                                <option value="5">Agosto</option>
-                                <option value="5">Setembro</option>
-                                <option value="5">Outubro</option>
-                                <option value="5">Novembro</option>
-                                <option value="5">Dezembro</option>
+								<option value="5">Maio</option>
+								<option value="6">Junho</option>
+                                <option value="7">Julho</option>
+                                <option value="8">Agosto</option>
+                                <option value="9">Setembro</option>
+                                <option value="10">Outubro</option>
+                                <option value="11">Novembro</option>
+                                <option value="12">Dezembro</option>
 							</select>
 
 							<label for="envio">Escolha aonde deseja receber a fatura:</label>
 							<select name="envio" id="envio">
-								<option value="" disabled selected hidden>Enviar para</option>
+								<option value="0" disabled selected hidden>Enviar para</option>
 								<option value="1">E-mail</option>
-                                <option value="1">Celular</option>
+                                <option value="2">Celular</option>
 							</select>
 
-							<button type="button" id="botao2">Enviar Fatura</button>
+							<button type="button" 
+									id="enviaFatura"
+									onclick="feedbackFatura()"
+								>
+								Enviar Fatura
+							</button>
+							
+							<span class="errorMsg2"
+							>* Você deve selecionar as opções antes de submeter
+							a solicitação!</span
+						>
+						
 						</form>
 					</fieldset>
 				</div>
 			</section>
 		</main>
 
-		<div id="modal1" class="modal">
+		<div id="modal" class="modal">
 
-			<!-- Modal content -->
+			<!-- Modal1 content -->
 			<div class="modal-content">
-			  <span class="close">&times;</span>
-			  <p>Solicitação enviada!</p>
+				<span class="close" onclick="fechaModal()">&times;</span>
+			  <p><strong>Solicitação enviada!</strong></p>
+			  <br />
 			</div>
-		  
 		</div>	
 		
 		<div id="modal2" class="modal">
 
-			<!-- Modal content -->
-			<div class="modal-content">
-			  <span class="close">&times;</span>
-			  <p>Fatura enviada!</p>
-			</div>
-		  
+			<!-- Modal2 content -->
+			<div class="modal2-content">
+			  <span class="close2" onclick="fechaModal2()">&times;</span>
+			  <p><strong> Solicitação concluída!</strong></p>
+				<br />
+			</div> 
 		</div>
 		  
 
