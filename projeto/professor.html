@@ -17,7 +17,7 @@
         sizes="16x16"
         href="assets/images/favicon-16x16.png"
     />
-    <link rel="stylesheet" href="src/styles/aluno.css" />
+    <link rel="stylesheet" href="src/styles/professor.css"/>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -66,11 +66,15 @@
             </button>
         </nav>
     </aside>
+
     <main id="main">
-        <section class="flexCard" style="float: left;">
+
+        <div class="flexCard">
             <div class="cardsGlass">
-                <form>
+                <form class="containerGrid2">
+                    
                     <h3>Agendamentos:</h3>
+                    <br>
                     <div>
                         <label for="prova" class="opcoesAgendamento">
                             <input type="checkbox" id="prova">Prova
@@ -81,21 +85,75 @@
                         <label for="aula" class="opcoesAgendamento">
                             <input type="checkbox" id="aula">Aulas
                         </label>
-                    </div>
-                        <input type="date" name="data" id="data">
-                        <button name="botao" id="botao">Agendar</button>        
+                        <br>
+                        <br>
+                        <input type="date" name="data" id="data" class="box">
+                        <button type="submit" name="botao" id="botao" onclick="mostraModal()">Agendar</button>        
+                    </div>  
                 </form>
             </div>
-        </section>
-        <section class="flexCard">
-            <div class="cardsGlass">
-                <Form>
+
+            <div class="cardsGlass">         
+                
+                <Form class="containerGrid2">
                     <label><h3>Consultar a situação do aluno:</h3></label>
-                    <label for="matricula">Número da matricula:<br></label>
-                    <input type="number" id="matricula" name="matricula">
+                    <br>
+                    <input type="number" id="matricula" name="matricula"  placeholder="Digite a matricula" class="box"/>
+                    <br>
+                    <button type="button" onclick='mostraBotoes()' id="matriculaBotao" name="matriculaBotao" value="click">Consultar</button>
                 </Form>
-            </div>
-        </section>
-        </main>
-                </body>
-                </html>
+                            
+                <div id="mostraBotao" style="display: none;">
+                    <div class="botaoLado">
+                        <button type="button" onclick="baixarRelatorio()" id="download" >Baixar relatório!</button>
+                    </div>
+                    
+                    <div class="botaoLado" style="float: right;">
+                        <button type="button" onclick="aprovarAluno()" id="aprovar" >Aprovar aluno!</button>
+                    </div>
+                </div>
+                
+            </div>    
+        </div>
+   
+    <section>
+        <h3 id="conteudo">Postar conteúdo</h3>
+        <div class="cardsGlass cardFull">
+            <form>
+    
+            <p>
+                <label>Titúlo:</label>
+                <input type="text" id="tituloCont">
+            </p>
+
+            <p>
+                <label>Descrição:</label>
+                <input type="text" id="descCont">
+            </p>
+
+            <p>
+                <label>Data de lançamento:</label>
+                <input type="date" id="dataCont">
+            </p>
+
+            <p>
+                <label>Email do professor:</label>
+                <input type="email" id="emailCont">
+            </p>
+
+            <p>
+                <label>Turma:</label>
+                <input chec
+            </p>
+                
+
+            </form>
+        </div>
+    </section>
+    
+    </main>
+
+        <script src="src/scripts/professor.js"></script>
+
+</body>
+</html>
