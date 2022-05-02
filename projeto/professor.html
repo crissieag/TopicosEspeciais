@@ -1,159 +1,306 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="assets/images/favicon-32x32.png"
-    />
-    <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="assets/images/favicon-16x16.png"
-    />
-    <link rel="stylesheet" href="src/styles/professor.css"/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="assets/images/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="assets/images/favicon-16x16.png"
+		/>
+		<link rel="stylesheet" href="src/styles/professor.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,500;0,600;1,100&display=swap"
-        rel="stylesheet"
-    />
-    <script
-        src="https://kit.fontawesome.com/278520f492.js"
-        crossorigin="anonymous"
-    ></script>
-    <title>Evolvere | Área do professor</title>
-</head>
-<body>
-    <aside id="menuLateral">
-        <nav>
-            <div>
-                <img
-                    class="logoEscola"
-                    src="./assets/images/logoEvolvere.png"
-                    alt="Logo Evolvere"
-                />
-            </div>
-            <ul id="navUl">
-                <li class="expandeLi">
-                    <a href="#agendamentos">Agendamentos</a>
-                </li>
-                    <a href="#matriculas">Matrículas</a>
-                </li>
-                <li class="expandeLi">
-                    <a href="#aluno">Aluno</a>
-                </li>
-                <div class="subnav-content">
-                    <a href="#AprovaMatricula=">Aprovar matriculas</a>
-                    <a href="#cargaHora">Carga horario do aluno</a>                   
-                </div>
-                <li>
-                </li>
-            </ul>
-            <div class="divEspaco">&nbsp;</div>
-            <button id="navIconOpen">
-                <i class="fa-solid fa-angle-right" alt="botão para expandir menu"></i>
-            </button>
-            <button id="navIconClose">
-                <i class="fa-solid fa-angle-left" alt="botão para fechar menu"></i>
-            </button>
-        </nav>
-    </aside>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,500;0,600;1,100&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/278520f492.js"
+			crossorigin="anonymous"
+		></script>
+		<title>Evolvere | Área do professor</title>
+	</head>
 
-    <main id="main">
+	<body>
+		<aside id="menuLateral">
+			<nav>
+				<div>
+					<img
+						class="logoEscola"
+						src="./assets/images/logoEvolvere.png"
+						alt="Logo Evolvere"
+					/>
+				</div>
+				<ul id="navUl">
+					<li class="expandeLi">
+						<a href="#agendamentos">Agendamentos</a>
+					</li>
+					<li class="expandeLi">
+						<a href="#aluno">Aluno</a>
+					</li>
+					<div class="subnav-content">
+						<a href="#AprovaMatricula=">Aprovar matriculas</a>
+						<a href="#cargaHora">Carga horario do aluno</a>
+					</div>
+				</ul>
+				<div class="divEspaco">&nbsp;</div>
+				<button id="navIconOpen">
+					<i class="fa-solid fa-angle-right" alt="botão para expandir menu"></i>
+				</button>
+				<button id="navIconClose">
+					<i class="fa-solid fa-angle-left" alt="botão para fechar menu"></i>
+				</button>
+			</nav>
+		</aside>
 
-        <div class="flexCard">
-            <div class="cardsGlass">
-                <form class="containerGrid2">
-                    
-                    <h3>Agendamentos:</h3>
-                    <br>
-                    <div>
-                        <label for="prova" class="opcoesAgendamento">
-                            <input type="checkbox" id="prova">Prova
-                        </label>
-                        <label for="atividade" class="opcoesAgendamento">
-                            <input type="checkbox" id="atividade">Atividade
-                        </label>
-                        <label for="aula" class="opcoesAgendamento">
-                            <input type="checkbox" id="aula">Aulas
-                        </label>
-                        <br>
-                        <br>
-                        <input type="date" name="data" id="data" class="box">
-                        <button type="submit" name="botao" id="botao" onclick="mostraModal()">Agendar</button>        
-                    </div>  
-                </form>
-            </div>
+		<main id="main">
+			<div class="flexCard">
+				<div class="cardsGlass">
+					<form class="containerGrid2">
+						<h3>Agendamentos:</h3>
+						<br />
+						<div>
+							<label for="prova" class="opcoesAgendamento">
+								<input type="checkbox" id="prova" />Prova
+							</label>
+							<label for="atividade" class="opcoesAgendamento">
+								<input type="checkbox" id="atividade" />Atividade
+							</label>
+							<label for="aula" class="opcoesAgendamento">
+								<input type="checkbox" id="aula" />Aulas
+							</label>
+							<br />
+							<br />
+							<input type="date" name="data" id="data" class="box" />
+							<button
+								type="submit"
+								name="botao"
+								id="botao"
+								onclick="mostraModal()"
+							>
+								Agendar
+							</button>
+						</div>
+					</form>
+				</div>
 
-            <div class="cardsGlass">         
-                
-                <Form class="containerGrid2">
-                    <label><h3>Consultar a situação do aluno:</h3></label>
-                    <br>
-                    <input type="number" id="matricula" name="matricula"  placeholder="Digite a matricula" class="box"/>
-                    <br>
-                    <button type="button" onclick='mostraBotoes()' id="matriculaBotao" name="matriculaBotao" value="click">Consultar</button>
-                </Form>
-                            
-                <div id="mostraBotao" style="display: none;">
-                    <div class="botaoLado">
-                        <button type="button" onclick="baixarRelatorio()" id="download" >Baixar relatório!</button>
-                    </div>
-                    
-                    <div class="botaoLado" style="float: right;">
-                        <button type="button" onclick="aprovarAluno()" id="aprovar" >Aprovar aluno!</button>
-                    </div>
-                </div>
-                
-            </div>    
-        </div>
-   
-    <section>
-        <h3 id="conteudo">Postar conteúdo</h3>
-        <div class="cardsGlass cardFull">
-            <form>
-    
-            <p>
-                <label>Titúlo:</label>
-                <input type="text" id="tituloCont">
-            </p>
+				<div class="cardsGlass">
+					<form class="containerGrid2">
+						<label>
+							<h3>Consultar a situação do aluno:</h3>
+						</label>
+						<br />
+						<input
+							type="number"
+							id="matricula"
+							name="matricula"
+							placeholder="Digite a matricula"
+							class="box"
+						/>
+						<br />
+						<button
+							type="button"
+							onclick="mostraBotoes()"
+							id="matriculaBotao"
+							name="matriculaBotao"
+							value="click"
+						>
+							Consultar
+						</button>
+					</form>
 
-            <p>
-                <label>Descrição:</label>
-                <input type="text" id="descCont">
-            </p>
+					<div id="mostraBotao" style="display: none">
+						<div class="botaoLado">
+							<button type="button" onclick="baixarRelatorio()" id="download">
+								Baixar relatório!
+							</button>
+						</div>
 
-            <p>
-                <label>Data de lançamento:</label>
-                <input type="date" id="dataCont">
-            </p>
+						<div class="botaoLado" style="float: right">
+							<button type="button" onclick="aprovarAluno()" id="aprovar">
+								Aprovar aluno!
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
 
-            <p>
-                <label>Email do professor:</label>
-                <input type="email" id="emailCont">
-            </p>
+			<section>
+				<h3 id="conteudo">Postar conteúdo</h3>
+				<div class="cardsGlass cardFull">
+					<form>
+						<label
+							>Titúlo:
+							<input type="text" id="tituloCont" />
+						</label>
 
-            <p>
-                <label>Turma:</label>
-                <input chec
-            </p>
-                
+						<p>
+							<label>Descrição:</label>
+							<input type="text" id="descCont" />
+						</p>
 
-            </form>
-        </div>
-    </section>
-    
-    </main>
+						<p>
+							<label>Data de lançamento:</label>
+							<input type="date" id="dataCont" />
+						</p>
 
-        <script src="src/scripts/professor.js"></script>
+						<p>
+							<label>Email do professor:</label>
+							<input type="email" id="emailCont" />
+						</p>
 
-</body>
+						<p>
+							<label>Turma:</label>
+							<input />
+						</p>
+					</form>
+				</div>
+			</section>
+			<section>
+				<h3 id="notasPresencas">Notas e Presenças</h3>
+				<div class="flexCard">
+					<div class="cardsGlass">
+						<h4 id="presenca">Registro de Presença</h4>
+						<p class="descriptionOpt">
+							Professor, favor selecionar qual turma deverá ser exibida para
+							registrar presença:
+						</p>
+
+						<ul>
+							<li class="titleList" id="tituloPresenca1">
+								Quarta-feira | Manhã
+							</li>
+							<div class="turma1-presenca">
+								<div>
+									<label id="aluno1">Alice Maria </label>
+									<input type="checkbox" name="aluno1" />
+								</div>
+								<div>
+									<label id="aluno2">Bruno Filgueira </label>
+									<input type="checkbox" name="aluno2" />
+								</div>
+								<div>
+									<label id="aluno3">João Pedro </label>
+									<input type="checkbox" name="aluno3" />
+								</div>
+								<div>
+									<label id="aluno4">Luana da Silva </label>
+									<input type="checkbox" name="aluno4" />
+								</div>
+								<div>
+									<label id="aluno5">Maria Francisca </label>
+									<input type="checkbox" name="aluno5" />
+								</div>
+								<button type="button" onclick="salvarPresenca1()">
+									Enviar
+								</button>
+							</div>
+							<li class="titleList" id="tituloPresenca2">
+								Segunda-feira | Tarde
+							</li>
+							<div class="turma2-presenca">
+								<div>
+									<label id="aluno10">Alice Maria </label>
+									<input type="checkbox" name="aluno10" />
+								</div>
+								<div>
+									<label id="aluno20">Bruno Filgueira </label>
+									<input type="checkbox" name="aluno20" />
+								</div>
+								<div>
+									<label id="aluno30">João Pedro </label>
+									<input type="checkbox" name="aluno30" />
+								</div>
+								<div>
+									<label id="aluno40">Luana da Silva </label>
+									<input type="checkbox" name="aluno40" />
+								</div>
+								<div>
+									<label id="aluno50">Maria Francisca </label>
+									<input type="checkbox" name="aluno50" />
+								</div>
+								<button type="button" onclick="salvarPresenca2()">
+									Enviar
+								</button>
+							</div>
+						</ul>
+					</div>
+					<div class="cardsGlass">
+						<h4 id="notas">Registro de Notas</h4>
+						<p class="descriptionOpt">
+							Professor, favor selecionar qual turma deverá ser exibida para
+							registrar as notas:
+						</p>
+						<ul>
+							<li class="titleList" id="tituloNota1">Quarta-feira | Manhã</li>
+							<div class="turma1-nota">
+								<div>
+									<label id="aluno1">Alice Maria </label>
+									<input type="number" name="aluno1" />
+								</div>
+								<div>
+									<label id="aluno2">Bruno Filgueira </label>
+									<input type="number" name="aluno2" />
+								</div>
+								<div>
+									<label id="aluno3">João Pedro </label>
+									<input type="number" name="aluno3" />
+								</div>
+								<div>
+									<label id="aluno4">Luana da Silva </label>
+									<input type="number" name="aluno4" />
+								</div>
+								<div>
+									<label id="aluno5">Maria Francisca </label>
+									<input type="number" name="aluno5" />
+								</div>
+								<button type="button" onclick="salvarPresenca1()">
+									Enviar
+								</button>
+							</div>
+							<li class="titleList" id="tituloNota2">Segunda-feira | Tarde</li>
+							<div class="turma2-nota">
+								<div>
+									<label id="aluno10">Alice Maria </label>
+									<input type="number" name="aluno10" />
+								</div>
+								<div>
+									<label id="aluno20">Bruno Filgueira </label>
+									<input type="number" name="aluno20" />
+								</div>
+								<div>
+									<label id="aluno30">João Pedro </label>
+									<input type="number" name="aluno30" />
+								</div>
+								<div>
+									<label id="aluno40">Luana da Silva </label>
+									<input type="number" name="aluno40" />
+								</div>
+								<div>
+									<label id="aluno50">Maria Francisca </label>
+									<input type="number" name="aluno50" />
+								</div>
+								<button type="button" onclick="salvarPresenca2()">
+									Enviar
+								</button>
+							</div>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<script src="src/scripts/professor.js"></script>
+	</body>
 </html>

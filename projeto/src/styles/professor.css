@@ -274,8 +274,7 @@ h4 {
 
 }
 
-.titleGrid {
-	font-weight: bolder;
+.titleGrid, .titleList {
 	background-color: #dbe9e4;
 	padding: 15px 5px;
 	border-radius: 10px;
@@ -310,6 +309,53 @@ h4 {
 	margin:0;
 }
 
+.turma1-presenca, 
+.turma2-presenca, 
+.turma1-nota, 
+.turma2-nota{
+	margin-top: 15px;
+	width: 75%;
+	margin: 10px auto 25px;
+	display: none;
+}
+
+.turma1-presenca div, 
+.turma2-presenca div, 
+.turma1-nota div,
+ .turma2-nota div{
+	display: flex;
+	justify-content: space-between;
+}
+
+ul .titleList{
+	margin-bottom: 10px;
+}
+
+ul .titleList:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.errorMsg {
+	color: rgb(158, 0, 0);
+	margin-top: 10px;
+	font-size: smaller;
+	display: none;
+}
+
+.successMsg {
+	color: rgb(0, 158, 18);
+	margin-top: 10px;
+	font-size: smaller;
+	display: none;
+}
+
+.turma1-nota input,
+.turma2-nota input {
+	border: none;
+	border-bottom: 1px solid #003c4a;
+	width: 50px;
+}
 /*media query: responsividade*/
 @media screen and (max-width: 1024px) {
 	/*menu lateral*/
@@ -373,6 +419,7 @@ h4 {
 	h4,
 	label,
 	.titleGrid,
+	.titleList
 	.descriptionOpt,
 	.containerGrid2 p,
 	.containerGrid3 p,
