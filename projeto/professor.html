@@ -18,6 +18,7 @@
 			href="assets/images/favicon-16x16.png"
 		/>
 		<link rel="stylesheet" href="src/styles/professor.css" />
+		<link rel="stylesheet" href="src/styles/menuLateral.css" />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,140 +34,191 @@
 	</head>
 
 	<body>
-		<aside id="menuLateral">
-			<nav>
-				<div>
-					<img
-						class="logoEscola"
-						src="./assets/images/logoEvolvere.png"
-						alt="Logo Evolvere"
-					/>
-				</div>
-				<ul id="navUl">
-					<li class="expandeLi">
-						<a href="#agendamentos">Agendamentos</a>
-					</li>
-					<li class="expandeLi">
-						<a href="#aluno">Aluno</a>
-					</li>
-					<div class="subnav-content">
-						<a href="#AprovaMatricula=">Aprovar matriculas</a>
-						<a href="#cargaHora">Carga horario do aluno</a>
-					</div>
-				</ul>
-				<div class="divEspaco">&nbsp;</div>
-				<button id="navIconOpen">
-					<i class="fa-solid fa-angle-right" alt="botão para expandir menu"></i>
-				</button>
-				<button id="navIconClose">
-					<i class="fa-solid fa-angle-left" alt="botão para fechar menu"></i>
-				</button>
-			</nav>
-		</aside>
+	<aside id="menuLateral">
+        <nav>
+            <div>
+                <img
+                    class="logoEscola"
+                    src="./assets/images/logoEvolvere.png"
+                    alt="Logo Evolvere"
+                />
+            </div>
+            <ul id="navUl">
+                <li class="expandeLi">
+                    <a href="#agendamentos">Agendamentos</a>
+                </li>
+                    <a href="#conteudo">Postar contúdo</a>
+                </li>
+                <li class="expandeLi">
+                    <a href="#aluno">Aluno</a>
+                </li>
+                <div class="subnav-content">
+                    <a href="#notasFaltas=">Notas e faltas</a>                   
+                </div>
+                <li class="expandeLi">
+                    <a href="#forum">Forum</a>
+                </li>
+            </ul>
+            <div class="divEspaco">&nbsp;</div>
+            <button id="navIconOpen">
+                <i class="fa-solid fa-angle-right" alt="botão para expandir menu"></i>
+            </button>
+            <button id="navIconClose">
+                <i class="fa-solid fa-angle-left" alt="botão para fechar menu"></i>
+            </button>
+        </nav>
+    </aside>		
+    <main id="main">
+        
+        <h3 id="agendamentos">Agendamentos</h3>
+            <div class="cardsGlass cardFull">
+                <form class="containerGrid2">         
+                    <div>
+                        <label for="prova" class="opcoesAgendamento">
+                            <input type="checkbox" id="prova">Prova
+                        </label>
+                        <label for="atividade" class="opcoesAgendamento">
+                            <input type="checkbox" id="atividade">Atividade
+                        </label>
+                        <label for="aula" class="opcoesAgendamento">
+                            <input type="checkbox" id="aula">Aulas
+                        </label>
+                        <br>
+                        <br>
+                        <input type="date" name="data" id="data" class="box" style="margin-left: auto; margin-right: auto; display: flex;">
+                        <button type="button" name="agendarBtn" id="agendarBtn" onclick="modalAgendamento()">Agendar</button>  
 
-		<main id="main">
-			<div class="flexCard">
-				<div class="cardsGlass">
-					<form class="containerGrid2">
-						<h3>Agendamentos:</h3>
-						<br />
-						<div>
-							<label for="prova" class="opcoesAgendamento">
-								<input type="checkbox" id="prova" />Prova
-							</label>
-							<label for="atividade" class="opcoesAgendamento">
-								<input type="checkbox" id="atividade" />Atividade
-							</label>
-							<label for="aula" class="opcoesAgendamento">
-								<input type="checkbox" id="aula" />Aulas
-							</label>
-							<br />
-							<br />
-							<input type="date" name="data" id="data" class="box" />
-							<button
-								type="submit"
-								name="botao"
-								id="botao"
-								onclick="mostraModal()"
-							>
-								Agendar
-							</button>
-						</div>
-					</form>
-				</div>
+	            	</div>	
+                </form>
+            </div>     
+    <section>
+        <h3 id="conteudo">Postar conteúdo</h3>
+        <div class="cardsGlass cardFull" style="display: flex; justify-content: space-around;">
+            <form>
+                <label>Título:
+                    <input type="text" id="tituloCont" class="box">
+                </label>
+            
 
-				<div class="cardsGlass">
-					<form class="containerGrid2">
-						<label>
-							<h3>Consultar a situação do aluno:</h3>
-						</label>
-						<br />
-						<input
-							type="number"
-							id="matricula"
-							name="matricula"
-							placeholder="Digite a matricula"
-							class="box"
-						/>
-						<br />
-						<button
-							type="button"
-							onclick="mostraBotoes()"
-							id="matriculaBotao"
-							name="matriculaBotao"
-							value="click"
-						>
-							Consultar
-						</button>
-					</form>
+            <p>
+                <label>Descrição:</label>
+                <input type="text" id="descCont" class="box">
+            </p>
 
-					<div id="mostraBotao" style="display: none">
-						<div class="botaoLado">
-							<button type="button" onclick="baixarRelatorio()" id="download">
-								Baixar relatório!
-							</button>
-						</div>
+            <p>
+                <label>Data de lançamento:</label>
+                <input type="date" id="dataCont" class="box">
+            </p>
 
-						<div class="botaoLado" style="float: right">
-							<button type="button" onclick="aprovarAluno()" id="aprovar">
-								Aprovar aluno!
-							</button>
-						</div>
-					</div>
-				</div>
-			</div>
+            <p>
+                <label>Email do professor:</label>
+                <input type="email" id="emailCont" class="box">
+            </p>
 
-			<section>
-				<h3 id="conteudo">Postar conteúdo</h3>
-				<div class="cardsGlass cardFull">
-					<form>
-						<label
-							>Titúlo:
-							<input type="text" id="tituloCont" />
-						</label>
+            <label>Turmas:</label>
+            <label for="t1">T1
+                <input type="checkbox" id="t1">
+            </label>
+            <label for="t2">T2
+                <input type="checkbox" id="t2">
+            </label>
+            <label for="t3">T3
+                <input type="checkbox" id="t3">
+            </label>
+            <label for="t4">T4
+                <input type="checkbox" id="t4">
+            </label>
+            <label for="t5">T5
+                <input type="checkbox" id="t5">
+            </label>
+            <div>
+                <button type="button" onclick="modalGeneric()" id="postarBtn">Postar!</button>
+            </div>
 
-						<p>
-							<label>Descrição:</label>
-							<input type="text" id="descCont" />
-						</p>
+            </form>
+            <div class="containerGrid2">
+                <label>Anexar arquivos:</label>
+                <br>
+                <button type="file" onclick="anexarArquivo()" id="anexador">Anexar</button>
+                
+            </div>
 
-						<p>
-							<label>Data de lançamento:</label>
-							<input type="date" id="dataCont" />
-						</p>
 
-						<p>
-							<label>Email do professor:</label>
-							<input type="email" id="emailCont" />
-						</p>
+        </div>
+    </section>
+    <section>
+        <h3 id="aluno">Aluno</h3>
+        <div class="cardsGlass">         
+            <Form class="containerGrid2">
+                <label><h3>Consultar a situação do aluno:</h3></label>
+                <br>
+                <input type="number" id="matricula" name="matricula"  placeholder="Digite a matricula" class="box"/>
+                <br>
+                <button type="button" onclick='mostraBotoes()' id="matriculaBotao" name="matriculaBotao" value="click">Consultar</button>
+            </Form>
+                        
+            <div id="mostraBotao" style="display: none;">
+                <div class="botaoLado">
+                <a href="/projeto/download/Aulas.png" download="Aulas">
+                        <button type="button"  id="download1">Baixar relatório do aluno</button>
+                </a>
+                </div>
+                
+                <div class="botaoLado">
+                    <button type="button" onclick="aprovarAluno()" id="aprovar" >Aprovar aluno!</button>
+                </div>
 
-						<p>
-							<label>Turma:</label>
-							<input />
-						</p>
-					</form>
-				</div>
-			</section>
+                <div class="botaoLado">
+                    <button type="button" id="download2">Baixar relatório da Turma</button>
+                </div>
+            </div>
+            
+        </div>    
+    </section>
+    <section class="sectionForum">
+        <h3 id="forum">Fórum</h3>
+        <div class="cardsGlass cardFull">
+            <h4>Comunique-se com seus professores e colegas</h4>
+            <p class="descriptionOpt">
+                Caro professor, aproveite o fórum para interagir com seus professores e
+                colegas. Não fique com dúvidas!
+            </p>
+            <div class="forumSection">
+                <h5 class="disciplinaTitulo">Turma I</h5>
+                <ul>
+                    <li>
+                        <a href="#" class="infodisciplina"
+                            >• Aula 05: Ajuda no exercício 04
+                            <span
+                                ><i class="fa-regular fa-comment"></i> 2 comentários</span
+                            >
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="infodisciplina"
+                            >• Aula 08: Não consigo acessar o material
+                            <span
+                                ><i class="fa-regular fa-comment"></i> 1 comentário</span
+                            >
+                        </a>
+                    </li>
+                </ul>
+                <h5 class="disciplinaTitulo">Turma II</h5>
+                <p class="infodisciplina">• Não há postagens no momento</p>
+                <ul>
+                    <li>
+                        <a href="#" class="infodisciplina"
+                            >• Aula 10: Ajuda no trabalho bimestral
+                            <span
+                                ><i class="fa-regular fa-comment"></i> 2 comentários</span
+                            >
+                        </a>
+                    </li>
+                </ul>
+                <button type="button">Enviar sua resposta!</button>
+            </div>
+        </div>
+    </section>						
 			<section>
 				<h3 id="notasPresencas">Notas e Presenças</h3>
 				<div class="flexCard">
@@ -300,7 +352,15 @@
 				</div>
 			</section>
 		</main>
+            <div class="modal" id="modal">            
+        <div class="modal-content" id="modal-content">
+            <span class="close" onclick="fechaModal()" id="close">&times;</span>
+            <p><strong>Concluido!</strong></p>
+            <br/>
+        </div>
+    </div>
 
 		<script src="src/scripts/professor.js"></script>
+        <script src="src/scripts/financeiro.js"></script>
 	</body>
 </html>
