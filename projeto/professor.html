@@ -45,16 +45,16 @@
                 <li class="expandeLi">
                     <a href="#agendamentos">Agendamentos</a>
                 </li>
-                    <a href="#matriculas">Matrículas</a>
+                    <a href="#conteudo">Postar contúdo</a>
                 </li>
                 <li class="expandeLi">
                     <a href="#aluno">Aluno</a>
                 </li>
                 <div class="subnav-content">
-                    <a href="#AprovaMatricula=">Aprovar matriculas</a>
-                    <a href="#cargaHora">Carga horario do aluno</a>                   
+                    <a href="#notasFaltas=">Notas e faltas</a>                   
                 </div>
-                <li>
+                <li class="expandeLi">
+                    <a href="#forum">Forum</a>
                 </li>
             </ul>
             <div class="divEspaco">&nbsp;</div>
@@ -66,15 +66,15 @@
             </button>
         </nav>
     </aside>
-
+    
     <main id="main">
-
-        <div class="flexCard">
-            <div class="cardsGlass">
+        
+        <h3 style="text-align: center;" id="agendamentos">Agendamentos</h3>
+            <div class="cardsGlass cardFull">
                 <form class="containerGrid2">
                     
-                    <h3>Agendamentos:</h3>
-                    <br>
+                    
+                    
                     <div>
                         <label for="prova" class="opcoesAgendamento">
                             <input type="checkbox" id="prova">Prova
@@ -87,71 +87,103 @@
                         </label>
                         <br>
                         <br>
-                        <input type="date" name="data" id="data" class="box">
-                        <button type="submit" name="botao" id="botao" onclick="mostraModal()">Agendar</button>        
+                        <input type="date" name="data" id="data" class="box" style="margin-left: auto; margin-right: auto; display: flex;">
+                        <button type="button" name="agendarBtn" id="agendarBtn" onclick="modalAgendamento()">Agendar</button>  
+
+		</div>	
                     </div>  
                 </form>
             </div>
-
-            <div class="cardsGlass">         
-                
-                <Form class="containerGrid2">
-                    <label><h3>Consultar a situação do aluno:</h3></label>
-                    <br>
-                    <input type="number" id="matricula" name="matricula"  placeholder="Digite a matricula" class="box"/>
-                    <br>
-                    <button type="button" onclick='mostraBotoes()' id="matriculaBotao" name="matriculaBotao" value="click">Consultar</button>
-                </Form>
-                            
-                <div id="mostraBotao" style="display: none;">
-                    <div class="botaoLado">
-                        <button type="button" onclick="baixarRelatorio()" id="download" >Baixar relatório!</button>
-                    </div>
-                    
-                    <div class="botaoLado" style="float: right;">
-                        <button type="button" onclick="aprovarAluno()" id="aprovar" >Aprovar aluno!</button>
-                    </div>
-                </div>
-                
-            </div>    
-        </div>
    
     <section>
-        <h3 id="conteudo">Postar conteúdo</h3>
-        <div class="cardsGlass cardFull">
+        <h3 id="conteudo" style="text-align: center;">Postar conteúdo</h3>
+        <div class="cardsGlass cardFull" style="display: flex; justify-content: space-around;">
             <form>
-    
-            <p>
-                <label>Titúlo:</label>
-                <input type="text" id="tituloCont">
-            </p>
+                <label>Titúlo:
+                    <input type="text" id="tituloCont" class="box">
+                </label>
+            
 
             <p>
                 <label>Descrição:</label>
-                <input type="text" id="descCont">
+                <input type="text" id="descCont" class="box">
             </p>
 
             <p>
                 <label>Data de lançamento:</label>
-                <input type="date" id="dataCont">
+                <input type="date" id="dataCont" class="box">
             </p>
 
             <p>
                 <label>Email do professor:</label>
-                <input type="email" id="emailCont">
+                <input type="email" id="emailCont" class="box">
             </p>
 
-            <p>
-                <label>Turma:</label>
-                <input chec
-            </p>
-                
+            <label>Turmas:</label>
+            <label for="t1">T1
+                <input type="checkbox" id="t1">
+            </label>
+            <label for="t2">T2
+                <input type="checkbox" id="t2">
+            </label>
+            <label for="t3">T3
+                <input type="checkbox" id="t3">
+            </label>
+            <label for="t4">T4
+                <input type="checkbox" id="t4">
+            </label>
+            <label for="t5">T5
+                <input type="checkbox" id="t5">
+            </label>
 
             </form>
+
+            <div class="containerGrid2">
+                <label>Anexar arquivos:</label>
+                <br>
+                <button type="file" onclick="anexarArquivo()" id="anexador">Anexar</button>
+            </div>
+
+            
         </div>
     </section>
-    
+    <section>
+        <h3 style="text-align: center;" id="aluno">Aluno</h3>
+        <div class="cardsGlass">         
+            <Form class="containerGrid2">
+                <label><h3>Consultar a situação do aluno:</h3></label>
+                <br>
+                <input type="number" id="matricula" name="matricula"  placeholder="Digite a matricula" class="box"/>
+                <br>
+                <button type="button" onclick='mostraBotoes()' id="matriculaBotao" name="matriculaBotao" value="click">Consultar</button>
+            </Form>
+                        
+            <div id="mostraBotao" style="display: none;">
+                <div class="botaoLado">
+                <a href="/projeto/download/Aulas.png" download="Aulas">
+                        <button type="button"  id="download">Baixar relatório!</button>
+                </a>
+                </div>
+                
+                <div class="botaoLado">
+                    <button type="button" onclick="aprovarAluno()" id="aprovar" >Aprovar aluno!</button>
+                </div>
+            </div>
+            
+        </div>    
+    </section>
+
+
+        
     </main>
+
+    <div class="modal" id="modal">            
+        <div class="modal-content">
+            <span class="close" onclick="fechaModal()" id="close">&times;</span>
+            <p><strong>Agendamento concluido!</strong></p>
+            <br/>
+        </div>
+    </div>
 
         <script src="src/scripts/professor.js"></script>
 

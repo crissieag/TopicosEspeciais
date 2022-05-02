@@ -409,11 +409,8 @@ h4 {
 
 .box {
 	border-radius: 7px;
-	border: #000000 solid;
+	border: solid;
 	border-style: groove;
-	margin-left: auto;
-	margin-right: auto;
-	display: flex;
 }
 
 ::placeholder{
