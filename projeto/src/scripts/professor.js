@@ -3,7 +3,6 @@ let agendarBtn = document.getElementById('agendarBtn');
 let agendaProva = document.getElementById('prova');
 let agendaAtividade = document.getElementById('atividade');
 let agendaAula = document.getElementById('aula');
-
 let modal = document.getElementById("modal");
 let close = document.getElementById("close");
 

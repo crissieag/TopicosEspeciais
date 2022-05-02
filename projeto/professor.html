@@ -19,8 +19,9 @@
     />
 
 
-    <link rel="stylesheet" href="src/styles/menuLateral.css"/>
-    <link rel="stylesheet" href="src/styles/professor.css"/>
+
+    <link rel="stylesheet" href="/projeto/src/styles/menuLateral.css">
+    <link rel="stylesheet" href="/projeto/src/styles/professor.css">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -73,7 +74,7 @@
     
     <main id="main">
         
-        <h3 style="text-align: center;" id="agendamentos">Agendamentos</h3>
+        <h3 id="agendamentos">Agendamentos</h3>
             <div class="cardsGlass cardFull">
                 <form class="containerGrid2">
                     
@@ -100,7 +101,7 @@
             </div>
    
     <section>
-        <h3 id="conteudo" style="text-align: center;">Postar conteúdo</h3>
+        <h3 id="conteudo">Postar conteúdo</h3>
         <div class="cardsGlass cardFull" style="display: flex; justify-content: space-around;">
             <form>
                 <label>Titúlo:
@@ -139,20 +140,23 @@
             <label for="t5">T5
                 <input type="checkbox" id="t5">
             </label>
+            <div>
+                <button type="button" onclick="modalGeneric()" id="postarBtn">Postar!</button>
+            </div>
 
             </form>
-
             <div class="containerGrid2">
                 <label>Anexar arquivos:</label>
                 <br>
                 <button type="file" onclick="anexarArquivo()" id="anexador">Anexar</button>
+                
             </div>
 
-            
+
         </div>
     </section>
     <section>
-        <h3 style="text-align: center;" id="aluno">Aluno</h3>
+        <h3 id="aluno">Aluno</h3>
         <div class="cardsGlass">         
             <Form class="containerGrid2">
                 <label><h3>Consultar a situação do aluno:</h3></label>
@@ -165,31 +169,78 @@
             <div id="mostraBotao" style="display: none;">
                 <div class="botaoLado">
                 <a href="/projeto/download/Aulas.png" download="Aulas">
-                        <button type="button"  id="download">Baixar relatório!</button>
+                        <button type="button"  id="download1">Baixar relatório do aluno</button>
                 </a>
                 </div>
                 
                 <div class="botaoLado">
                     <button type="button" onclick="aprovarAluno()" id="aprovar" >Aprovar aluno!</button>
                 </div>
+
+                <div class="botaoLado">
+                    <button type="button" id="download2">Baixar relatório da Turma</button>
+                </div>
             </div>
             
         </div>    
     </section>
+    <section class="sectionForum">
+        <h3 id="forum">Fórum</h3>
+        <div class="cardsGlass cardFull">
+            <h4>Comunique-se com seus professores e colegas</h4>
+            <p class="descriptionOpt">
+                Caro professor, aproveite o fórum para interagir com seus professores e
+                colegas. Não fique com dúvidas!
+            </p>
+            <div class="forumSection">
+                <h5 class="disciplinaTitulo">Turma I</h5>
+                <ul>
+                    <li>
+                        <a href="#" class="infodisciplina"
+                            >• Aula 05: Ajuda no exercício 04
+                            <span
+                                ><i class="fa-regular fa-comment"></i> 2 comentários</span
+                            >
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="infodisciplina"
+                            >• Aula 08: Não consigo acessar o material
+                            <span
+                                ><i class="fa-regular fa-comment"></i> 1 comentário</span
+                            >
+                        </a>
+                    </li>
+                </ul>
+                <h5 class="disciplinaTitulo">Turma II</h5>
+                <p class="infodisciplina">• Não há postagens no momento</p>
+                <ul>
+                    <li>
+                        <a href="#" class="infodisciplina"
+                            >• Aula 10: Ajuda no trabalho bimestral
+                            <span
+                                ><i class="fa-regular fa-comment"></i> 2 comentários</span
+                            >
+                        </a>
+                    </li>
+                </ul>
+                <button type="button">Enviar sua resposta!</button>
+            </div>
+        </div>
+    </section>
 
-
-        
     </main>
 
     <div class="modal" id="modal">            
-        <div class="modal-content">
+        <div class="modal-content" id="modal-content">
             <span class="close" onclick="fechaModal()" id="close">&times;</span>
-            <p><strong>Agendamento concluido!</strong></p>
+            <p><strong>Concluido!</strong></p>
             <br/>
         </div>
     </div>
 
-        <script src="src/scripts/professor.js"></script>
+        <script src="/projeto/src/scripts/professor.js"></script>
+        <script src="/projeto/src/scripts/financeiro.js"></script>
 
 </body>
 </html>
