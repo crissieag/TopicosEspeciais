@@ -49,7 +49,11 @@ input{
     margin-bottom: 5px;
 }
 
-
+.errorMsg {
+    color: rgb(158, 0, 0);
+    font-size: smaller;
+    display: none;
+}
 
 button{
     color:#fffefe;
@@ -60,6 +64,7 @@ button{
     border: none;
     font-weight:600;
     padding: 5px;
+    margin-bottom: 15px;
 }
 
 button:hover{
