@@ -16,8 +16,10 @@
 			sizes="16x16"
 			href="assets/images/favicon-16x16.png"
 		/>
+		<link rel="stylesheet" href="src/styles/global.css" />
 		<link rel="stylesheet" href="src/styles/financeiro.css" />
 		<link rel="stylesheet" href="src/styles/menuLateral.css"/>
+
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -66,22 +68,18 @@
                 <div class="cardsGlass cardFull">
                     <h1 class="h1-centralizado">Digite a matrícula do aluno: <br></h1>
 
-                    <input class = "searchbar" type = "text" placeholder = "Digite aqui a matrícula "/>
-                    
+                    <input class = "searchbar" type = "text" placeholder = "Digite aqui a matrícula "/>                    
 
                     <div 
 						class = "search-results">
 					</div>
 					
-
 					<button type="button"
 						id="Exportar"
-						onclick="exportar()"
-				
+						onclick="exportar()"				
 					>
 						Exportar
-					</button>
-				
+					</button>				
 			</section>
 		</main>
 
@@ -94,7 +92,6 @@
 			  <br />
 			</div>
 		</div>		
-
 
 		<script src="src/scripts/menuLateral.js"></script>
         <script src="src/scripts/financeiro.js"></script>
