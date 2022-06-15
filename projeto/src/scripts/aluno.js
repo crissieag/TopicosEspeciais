@@ -1,6 +1,5 @@
 let btn = document.getElementById("enviaMatricula");
 let modal = document.getElementById("modal");
-let close = document.getElementById("close");
 
 let modalContent = document.querySelector(".modal-content");
 let errorMsg = document.querySelector(".errorMsg");
