@@ -1,0 +1,21 @@
+{
+  "matricula": "278172",
+  "nome": "Alfredo Dias",
+  "ano_letiv": "8º ano",
+  "aulas": [
+    "Língua Portuguesa",
+    "História",
+    "Matemática",
+    "Física",
+    "Geografia",
+    "Biologia",
+    "Filosofia",
+    "Química",
+    "Sociologia",
+    "Lígua Estrangeira"
+  ],
+  "ativ_extras": ["Atletismo", "Judô", "Xadrez"],
+  "notas": [10, 9.5, 8, 8.8, 9.3],
+  "faltas": [2, 3],
+  "Resultado": "Aprovado!"
+}
