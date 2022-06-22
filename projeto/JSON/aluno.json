@@ -1,7 +1,7 @@
 [   
     {
         "nome":"Larry Kihn",
-        "idSerie":2,
+        "idSerie":3,
         "idResponsavel":4,
         "Matricula":"1",
         "disciplinasExtra":[
@@ -9,12 +9,22 @@
             {"IdDisciplinaExtra":2}
         ],
         "faltas":[
-            {"idDisciplina":2,"Faltas":61}
+            {"idDisciplina":1,"Faltas":1},
+            {"idDisciplina":2,"Faltas":2},
+            {"idDisciplina":3,"Faltas":0},
+            {"idDisciplina":4,"Faltas":0},
+            {"idDisciplina":5,"Faltas":0},
+            {"idDisciplina":6,"Faltas":0},
+            {"idDisciplina":7,"Faltas":3},
+            {"idDisciplina":8,"Faltas":1},
+            {"idDisciplina":9,"Faltas":0},
+            {"idDisciplina":10,"Faltas":8}
         ],
         "notas":[
             {"idDisciplina":1, "nota":6},
             {"idDisciplina":2, "nota":8},
             {"idDisciplina":3, "nota":7},
+            {"idDisciplina":4, "nota":4},
             {"idDisciplina":5, "nota":9},
             {"idDisciplina":6, "nota":5},
             {"idDisciplina":7, "nota":7},

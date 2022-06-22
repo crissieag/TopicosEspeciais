@@ -1,7 +1,7 @@
 [
     {
      "disciplina": "Português",
-     "id": "1",
+     "id": 1,
      "provas":[
         {"data":"22/09/2022"},
         {"data":"20/11/2022"}
@@ -10,7 +10,7 @@
 
     {
      "disciplina": "Matemática",
-     "id": "2",
+     "id": 2,
      "provas":[
         {"data":"22/09/2022"},
         {"data":"20/11/2022"}
@@ -18,7 +18,7 @@
     },
     {
      "disciplina": "Física",
-     "id": "3",
+     "id": 3,
      "provas":[
         {"data":"22/09/2022"},
         {"data":"20/11/2022"}
@@ -26,7 +26,7 @@
     },
     {
      "disciplina": "Química",
-     "id": "4",
+     "id": 4,
      "provas":[
         {"data":"22/09/2022"},
         {"data":"20/11/2022"}
@@ -34,7 +34,7 @@
     },
     {
      "disciplina": "Artes",
-     "id": "5",
+     "id": 5,
      "provas":[
         {"data":"22/09/2022"},
         {"data":"20/11/2022"}
@@ -42,7 +42,7 @@
     },
     {
      "disciplina": "Filosofia",
-     "id": "6",
+     "id": 6,
      "provas":[
         {"data":"24/09/2022"},
         {"data":"22/11/2022"}
@@ -50,7 +50,7 @@
     },
     {
      "disciplina": "Geografia",
-     "id": "7",
+     "id": 7,
      "provas":[
         {"data":"23/09/2022"},
         {"data":"21/11/2022"}
@@ -58,7 +58,7 @@
     },
     {
      "disciplina": "História",
-     "id": "8",
+     "id": 8,
      "provas":[
         {"data":"25/09/2022"},
         {"data":"23/11/2022"}
@@ -66,7 +66,7 @@
     },
     {
      "disciplina": "Educação Física",
-     "id": "9",
+     "id": 9,
      "provas":[
         {"data":"26/09/2022"},
         {"data":"24/11/2022"}
@@ -74,7 +74,7 @@
     },
     {
      "disciplina": "Biologia",
-     "id": "10",
+     "id": 10,
      "provas":[
         {"data":"27/09/2022"},
         {"data":"25/11/2022"}
