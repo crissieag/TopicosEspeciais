@@ -1,0 +1,100 @@
+[   
+    {
+        "nome":"Larry Kihn",
+        "idSerie":3,
+        "idResponsavel":4,
+        "Matricula":"1",
+        "disciplinasExtra":[
+            {"IdDisciplinaExtra":1},
+            {"IdDisciplinaExtra":2}
+        ],
+        "faltas":[
+            {"idDisciplina":1,"Faltas":1},
+            {"idDisciplina":2,"Faltas":2},
+            {"idDisciplina":3,"Faltas":0},
+            {"idDisciplina":4,"Faltas":0},
+            {"idDisciplina":5,"Faltas":0},
+            {"idDisciplina":6,"Faltas":0},
+            {"idDisciplina":7,"Faltas":3},
+            {"idDisciplina":8,"Faltas":1},
+            {"idDisciplina":9,"Faltas":0},
+            {"idDisciplina":10,"Faltas":8}
+        ],
+        "notas":[
+            {"idDisciplina":1, "nota":6},
+            {"idDisciplina":2, "nota":8},
+            {"idDisciplina":3, "nota":7},
+            {"idDisciplina":4, "nota":4},
+            {"idDisciplina":5, "nota":9},
+            {"idDisciplina":6, "nota":5},
+            {"idDisciplina":7, "nota":7},
+            {"idDisciplina":8, "nota":8},
+            {"idDisciplina":9, "nota":8},
+            {"idDisciplina":10, "nota":7}
+        ]
+    },
+
+    {
+        "nome":"Miss Sophia Casper",
+        "idSerie":5,
+        "idResponsavel":25,
+        "Matricula":"2",
+        "disciplinasExtra":[
+            {"IdDisciplinaExtra":1},
+            {"IdDisciplinaExtra":3}
+        ],
+        "faltas":[
+            {"idDisciplina":4,"Faltas":4}
+        ],
+        "notas":[
+            {"idDisciplina":1, "nota":2},
+            {"idDisciplina":2, "nota":8},
+            {"idDisciplina":3, "nota":9},
+            {"idDisciplina":5, "nota":5},
+            {"idDisciplina":6, "nota":6},
+            {"idDisciplina":7, "nota":9},
+            {"idDisciplina":8, "nota":10},
+            {"idDisciplina":9, "nota":8},
+            {"idDisciplina":10, "nota":7}
+        ]
+    },
+
+    {
+        "nome":"Mrs. Mona Rice",
+        "idSerie":4,
+        "idResponsavel":3,
+        "Matricula":"3",
+        "disciplinasExtra":[
+            {"IdDisciplinaExtra":8},
+            {"IdDisciplinaExtra":5}
+        ],
+        "faltas":[
+            {"idDisciplina":74,"Faltas":98,"id":"3","alunoId":"3"}
+        ],
+        "notas":[
+            {"idDisciplina":1, "nota":5},
+            {"idDisciplina":2, "nota":5},
+            {"idDisciplina":3, "nota":9},
+            {"idDisciplina":5, "nota":7},
+            {"idDisciplina":6, "nota":6},
+            {"idDisciplina":7, "nota":9},
+            {"idDisciplina":8, "nota":10},
+            {"idDisciplina":9, "nota":8},
+            {"idDisciplina":10, "nota":7}
+        ]
+    },
+
+    {"nome":"Elena Pfeffer","idSerie":7,"idResponsavel":58,"Matricula":"4","disciplinasExtra":[{"IdDisciplinaExtra":38,"id":"7","alunoId":"4"}],"faltas":[{"idDisciplina":53,"Faltas":89,"id":"4","alunoId":"4"}]},
+
+    {"nome":"Samuel Torp","idSerie":51,"idResponsavel":29,"Matricula":"5","disciplinasExtra":[],"faltas":[{"idDisciplina":99,"Faltas":85,"id":"5","alunoId":"5"}]},
+
+    {"nome":"Julio Crooks","idSerie":78,"idResponsavel":84,"Matricula":"6","disciplinasExtra":[],"faltas":[{"idDisciplina":57,"Faltas":75,"id":"6","alunoId":"6"}]},
+
+    {"nome":"Janis Franey","idSerie":36,"idResponsavel":11,"Matricula":"7","disciplinasExtra":[],"faltas":[{"idDisciplina":64,"Faltas":90,"id":"7","alunoId":"7"}]},
+
+    {"nome":"Devin Jacobi","idSerie":96,"idResponsavel":90,"Matricula":"8","disciplinasExtra":[],"faltas":[{"idDisciplina":88,"Faltas":95,"id":"8","alunoId":"8"}]},
+
+    {"nome":"Malcolm Feeney","idSerie":74,"idResponsavel":52,"Matricula":"9","disciplinasExtra":[],"faltas":[{"idDisciplina":63,"Faltas":88,"id":"9","alunoId":"9"}]},
+
+    {"nome":"Amy Gleason","idSerie":51,"idResponsavel":100,"Matricula":"10","disciplinasExtra":[],"faltas":[{"idDisciplina":51,"Faltas":59,"id":"10","alunoId":"10"}]}
+]

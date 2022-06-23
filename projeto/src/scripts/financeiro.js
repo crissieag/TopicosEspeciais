@@ -60,7 +60,6 @@ function selectElement(selector){
 //Limpar o conteúdo dentro da div buscaResultados
 function limparResultados(){
     selectElement('.search-results').innerHTML = "";
-
 }
 
 
@@ -68,7 +67,6 @@ function buscaResultados(){
     const search = selectElement('.searchbar').value;
     
     limparResultados();
-
 
     if(search.length > 0){ 
         for(let i = 0; i < database.length; i++){
