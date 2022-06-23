@@ -37,6 +37,7 @@ function BuscarAluno() {
 				let h1totalfaltas = document.getElementById("totalfaltas");
 				let divdisciplinas = document.getElementById("disciplinas");
 				let divprovas = document.getElementById("provasDiscip");
+				let calendarioAulas = document.getElementById("calendarioAulas");
 
 				//inicializando as variáveis que serão mudadas de acordo com o conteúdo do aluno
 				let somaTotalNotas = 0;
@@ -119,8 +120,36 @@ function BuscarAluno() {
 				divprovas.innerHTML = innerHTMLdivprovas;
 
 				//horários de aulas
-				
+				let innerHTMLcalendarioAulas = '';
+				//verifica quantos dias de aula tem na série
+				let numeroDias = 0;
+				//verifica quanl o dia que tem mais aulas na semana
+				let numeroMaximoDisciplinas = 0;
 
+				//percorre todos os dias de aula da série
+				serieAluno.dias.forEach(dia => {
+					//preeche com o nome do dia
+					innerHTMLcalendarioAulas = innerHTMLcalendarioAulas + 
+						`<p class="titleGrid">${dia.nomeDia}</p>`;
+					//preecher o contador de número de dias
+					numeroDias = numeroDias + 1;
+					//se o dia da semana tem mais disciplinas do que o número máximo encontrado, então atualiza o número máximo
+					if (dia.disciplinas.length > numeroMaximoDisciplinas) {
+						numeroMaximoDisciplinas = dia.disciplinas.length;
+					}
+				});
+
+				//percorre os dias da semana
+				for (let i = 0; i < numeroDias; i++) {
+					//percorre o número de disciplinas
+					for (let j = 0; j < numeroMaximoDisciplinas; j++) {
+						innerHTMLcalendarioAulas = innerHTMLcalendarioAulas +
+						`<p>${disciplinas.find(d => d.id === serieAluno.dias[i].disciplinas[j].IdDisciplina).disciplina}</p>`;
+					}
+				}
+
+				//preenche a div horários de aulas
+				calendarioAulas.innerHTML = innerHTMLcalendarioAulas;
 			});
 		});
 	  });
