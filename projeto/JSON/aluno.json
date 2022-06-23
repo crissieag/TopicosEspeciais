@@ -44,7 +44,16 @@
             {"IdDisciplinaExtra":3}
         ],
         "faltas":[
-            {"idDisciplina":4,"Faltas":4}
+            {"idDisciplina":1,"Faltas":1},
+            {"idDisciplina":2,"Faltas":2},
+            {"idDisciplina":3,"Faltas":0},
+            {"idDisciplina":4,"Faltas":0},
+            {"idDisciplina":5,"Faltas":0},
+            {"idDisciplina":6,"Faltas":0},
+            {"idDisciplina":7,"Faltas":3},
+            {"idDisciplina":8,"Faltas":3},
+            {"idDisciplina":9,"Faltas":3},
+            {"idDisciplina":10,"Faltas":4}
         ],
         "notas":[
             {"idDisciplina":1, "nota":2},
@@ -69,7 +78,7 @@
             {"IdDisciplinaExtra":5}
         ],
         "faltas":[
-            {"idDisciplina":74,"Faltas":98,"id":"3","alunoId":"3"}
+            {"idDisciplina":74,"Faltas":98}
         ],
         "notas":[
             {"idDisciplina":1, "nota":5},
