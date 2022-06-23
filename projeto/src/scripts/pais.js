@@ -36,6 +36,7 @@ function BuscarAluno() {
 				let h1mediageral = document.getElementById("mediageral");
 				let h1totalfaltas = document.getElementById("totalfaltas");
 				let divdisciplinas = document.getElementById("disciplinas");
+				let divprovas = document.getElementById("provasDiscip");
 
 				//inicializando as variáveis que serão mudadas de acordo com o conteúdo do aluno
 				let somaTotalNotas = 0;
@@ -98,11 +99,31 @@ function BuscarAluno() {
 
 				//preenche a div de disciplinas
 				divdisciplinas.innerHTML = innerHTMLdivdisciplinas;
+
+				//Listar Disciplinas e localizar data de provas
+				let innerHTMLdivprovas =`
+					<p class="titleGrid">Disciplina</p>
+					<p class="titleGrid">Prova 1</p>
+					<p class="titleGrid">Prova 2</p>`;
+
+				disciplinasSerie.forEach(disciplinaSerie => {
+					innerHTMLdivprovas = innerHTMLdivprovas +
+						//busca o nome da disciplina
+						`<p>${disciplinas.find(d => d.id === disciplinaSerie).disciplina}</p>
+						<p>${disciplinas.find(d => d.id === disciplinaSerie).provas[0].data}</p>
+						<p>${disciplinas.find(d => d.id === disciplinaSerie).provas[1].data}</p>`
+					}
+				);
+
+				//preenche a div de provas
+				divprovas.innerHTML = innerHTMLdivprovas;
+
+				//horários de aulas
+				
+
 			});
 		});
 	  });
-	
-
   }
 
 ////Botão 1 Matricula
