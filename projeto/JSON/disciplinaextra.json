@@ -1,7 +1,7 @@
 [
     {
         "disciplinaExtra": "Judô",
-        "id": "1",
+        "id": 1,
         "preco":200,
         "dias":[
             {
@@ -36,7 +36,7 @@
     },
     {
         "disciplinaExtra": "Ballet",
-        "id": "2",
+        "id": 2,
         "preco":200,
         "dias":[
             {
@@ -71,7 +71,7 @@
     },
     {
         "disciplinaExtra": "Inglês",
-        "id": "3",
+        "id": 3,
         "preco":300,
         "dias":[
             {
@@ -106,7 +106,7 @@
     },
     {
         "disciplinaExtra": "Espanhol",
-        "id": "4",
+        "id": 4,
         "preco":300,
         "dias":[
             {

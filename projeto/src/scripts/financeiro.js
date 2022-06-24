@@ -1,55 +1,35 @@
-const database = [
-    {
-        alunoMatricula: "0001",
-        alunoNome: "Maria Francisca",
-        alunoDisciplinas: [
-            {
-                disciplinaNome: "Judô",
-                disciplinaValor: 100
-            },
-            {
-                disciplinaNome: "Ballet",
-                disciplinaValor: 200
-            }
-        ]
-    },
+let alunos = [];
+let disciplinasExtras = [];
+let series = [];
 
-    {
-        alunoMatricula: "0002",
-        alunoNome: "João Victor",
-        alunoDisciplinas: [
-            {
-                disciplinaNome: "Ballet",
-                disciplinaValor: 200
-            }
-        ]
+CarregarDados()
 
-    },
-
-    {
-        alunoMatricula: "0003",
-        alunoNome: "Mateus Garrido",
-        alunoDisciplinas: [
-            {
-                disciplinaNome: "Judô",
-                disciplinaValor: 100
-            },
-            {
-                disciplinaNome: "Inglês",
-                disciplinaValor: 300
-            },
-            {
-                disciplinaNome: "Espanhol",
-                disciplinaValor: 300
-            }
-        ]
-        
-    },
+function CarregarDados() {
     
-];
+	fetch("./JSON/aluno.json")
+    .then((resAluno1) => {
+        return resAluno1.json();
+    })
+    .then((resAluno2) => {
+        alunos = resAluno2;
+      
+        fetch("./JSON/disciplinaextra.json")
+        .then((resDisciplinaExtra1) => {
+            return resDisciplinaExtra1.json();
+        })
+        .then((resDisciplinaExtra2) => {
+            disciplinasExtras = resDisciplinaExtra2;
 
-
-
+            fetch("./JSON/serie.json")
+            .then((resSerie1) => {
+                return resSerie1.json();
+            })
+            .then((resSerie2) => {
+                series = resSerie2;
+            });
+        });
+    });
+}
 
 // Seleciona elemento 
 function selectElement(selector){
@@ -69,31 +49,31 @@ function buscaResultados(){
     limparResultados();
 
     if(search.length > 0){ 
-        for(let i = 0; i < database.length; i++){
+        for(let i = 0; i < alunos.length; i++){
             if(
-                database[i].alunoMatricula.toLocaleLowerCase().includes(search.toLocaleLowerCase()) ||
-                database[i].alunoNome.toLocaleLowerCase().includes(search.toLocaleLowerCase())
+                alunos[i].Matricula.toLocaleLowerCase().includes(search.toLocaleLowerCase()) ||
+                alunos[i].nome.toLocaleLowerCase().includes(search.toLocaleLowerCase())
             ){
                 selectElement('.search-results').innerHTML +=  `
                 
                 <div class="containerGrid3">
                     <div class="resultadoNota">
                         <p>Matrícula:</p>
-                        <h1><span class="search-item">${database[i].alunoMatricula}</span></h1>
+                        <h1><span class="search-item">${alunos[i].Matricula}</span></h1>
                     </div>
                 	
 
                     <div class="containerGrid2">
                         <div class="resultadoNota">
                             <p>Nome:</p>
-                            <h1><span class="search-item">${database[i].alunoNome}</span></h1>
+                            <h1><span class="search-item">${alunos[i].nome}</span></h1>
                         </div>
                     </div>
 
                     <div class="containerGrid2">
                         <div class="resultadoNota">
                             <p>Valor total:</p>
-                            <h1><span class="search-item">R$ ${somarValores(database[i].alunoDisciplinas)}</span></h1>
+                            <h1><span class="search-item">R$ ${somarValores(alunos[i])}</span></h1>
                         </div>
                     </div>
                 
@@ -105,7 +85,7 @@ function buscaResultados(){
                             <div class="containerGrid2">
                                 <p class="titleGrid">Atividade Extra</p>
                                 <p class="titleGrid">Valor</p>
-                                ${montaDisciplina(database[i].alunoDisciplinas)}
+                                ${montaDisciplina(alunos[i])}
                             </div>
                         </div>
                     </div>
@@ -115,25 +95,27 @@ function buscaResultados(){
     }
 }
 
-function somarValores(disciplinas){
+function somarValores(aluno){
     let valorTotal = 0;
-    for (let index = 0; index < disciplinas.length; index++) {
-        valorTotal = valorTotal + disciplinas[index].disciplinaValor;
-        
+
+    for (let index = 0; index < aluno.disciplinasExtra.length; index++) {
+        valorTotal = valorTotal + disciplinasExtras.find(de => de.id === aluno.disciplinasExtra[index].IdDisciplinaExtra).preco;
     }
 
+    valorTotal = valorTotal + series.find(s => s.serie === aluno.idSerie).preco;
+
     return valorTotal;
-
-
 }
 
-function montaDisciplina(disciplinas) {
-    let htmlDisciplinas = '';
-    for (let index = 0; index < disciplinas.length; index++) {
-        const disciplina = disciplinas[index];
+function montaDisciplina(aluno) {
+    const serie = series.find(s => s.serie === aluno.idSerie);
+    let htmlDisciplinas = `<p>${serie?.serie}ª Série</p><p>R$ ${serie.preco}</p>`;
+
+    for (let index = 0; index < aluno.disciplinasExtra.length; index++) {
+        const disciplinaExtra = disciplinasExtras.find(de => de.id === aluno.disciplinasExtra[index].IdDisciplinaExtra);
         htmlDisciplinas = htmlDisciplinas + 
-        `<p>${disciplina.disciplinaNome}</p>
-        <p>R$ ${disciplina.disciplinaValor}</p>`;
+        `<p>${disciplinaExtra.disciplinaExtra}</p>
+        <p>R$ ${disciplinaExtra.preco}</p>`;
     }
     return htmlDisciplinas;
 }

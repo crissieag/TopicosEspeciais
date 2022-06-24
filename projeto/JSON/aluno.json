@@ -106,7 +106,7 @@
 
     {
         "nome":"Elena Pfeffer",
-        "idSerie":7,
+        "idSerie":2,
         "idResponsavel":4,
         "Matricula":"4",
         "disciplinasExtra":[
@@ -138,15 +138,194 @@
         ]
     },
 
-    {"nome":"Samuel Torp","idSerie":51,"idResponsavel":29,"Matricula":"5","disciplinasExtra":[],"faltas":[{"idDisciplina":99,"Faltas":85,"id":"5","alunoId":"5"}]},
+    {
+        "nome":"Samuel Torp",
+        "idSerie":5,
+        "idResponsavel":5,
+        "Matricula":"5",
+        "disciplinasExtra":[],
+        "faltas":[
+            {"idDisciplina":1,"Faltas":0},
+            {"idDisciplina":2,"Faltas":4},
+            {"idDisciplina":3,"Faltas":0},
+            {"idDisciplina":4,"Faltas":2},
+            {"idDisciplina":5,"Faltas":0},
+            {"idDisciplina":6,"Faltas":0},
+            {"idDisciplina":7,"Faltas":1},
+            {"idDisciplina":8,"Faltas":3},
+            {"idDisciplina":9,"Faltas":3},
+            {"idDisciplina":10,"Faltas":4}
+        ],
+        "notas":[
+            {"idDisciplina":1, "nota":5},
+            {"idDisciplina":2, "nota":6},
+            {"idDisciplina":3, "nota":9},
+            {"idDisciplina":4, "nota":6},
+            {"idDisciplina":5, "nota":7},
+            {"idDisciplina":6, "nota":7},
+            {"idDisciplina":7, "nota":9},
+            {"idDisciplina":8, "nota":8},
+            {"idDisciplina":9, "nota":8},
+            {"idDisciplina":10, "nota":7}
+        ]
+    },
 
-    {"nome":"Julio Crooks","idSerie":78,"idResponsavel":84,"Matricula":"6","disciplinasExtra":[],"faltas":[{"idDisciplina":57,"Faltas":75,"id":"6","alunoId":"6"}]},
+    {
+        "nome":"Julio Crooks",
+        "idSerie":1,
+        "idResponsavel":84,
+        "Matricula":"6",
+        "disciplinasExtra":[],
+        "faltas":[
+            {"idDisciplina":1,"Faltas":0},
+            {"idDisciplina":2,"Faltas":4},
+            {"idDisciplina":3,"Faltas":0},
+            {"idDisciplina":4,"Faltas":2},
+            {"idDisciplina":5,"Faltas":0},
+            {"idDisciplina":6,"Faltas":0},
+            {"idDisciplina":7,"Faltas":1},
+            {"idDisciplina":8,"Faltas":3},
+            {"idDisciplina":9,"Faltas":3},
+            {"idDisciplina":10,"Faltas":4}
+        ],
+        "notas":[
+            {"idDisciplina":1, "nota":5},
+            {"idDisciplina":2, "nota":6},
+            {"idDisciplina":3, "nota":9},
+            {"idDisciplina":4, "nota":6},
+            {"idDisciplina":5, "nota":7},
+            {"idDisciplina":6, "nota":5},
+            {"idDisciplina":7, "nota":4},
+            {"idDisciplina":8, "nota":3},
+            {"idDisciplina":9, "nota":8},
+            {"idDisciplina":10, "nota":7}
+        ]
+    },
 
-    {"nome":"Janis Franey","idSerie":36,"idResponsavel":11,"Matricula":"7","disciplinasExtra":[],"faltas":[{"idDisciplina":64,"Faltas":90,"id":"7","alunoId":"7"}]},
+    {
+        "nome":"Janis Franey",
+        "idSerie":3,
+        "idResponsavel":7,
+        "Matricula":"7",
+        "disciplinasExtra":[],
+        "faltas":[
+            {"idDisciplina":1,"Faltas":0},
+            {"idDisciplina":2,"Faltas":4},
+            {"idDisciplina":3,"Faltas":0},
+            {"idDisciplina":4,"Faltas":2},
+            {"idDisciplina":5,"Faltas":0},
+            {"idDisciplina":6,"Faltas":0},
+            {"idDisciplina":7,"Faltas":1},
+            {"idDisciplina":8,"Faltas":3},
+            {"idDisciplina":9,"Faltas":3},
+            {"idDisciplina":10,"Faltas":4}
+        ],
+        "notas":[
+            {"idDisciplina":1, "nota":5},
+            {"idDisciplina":2, "nota":6},
+            {"idDisciplina":3, "nota":9},
+            {"idDisciplina":4, "nota":6},
+            {"idDisciplina":5, "nota":7},
+            {"idDisciplina":6, "nota":5},
+            {"idDisciplina":7, "nota":4},
+            {"idDisciplina":8, "nota":3},
+            {"idDisciplina":9, "nota":8},
+            {"idDisciplina":10, "nota":7}
+        ]
+    },
 
-    {"nome":"Devin Jacobi","idSerie":96,"idResponsavel":90,"Matricula":"8","disciplinasExtra":[],"faltas":[{"idDisciplina":88,"Faltas":95,"id":"8","alunoId":"8"}]},
+    {"nome":"Devin Jacobi",
+        "idSerie":4,
+        "idResponsavel":90,
+        "Matricula":"8",
+        "disciplinasExtra":[],
+        "faltas":[
+            {"idDisciplina":1,"Faltas":0},
+            {"idDisciplina":2,"Faltas":4},
+            {"idDisciplina":3,"Faltas":0},
+            {"idDisciplina":4,"Faltas":2},
+            {"idDisciplina":5,"Faltas":2},
+            {"idDisciplina":6,"Faltas":3},
+            {"idDisciplina":7,"Faltas":1},
+            {"idDisciplina":8,"Faltas":3},
+            {"idDisciplina":9,"Faltas":3},
+            {"idDisciplina":10,"Faltas":4}
+        ],
+        "notas":[
+            {"idDisciplina":1, "nota":5},
+            {"idDisciplina":2, "nota":6},
+            {"idDisciplina":3, "nota":9},
+            {"idDisciplina":4, "nota":6},
+            {"idDisciplina":5, "nota":7},
+            {"idDisciplina":6, "nota":5},
+            {"idDisciplina":7, "nota":4},
+            {"idDisciplina":8, "nota":3},
+            {"idDisciplina":9, "nota":8},
+            {"idDisciplina":10, "nota":7}
+        ]
+    },
 
-    {"nome":"Malcolm Feeney","idSerie":74,"idResponsavel":52,"Matricula":"9","disciplinasExtra":[],"faltas":[{"idDisciplina":63,"Faltas":88,"id":"9","alunoId":"9"}]},
+    {
+        "nome":"Malcolm Feeney",
+        "idSerie":4,
+        "idResponsavel":9,
+        "Matricula":"9",
+        "disciplinasExtra":[],
+        "faltas":[
+            {"idDisciplina":1,"Faltas":0},
+            {"idDisciplina":2,"Faltas":4},
+            {"idDisciplina":3,"Faltas":0},
+            {"idDisciplina":4,"Faltas":2},
+            {"idDisciplina":5,"Faltas":0},
+            {"idDisciplina":6,"Faltas":0},
+            {"idDisciplina":7,"Faltas":1},
+            {"idDisciplina":8,"Faltas":3},
+            {"idDisciplina":9,"Faltas":3},
+            {"idDisciplina":10,"Faltas":4}
+        ],
+        "notas":[
+            {"idDisciplina":1, "nota":5},
+            {"idDisciplina":2, "nota":6},
+            {"idDisciplina":3, "nota":9},
+            {"idDisciplina":4, "nota":6},
+            {"idDisciplina":5, "nota":7},
+            {"idDisciplina":6, "nota":5},
+            {"idDisciplina":7, "nota":4},
+            {"idDisciplina":8, "nota":3},
+            {"idDisciplina":9, "nota":8},
+            {"idDisciplina":10, "nota":7}
+        ]
+    },
 
-    {"nome":"Amy Gleason","idSerie":51,"idResponsavel":100,"Matricula":"10","disciplinasExtra":[],"faltas":[{"idDisciplina":51,"Faltas":59,"id":"10","alunoId":"10"}]}
+    {
+        "nome":"Amy Gleason",
+        "idSerie":1,
+        "idResponsavel":10,
+        "Matricula":"10",
+        "disciplinasExtra":[],
+        "faltas":[
+            {"idDisciplina":1,"Faltas":0},
+            {"idDisciplina":2,"Faltas":4},
+            {"idDisciplina":3,"Faltas":1},
+            {"idDisciplina":4,"Faltas":2},
+            {"idDisciplina":5,"Faltas":0},
+            {"idDisciplina":6,"Faltas":0},
+            {"idDisciplina":7,"Faltas":1},
+            {"idDisciplina":8,"Faltas":0},
+            {"idDisciplina":9,"Faltas":2},
+            {"idDisciplina":10,"Faltas":5}
+        ],
+        "notas":[
+            {"idDisciplina":1, "nota":5},
+            {"idDisciplina":2, "nota":6},
+            {"idDisciplina":3, "nota":4},
+            {"idDisciplina":4, "nota":6},
+            {"idDisciplina":5, "nota":7},
+            {"idDisciplina":6, "nota":5},
+            {"idDisciplina":7, "nota":4},
+            {"idDisciplina":8, "nota":3},
+            {"idDisciplina":9, "nota":8},
+            {"idDisciplina":10, "nota":6}
+        ]
+    }
 ]
