@@ -89,28 +89,68 @@ function BuscarAluno() {
 					<p class="titleGrid">Notas</p>
 					<p class="titleGrid">Faltas</p>`;
 
-							//percorre todas as disciplinas encontradas para a série localizada
+							//preenche a div de disciplinas
+							divdisciplinas.innerHTML = innerHTMLdivdisciplinas;
+
+							//Listar Disciplinas e localizar data de provas
+							let innerHTMLdivprovas = `
+					<p class="titleGrid">Disciplina</p>
+					<p class="titleGrid">Prova 1</p>
+					<p class="titleGrid">Prova 2</p>`;
+
 							disciplinasSerie.forEach((disciplinaSerie) => {
-								innerHTMLdivdisciplinas =
-									innerHTMLdivdisciplinas +
+								innerHTMLdivprovas =
+									innerHTMLdivprovas +
 									//busca o nome da disciplina
 									`<p>${
 										disciplinas.find((d) => d.id === disciplinaSerie).disciplina
-									}</p>` +
-									//busca a nota que o aluno tirou para a disciplina
-									`<p>${
-										aluno.notas.find((n) => n.idDisciplina === disciplinaSerie)
-											.nota
-									}</p>` +
-									//busca as faltas que o aluno teve paara a disciplina
-									`<p>${
-										aluno.faltas.find((f) => f.idDisciplina === disciplinaSerie)
-											.Faltas
-									}</p>`;
+									}</p>
+						<p>${disciplinas.find((d) => d.id === disciplinaSerie).provas[0].data}</p>
+						<p>${disciplinas.find((d) => d.id === disciplinaSerie).provas[1].data}</p>`;
 							});
 
-							//preenche a div de disciplinas
-							divdisciplinas.innerHTML = innerHTMLdivdisciplinas;
+							//preenche a div de provas
+							divprovas.innerHTML = innerHTMLdivprovas;
+
+							//horários de aulas
+							let innerHTMLcalendarioAulas = "";
+							//verifica quantos dias de aula tem na série
+							let numeroDias = 0;
+							//verifica quanl o dia que tem mais aulas na semana
+							let numeroMaximoDisciplinas = 0;
+
+							//percorre todos os dias de aula da série
+							serieAluno.dias.forEach((dia) => {
+								//preeche com o nome do dia
+								innerHTMLcalendarioAulas =
+									innerHTMLcalendarioAulas +
+									`<p class="titleGrid">${dia.nomeDia}</p>`;
+								//preecher o contador de número de dias
+								numeroDias = numeroDias + 1;
+								//se o dia da semana tem mais disciplinas do que o número máximo encontrado, então atualiza o número máximo
+								if (dia.disciplinas.length > numeroMaximoDisciplinas) {
+									numeroMaximoDisciplinas = dia.disciplinas.length;
+								}
+							});
+
+							//percorre os dias da semana
+							for (let i = 0; i < numeroDias; i++) {
+								//percorre o número de disciplinas
+								for (let j = 0; j < numeroMaximoDisciplinas; j++) {
+									innerHTMLcalendarioAulas =
+										innerHTMLcalendarioAulas +
+										`<p>${
+											disciplinas.find(
+												(d) =>
+													d.id ===
+													serieAluno.dias[i].disciplinas[j].IdDisciplina
+											).disciplina
+										}</p>`;
+								}
+							}
+
+							//preenche a div horários de aulas
+							calendarioAulas.innerHTML = innerHTMLcalendarioAulas;
 						});
 				});
 		});
