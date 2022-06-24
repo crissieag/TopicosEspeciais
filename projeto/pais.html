@@ -1,445 +1,451 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="assets/images/favicon-32x32.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="16x16"
-			href="assets/images/favicon-16x16.png"
-		/>
-		<link rel="stylesheet" href="src/styles/global.css"/>
-		<link rel="stylesheet" href="src/styles/pais.css"/>
-		<link rel="stylesheet" href="src/styles/menuLateral.css"/>
-		
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,500;0,600;1,100&display=swap"
-			rel="stylesheet"
-		/>
-		<script
-			src="https://kit.fontawesome.com/278520f492.js"
-			crossorigin="anonymous"
-		></script>
-		/>
 
-		<title>Evolvere | Área do aluno</title>
-	</head>
-	<body>
-		<aside id="menuLateral">
-			<nav>
-				<div>
-					<img
-						class="logoEscola"
-						src="./assets/images/logoEvolvere.png"
-						alt="Logo Evolvere"
-					/>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png" />
+	<link rel="stylesheet" href="src/styles/global.css" />
+	<link rel="stylesheet" href="src/styles/pais.css" />
+	<link rel="stylesheet" href="src/styles/menuLateral.css" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,500;0,600;1,100&display=swap"
+		rel="stylesheet" />
+	<script src="https://kit.fontawesome.com/278520f492.js" crossorigin="anonymous"></script>
+	/>
+
+	<title>Evolvere | Área do aluno</title>
+</head>
+
+<body>
+	<aside id="menuLateral">
+		<nav>
+			<div>
+				<img class="logoEscola" src="./assets/images/logoEvolvere.png" alt="Logo Evolvere" />
+			</div>
+			<ul id="navUl">
+				<li class="expandeLi">
+					<a href="#consultas">Consultas</a>
+				</li>
+				<div class="subnav-content">
+					<a href="#notasefaltas">Notas e Faltas</a>
+					<a href="#provas">Agenda de Provas</a>
+					<a href="#aulas">Aulas</a>
+					<a href="#atividadesExtra">Atividades Extra</a>
+
 				</div>
-				<ul id="navUl">
-					<li class="expandeLi">
-						<a href="#consultas">Consultas</a>
-					</li>
-					<div class="subnav-content">
-                        <a href="#notasefaltas">Notas e Faltas</a>
-						<a href="#provas">Agenda de Provas</a>
-						<a href="#aulas">Aulas</a>
-						<a href="#atividadesExtra">Atividades Extra</a>
-					
+				<li class="expandeLi">
+					<a href="#conteudo">Conteúdos</a>
+				</li>
+				<div class="subnav-content">
+					<a href="#disciplinai">Disciplina I</a>
+					<a href="#disciplinaii">Disciplina II</a>
+					<a href="#disciplinaiii">Disciplina III</a>
+					<a href="#disciplinaiv">Disciplina IV</a>
+				</div>
+				<li>
+					<a href="#forum">Fórum</a>
+				</li>
+				<li>
+					<a href="#matricula">Matrícula</a>
+				</li>
+				<li>
+					<a href="#financeiro">Financeiro</a>
+				</li>
+			</ul>
+			<button id="logoutBtn">
+				<i class="fa-solid fa-arrow-right-from-bracket" alt="botão para sair da área logada"> </i>
+			</button>
+			<div class="divEspaco">&nbsp;</div>
+			<button id="navIconOpen">
+				<i class="fa-solid fa-angle-right" alt="botão para expandir menu"></i>
+			</button>
+			<button id="navIconClose">
+				<i class="fa-solid fa-angle-left" alt="botão para fechar menu"></i>
+			</button>
+		</nav>
+	</aside>
+	<main id="main">
+		<section>
+			<h3 id="consultas">Consultas</h3>
+
+			<!-- <div class="flexCard"> -->
+			<div class="cardsGlass cardFull">
+				<h4 id="notasefaltas">Notas e Faltas:</h4>
+				<p class="descriptionOpt">
+				<div class="containerGrid3">
+
+					<div>
+						<p>Resultado:</p>
+						<h1 id="resultado"></h1>
 					</div>
-					<li class="expandeLi">
-						<a href="#conteudo">Conteúdos</a>
-					</li>
-					<div class="subnav-content">
-						<a href="#disciplinai">Disciplina I</a>
-						<a href="#disciplinaii">Disciplina II</a>
-						<a href="#disciplinaiii">Disciplina III</a>
-						<a href="#disciplinaiv">Disciplina IV</a>
+
+					<div>
+						<p>Média Geral de Notas:</p>
+						<h1 id="mediageral" class="h1-centralizado"></h1>
 					</div>
+
+					<div>
+						<p>Total de Faltas:</p>
+						<h1 id="totalfaltas" class="h1-centralizado"></h1>
+					</div>
+				</div>
+				</p>
+
+				<p class="descriptionOpt">Resultado por Disciplinas:</p>
+				<div id="disciplinas" class="containerGrid3">
+				</div>
+			</div>
+
+			<!-- </div> -->
+
+
+			<div class="flexCard">
+				<div class="cardsGlass">
+					<h4 id="provas">Agenda de provas</h4>
+					<p class="descriptionOpt">
+						Suas provas estão listadas abaixo, preste atenção as datas!
+					</p>
+					<div class="containerGrid2">
+						<p class="titleGrid">Disciplina</p>
+						<p class="titleGrid">Data</p>
+						<p>Disciplina I</p>
+						<p>27/04/2022</p>
+						<p>Disciplina II</p>
+						<p>28/04/2022</p>
+						<p>Disciplina III</p>
+						<p>29/04/2022</p>
+						<p>Disciplina IV</p>
+						<p>02/05/2022</p>
+					</div>
+				</div>
+				<div class="cardsGlass">
+					<h4 id="atividadesExtra">Atividades Extra</h4>
+					<p class="descriptionOpt">
+						Essas são as atividades extra que XXXXXX está matriculado(a) :)
+					</p>
+					<div class="containerGrid2">
+						<p class="titleGrid">Atividade</p>
+						<p class="titleGrid">Dia da Semana</p>
+						<p>Inglês</p>
+						<p>Segunda e Quarta | 17:30 - 18:30</p>
+						<p>Ballet</p>
+						<p>Terça e Quinta | 19:00 - 20:00</p>
+						<p>Teatro</p>
+						<p>Sexta | 17:00 - 18:00</p>
+					</div>
+				</div>
+			</div>
+			<div class="cardsGlass cardFull">
+				<h4 id="aulas">Horário de aulas</h4>
+				<p class="descriptionOpt">
+					Sua grade horária está abaixo! Qualquer dúvida, você pode entrar em
+					contanto com seu professor através do <a href="#forum">fórum</a>!
+				</p>
+				<div class="containerGrid5">
+					<p class="titleGrid">Segunda</p>
+					<p class="titleGrid">Terça</p>
+					<p class="titleGrid">Quarta</p>
+					<p class="titleGrid">Quinta</p>
+					<p class="titleGrid">Sexta</p>
+					<p>Disciplina I</p>
+					<p>Disciplina II</p>
+					<p>Disciplina III</p>
+					<p>Disciplina IV</p>
+					<p>Disciplina I</p>
+					<p>Disciplina I</p>
+					<p>Disciplina II</p>
+					<p>Disciplina III</p>
+					<p>Disciplina IV</p>
+					<p>Disciplina I</p>
+					<p>Disciplina II</p>
+					<p>Disciplina III</p>
+					<p>Disciplina IV</p>
+					<p>Disciplina I</p>
+					<p>Disciplina II</p>
+					<p>Disciplina II</p>
+					<p>Disciplina III</p>
+					<p>Disciplina IV</p>
+					<p>Disciplina I</p>
+					<p>Disciplina II</p>
+				</div>
+			</div>
+		</section>
+		<section class="sectionConteudo">
+			<h3 id="conteudo">Conteúdos</h3>
+			<div class="cardsGlass cardFull">
+				<h4>Acesse os conteúdos das disciplinas cursadas</h4>
+				<p class="descriptionOpt">
+					Aqui você pode acessar todos os conteúdos disponibilizados pelos
+					professores. Em caso de dúvida, você pode em contato com o professor
+					através do <a href="#forum">fórum</a>. Ele tem até 48hrs para te
+					responder.
+				</p>
+				<h5 class="disciplinaTitulo" id="disciplinai">Disciplina I</h5>
+				<ul>
 					<li>
-						<a href="#forum">Fórum</a>
+						<a href="#" class="infodisciplina">• Aula 01: Conteúdo </a>
 					</li>
 					<li>
-						<a href="#matricula">Matrícula</a>
+						<a href="#" class="infodisciplina">• Aula 02: Conteúdo </a>
 					</li>
 					<li>
-						<a href="#financeiro">Financeiro</a>
+						<a href="#" class="infodisciplina">• Aula 03: Conteúdo </a>
 					</li>
 				</ul>
-				<button id="logoutBtn">
-					<i class="fa-solid fa-arrow-right-from-bracket" alt="botão para sair da área logada"> </i>
-					</button>
-				<div class="divEspaco">&nbsp;</div>
-				<button id="navIconOpen">
-					<i class="fa-solid fa-angle-right" alt="botão para expandir menu"></i>
-				</button>
-				<button id="navIconClose">
-					<i class="fa-solid fa-angle-left" alt="botão para fechar menu"></i>
-				</button>
-			</nav>
-		</aside>
-		<main id="main">
-			<section>
-				<h3 id="consultas">Consultas</h3>
-
-                <!-- <div class="flexCard"> -->
-                    <div class="cardsGlass cardFull">
-						<h4 id="notasefaltas">Notas e Faltas:</h4>
-						<p class="descriptionOpt">
-                            <div class="containerGrid3">
-
-								<div>
-                                    <p>Resultado:</p>
-                                    <h1 id="resultado"></h1>
-                                </div>
-								
-                                <div>
-                                    <p>Média Geral de Notas:</p>
-                                    <h1 id="mediageral" class="h1-centralizado"></h1>
-								</div>
-
-                                <div>
-									<p>Total de Faltas:</p>
-									<h1 id="totalfaltas" class="h1-centralizado"></h1>
-                                </div>
-                            </div>
-						</p>
-
-						<p class="descriptionOpt">Resultado por Disciplinas:</p>
-						<div id="disciplinas" class="containerGrid3">
-						</div>
-					</div>
-
-                <!-- </div> -->
-
-
-				<div class="flexCard">
-					<div class="cardsGlass">
-						<h4 id="provas">Agenda de provas</h4>
-						<p class="descriptionOpt">
-							Suas provas estão listadas abaixo, preste atenção as datas!
-						</p>
-						<div class="containerGrid2">
-							<p class="titleGrid">Disciplina</p>
-							<p class="titleGrid">Data</p>
-							<p>Disciplina I</p>
-							<p>27/04/2022</p>
-							<p>Disciplina II</p>
-							<p>28/04/2022</p>
-							<p>Disciplina III</p>
-							<p>29/04/2022</p>
-							<p>Disciplina IV</p>
-							<p>02/05/2022</p>
-						</div>
-					</div>
-					<div class="cardsGlass">
-						<h4 id="atividadesExtra">Atividades Extra</h4>
-						<p class="descriptionOpt">
-							Essas são as atividades extra que XXXXXX está matriculado(a) :)
-						</p>
-						<div class="containerGrid2">
-							<p class="titleGrid">Atividade</p>
-							<p class="titleGrid">Dia da Semana</p>
-							<p>Inglês</p>
-							<p>Segunda e Quarta | 17:30 - 18:30</p>
-							<p>Ballet</p>
-							<p>Terça e Quinta | 19:00 - 20:00</p>
-							<p>Teatro</p>
-							<p>Sexta | 17:00 - 18:00</p>
-						</div>
-					</div>
-				</div>
-				<div class="cardsGlass cardFull">
-					<h4 id="aulas">Horário de aulas</h4>
-					<p class="descriptionOpt">
-						Sua grade horária está abaixo! Qualquer dúvida, você pode entrar em
-						contanto com seu professor através do <a href="#forum">fórum</a>!
-					</p>
-					<div class="containerGrid5">
-						<p class="titleGrid">Segunda</p>
-						<p class="titleGrid">Terça</p>
-						<p class="titleGrid">Quarta</p>
-						<p class="titleGrid">Quinta</p>
-						<p class="titleGrid">Sexta</p>
-						<p>Disciplina I</p>
-						<p>Disciplina II</p>
-						<p>Disciplina III</p>
-						<p>Disciplina IV</p>
-						<p>Disciplina I</p>
-						<p>Disciplina I</p>
-						<p>Disciplina II</p>
-						<p>Disciplina III</p>
-						<p>Disciplina IV</p>
-						<p>Disciplina I</p>
-						<p>Disciplina II</p>
-						<p>Disciplina III</p>
-						<p>Disciplina IV</p>
-						<p>Disciplina I</p>
-						<p>Disciplina II</p>
-						<p>Disciplina II</p>
-						<p>Disciplina III</p>
-						<p>Disciplina IV</p>
-						<p>Disciplina I</p>
-						<p>Disciplina II</p>
-					</div>
-				</div>
-			</section>
-			<section class="sectionConteudo">
-				<h3 id="conteudo">Conteúdos</h3>
-				<div class="cardsGlass cardFull">
-					<h4>Acesse os conteúdos das disciplinas cursadas</h4>
-					<p class="descriptionOpt">
-						Aqui você pode acessar todos os conteúdos disponibilizados pelos
-						professores. Em caso de dúvida, você pode em contato com o professor
-						através do <a href="#forum">fórum</a>. Ele tem até 48hrs para te
-						responder.
-					</p>
-					<h5 class="disciplinaTitulo" id="disciplinai">Disciplina I</h5>
-					<ul>
-						<li>
-							<a href="#" class="infodisciplina">• Aula 01: Conteúdo </a>
-						</li>
-						<li>
-							<a href="#" class="infodisciplina">• Aula 02: Conteúdo </a>
-						</li>
-						<li>
-							<a href="#" class="infodisciplina">• Aula 03: Conteúdo </a>
-						</li>
-					</ul>
-					<h5 class="disciplinaTitulo" id="disciplinaii">Disciplina II</h5>
-					<ul>
-						<li>
-							<a href="#" class="infodisciplina">• Aula 01: Conteúdo </a>
-						</li>
-						<li>
-							<a href="#" class="infodisciplina">• Aula 02: Conteúdo </a>
-						</li>
-						<li>
-							<a href="#" class="infodisciplina">• Aula 03: Conteúdo </a>
-						</li>
-					</ul>
-					<h5 class="disciplinaTitulo" id="disciplinaiii">Disciplina III</h5>
-					<ul>
-						<li>
-							<a href="#" class="infodisciplina">• Aula 01: Conteúdo </a>
-						</li>
-						<li>
-							<a href="#" class="infodisciplina">• Aula 02: Conteúdo </a>
-						</li>
-						<li>
-							<a href="#" class="infodisciplina">• Aula 03: Conteúdo </a>
-						</li>
-					</ul>
-					<h5 class="disciplinaTitulo" id="disciplinaiv">Disciplina IV</h5>
-					<ul>
-						<li>
-							<a href="#" class="infodisciplina">• Aula 01: Conteúdo </a>
-						</li>
-						<li>
-							<a href="#" class="infodisciplina">• Aula 02: Conteúdo </a>
-						</li>
-						<li>
-							<a href="#" class="infodisciplina">• Aula 03: Conteúdo </a>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<section class="sectionForum">
-				<h3 id="forum">Fórum</h3>
-				<div class="cardsGlass cardFull">
-					<h4>Comunique-se com professores e a secretaria</h4>
-					<p class="descriptionOpt">
-						Caro pai ou responsável, aproveite o fórum para interagir com os professores e a secretaria. Não fique com dúvidas!
-					</p>
-					<div class="forumSection">
-						<h5 class="disciplinaTitulo">Disciplina I</h5>
-						<ul>
-							<li>
-								<a href="#" class="infodisciplina"
-									>• Aula 05: Ajuda no exercício 04
-									<span
-										><i class="fa-regular fa-comment"></i> 2 comentários</span
-									>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="infodisciplina"
-									>• Aula 08: Não consigo acessar o material
-									<span
-										><i class="fa-regular fa-comment"></i> 1 comentário</span
-									>
-								</a>
-							</li>
-						</ul>
-						<h5 class="disciplinaTitulo">Disciplina II</h5>
-						<p class="infodisciplina">• Não há postagens no momento</p>
-						<h5 class="disciplinaTitulo">Disciplina III</h5>
-						<p class="infodisciplina">• Não há postagens no momento</p>
-						<h5 class="disciplinaTitulo">Disciplina IV</h5>
-						<ul>
-							<li>
-								<a href="#" class="infodisciplina"
-									>• Aula 02: Não consigo encontrar o livro recomendado
-									<span
-										><i class="fa-regular fa-comment"></i> Sem comentários</span
-									>
-								</a>
-							</li>
-						</ul>
-
-                        <h5 class="disciplinaTitulo">Secretaria</h5>
-                        <ul>
-							<li>
-								<a href="#" class="infodisciplina"
-									>• Emissão do comprovante de matrícula
-									<span
-										><i class="fa-regular fa-comment"></i> 1 comentário</span
-									>
-								</a>
-							</li>
-                        </ul>
-
-						<button type="button">Enviar nova pergunta</button>
-					</div>
-				</div>
-			</section>
-			<section class="sectionMatricula">
-				<h3 id="matricula">Matrícula</h3>
-				<div class="cardsGlass cardFull">
-					<h4>Matrícula - Atividades Extra</h4>
-					<p class="descriptionOpt">
-						Para maior facilidade, você pode realizar sua matrícula nas
-						atividades extra através do portal. Você deve escolher a atividade,
-						o dia da semana e horário disponível. Após confirmação, sua
-						solicitação será enviada para aprovação do professor.
-					</p>
-					<fieldset>
-						<form action="">
-							<label for="atividade">Selecione a atividade desejada</label>
-							<select name="atividade" id="atividade">
-								<option value="0" disabled selected>Opções</option>
-								<option value="1">Ballet</option>
-								<option value="2">Teatro</option>
-								<option value="3">Judo</option>
-								<option value="4">Capoeira</option>
-								<option value="5">Inglês</option>
-								<option value="6">Espanhol</option>
-							</select>
-							<label for="diaSemana">Escolha a data desejada</label>
-							<select name="diaSemana" id="diaSemana">
-								<option value="0" disabled selected>Dias</option>
-								<option value="1">Segunda</option>
-								<option value="2">Terça</option>
-								<option value="3">Quarta</option>
-								<option value="4">Quinta</option>
-								<option value="5">Sexta</option>
-							</select>
-							<label for="horarioAtividade">Selecione o horário</label>
-							<select name="horarioAtividade" id="horarioAtividade">
-								<option value="0" disabled selected>Horários</option>
-								<option value="1">13:00 - 14:00</option>
-								<option value="2">15:00 - 16:00</option>
-								<option value="3">20:00 - 21:00</option>
-							</select>
-							<button
-								type="button"
-								id="enviaMatricula"
-								onclick="feedbackMatricula()"
-							>
-								Enviar
-							</button>
-							<span class="errorMsg"
-								>* Você deve selecionar as opções de matrícula antes de submeter
-								a solicitação!</span
-							>
-						</form>
-					</fieldset>
-				</div>
-			</section>
-
-			<section class="sectionFinanceiro">
-				<h3 id="financeiro">Financeiro</h3>
-				<div class="cardsGlass cardFull">
-					<h4>Financeiro</h4>
-					<p class="descriptionOpt">
-						Selecione o mês desejado para receber sua fatura.
-                        Você pode enviá-la para seu e-mail e/ou celular cadastrado na secretaria.
-					</p>
-					<fieldset>
-						<form action="">
-
-							<label for="mensalidade">Escolha o mês desejado:</label>
-							<select name="mensalidade" id="mensalidade">
-								<option value="0" disabled selected hidden>Mês</option>
-								<option value="1">Janeiro</option>
-								<option value="2">Fevereiro</option>
-								<option value="3">Março</option>
-								<option value="4">Abril</option>
-								<option value="5">Maio</option>
-								<option value="6">Junho</option>
-                                <option value="7">Julho</option>
-                                <option value="8">Agosto</option>
-                                <option value="9">Setembro</option>
-                                <option value="10">Outubro</option>
-                                <option value="11">Novembro</option>
-                                <option value="12">Dezembro</option>
-							</select>
-
-							<label for="envio">Escolha aonde deseja receber a fatura:</label>
-							<select name="envio" id="envio">
-								<option value="0" disabled selected hidden>Enviar para</option>
-								<option value="1">E-mail</option>
-                                <option value="2">Celular</option>
-							</select>
-
-							<button type="button" 
-									id="enviaFatura"
-									onclick="feedbackFatura()"
-								>
-								Enviar Fatura
-							</button>
-							
-							<span class="errorMsg2"
-							>* Você deve selecionar as opções antes de submeter
-							a solicitação!</span
-						>
-						
-						</form>
-					</fieldset>
-				</div>
-			</section>
-		</main>
-
-		<div id="modal" class="modal">
-
-			<!-- Modal1 content -->
-			<div class="modal-content">
-				<span class="close" onclick="fechaModal()">&times;</span>
-			  <p><strong>Solicitação enviada!</strong></p>
-			  <br />
+				<h5 class="disciplinaTitulo" id="disciplinaii">Disciplina II</h5>
+				<ul>
+					<li>
+						<a href="#" class="infodisciplina">• Aula 01: Conteúdo </a>
+					</li>
+					<li>
+						<a href="#" class="infodisciplina">• Aula 02: Conteúdo </a>
+					</li>
+					<li>
+						<a href="#" class="infodisciplina">• Aula 03: Conteúdo </a>
+					</li>
+				</ul>
+				<h5 class="disciplinaTitulo" id="disciplinaiii">Disciplina III</h5>
+				<ul>
+					<li>
+						<a href="#" class="infodisciplina">• Aula 01: Conteúdo </a>
+					</li>
+					<li>
+						<a href="#" class="infodisciplina">• Aula 02: Conteúdo </a>
+					</li>
+					<li>
+						<a href="#" class="infodisciplina">• Aula 03: Conteúdo </a>
+					</li>
+				</ul>
+				<h5 class="disciplinaTitulo" id="disciplinaiv">Disciplina IV</h5>
+				<ul>
+					<li>
+						<a href="#" class="infodisciplina">• Aula 01: Conteúdo </a>
+					</li>
+					<li>
+						<a href="#" class="infodisciplina">• Aula 02: Conteúdo </a>
+					</li>
+					<li>
+						<a href="#" class="infodisciplina">• Aula 03: Conteúdo </a>
+					</li>
+				</ul>
 			</div>
-		</div>	
-		
-		<div id="modal2" class="modal">
+		</section>
+		<section class="sectionForum">
+			<h3 id="forum">Fórum</h3>
+			<div class="cardsGlass cardFull">
+				<h4>Comunique-se com professores e a secretaria</h4>
+				<p class="descriptionOpt">
+					Caro pai ou responsável, aproveite o fórum para interagir com os professores e a secretaria. Não
+					fique com dúvidas!
+				</p>
+				<div class="forumSection">
+					<h5 class="disciplinaTitulo">Disciplina I</h5>
+					<ul>
+						<li>
+							<a href="#" class="infodisciplina">• Aula 05: Ajuda no exercício 04
+								<span><i class="fa-regular fa-comment"></i> 2 comentários</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="infodisciplina">• Aula 08: Não consigo acessar o material
+								<span><i class="fa-regular fa-comment"></i> 1 comentário</span>
+							</a>
+						</li>
+					</ul>
+					<h5 class="disciplinaTitulo">Disciplina II</h5>
+					<p class="infodisciplina">• Não há postagens no momento</p>
+					<h5 class="disciplinaTitulo">Disciplina III</h5>
+					<p class="infodisciplina">• Não há postagens no momento</p>
+					<h5 class="disciplinaTitulo">Disciplina IV</h5>
+					<ul>
+						<li>
+							<a href="#" class="infodisciplina">• Aula 02: Não consigo encontrar o livro recomendado
+								<span><i class="fa-regular fa-comment"></i> Sem comentários</span>
+							</a>
+						</li>
+					</ul>
 
-			<!-- Modal2 content -->
-			<div class="modal2-content">
-			  <span class="close2" onclick="fechaModal2()">&times;</span>
-			  <p><strong> Solicitação concluída!</strong></p>
-				<br />
-			</div> 
+					<h5 class="disciplinaTitulo">Secretaria</h5>
+					<ul>
+						<li>
+							<a href="#" class="infodisciplina">• Emissão do comprovante de matrícula
+								<span><i class="fa-regular fa-comment"></i> 1 comentário</span>
+							</a>
+						</li>
+					</ul>
+
+					<button type="button">Enviar nova pergunta</button>
+				</div>
+			</div>
+		</section>
+		<section class="sectionMatricula">
+			<h3 id="matricula">Matrícula</h3>
+			<div class="cardsGlass cardFull">
+				<h4>Matrícula - Atividades Extra</h4>
+				<p class="descriptionOpt">
+					Para maior facilidade, você pode realizar a matrícula de seu filho(a)
+					em atividades extra através do portal. Você deve escolher a atividade,
+					o dia da semana e horário disponível. Após confirmação, sua
+					solicitação será enviada para aprovação do professor.
+				</p>
+				<fieldset>
+					<form action="">
+						<label for="atividade">Selecione a atividade desejada</label>
+						<select name="atividade" id="atividade">
+							<option value="0" disabled selected>Opções</option>
+							<option value="1">Ballet</option>
+							<option value="2">Teatro</option>
+							<option value="3">Judo</option>
+							<option value="4">Capoeira</option>
+							<option value="5">Inglês</option>
+							<option value="6">Espanhol</option>
+						</select>
+						<label for="diaSemana">Escolha a data desejada</label>
+						<select name="diaSemana" id="diaSemana">
+							<option value="0" disabled selected>Dias</option>
+							<option value="1">Segunda</option>
+							<option value="2">Terça</option>
+							<option value="3">Quarta</option>
+							<option value="4">Quinta</option>
+							<option value="5">Sexta</option>
+						</select>
+						<label for="horarioAtividade">Selecione o horário</label>
+						<select name="horarioAtividade" id="horarioAtividade">
+							<option value="0" disabled selected>Horários</option>
+							<option value="1">13:00 - 14:00</option>
+							<option value="2">15:00 - 16:00</option>
+							<option value="3">20:00 - 21:00</option>
+						</select>
+						<button type="button" id="enviaMatricula" onclick="feedbackMatricula()">
+							Enviar
+						</button>
+						<span class="errorMsg">* Você deve selecionar as opções de matrícula antes de submeter
+							a solicitação!</span>
+					</form>
+				</fieldset>
+			</div>
+			<div class="cardsGlass cardFull">
+				<h4>Matrícula - Ano Letivo</h4>
+				<p class="descriptionOpt">
+					Para maior facilidade, você pode realizar a matrícula de seu filho(a) para o próximo ano letivo,
+					pelo portal. Você deve escolher a o ano letivo e período. Após confirmação, sua
+					solicitação será enviada para a secretaria.
+				</p>
+				<fieldset>
+					<form action="">
+						<label for="anoLetivo">Selecione o ano letivo</label>
+						<select name="anoLetivo" id="anoLetivo">
+							<option value="0" disabled selected>Opções</option>
+							<option value="1">2023</option>
+						</select>
+						<label for="turmaEscolhida">Selecione a turma desejada</label>
+						<select name="turmaEscolhida" id="turmaEscolhida">
+							<option value="0" disabled selected>Opções</option>
+							<option value="1">4ª A</option>
+							<option value="2">4ª B</option>
+							<option value="3">4ª C</option>
+						</select>
+						<label for="turnoAula">Escolha o turno desejada</label>
+						<select name="turnoAula" id="turnoAula">
+							<option value="0" disabled selected>Turnos</option>
+							<option value="1">Manhã</option>
+							<option value="2">Tarde</option>
+							<option value="3">Integral</option>
+						</select>
+						<button type="button" id="enviaAnoLetivo" onclick="feedbackMatriculaAnoLetivo()">
+							Enviar
+						</button>
+						<span class="errorMsg3">* Você deve selecionar as opções de matrícula antes de submeter
+							a solicitação!</span>
+					</form>
+				</fieldset>
+			</div>
+		</section>
+
+		<section class="sectionFinanceiro">
+			<h3 id="financeiro">Financeiro</h3>
+			<div class="cardsGlass cardFull">
+				<h4>Financeiro</h4>
+				<p class="descriptionOpt">
+					Selecione o mês desejado para receber sua fatura.
+					Você pode enviá-la para seu e-mail e/ou celular cadastrado na secretaria.
+				</p>
+				<fieldset>
+					<form action="">
+
+						<label for="mensalidade">Escolha o mês desejado:</label>
+						<select name="mensalidade" id="mensalidade">
+							<option value="0" disabled selected hidden>Mês</option>
+							<option value="1">Janeiro</option>
+							<option value="2">Fevereiro</option>
+							<option value="3">Março</option>
+							<option value="4">Abril</option>
+							<option value="5">Maio</option>
+							<option value="6">Junho</option>
+							<option value="7">Julho</option>
+							<option value="8">Agosto</option>
+							<option value="9">Setembro</option>
+							<option value="10">Outubro</option>
+							<option value="11">Novembro</option>
+							<option value="12">Dezembro</option>
+						</select>
+
+						<label for="envio">Escolha aonde deseja receber a fatura:</label>
+						<select name="envio" id="envio">
+							<option value="0" disabled selected hidden>Enviar para</option>
+							<option value="1">E-mail</option>
+							<option value="2">Celular</option>
+						</select>
+
+						<button type="button" id="enviaFatura" onclick="feedbackFatura()">
+							Enviar Fatura
+						</button>
+
+						<span class="errorMsg2">* Você deve selecionar as opções antes de submeter
+							a solicitação!</span>
+
+					</form>
+				</fieldset>
+			</div>
+		</section>
+	</main>
+
+	<div id="modal" class="modal">
+
+		<!-- Modal1 content -->
+		<div class="modal-content">
+			<span class="close" onclick="fechaModal()">&times;</span>
+			<p><strong>Solicitação enviada!</strong></p>
+			<br />
 		</div>
-		  
+	</div>
 
-		<script src="src/scripts/menuLateral.js"></script>
-		<script src="src/scripts/pais.js"></script>
-	</body>
+	<div id="modal2" class="modal">
+
+		<!-- Modal2 content -->
+		<div class="modal2-content">
+			<span class="close2" onclick="fechaModal2()">&times;</span>
+			<p><strong> Solicitação concluída!</strong></p>
+			<br />
+		</div>
+	</div>
+
+	<div id="modal3" class="modal">
+		<!-- Modal3 content -->
+		<div class="modal3-content">
+			<span class="close3" onclick="fechaModal3()">&times;</span>
+	
+		</div>
+	</div>
+
+
+	<script src="src/scripts/menuLateral.js"></script>
+	<script src="src/scripts/pais.js"></script>
+</body>
+
 </html>
