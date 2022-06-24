@@ -62,7 +62,8 @@ fieldset {
 
 /*Modal*/
 .modal-content,
-.modal2-content {
+.modal2-content,
+.modal3-content {
 	background-color: #fae8c4;
 	border-radius: 5px;
 	margin: 0 auto 0 190px;
@@ -71,7 +72,8 @@ fieldset {
 }
 
 .close, 
-.close2 {
+.close2,
+.close3 {
 	color: #001219;
 	float: right;
 	font-size: 28px;
@@ -81,14 +83,17 @@ fieldset {
 .close:hover,
 .close:focus,
 .close2:hover,
-.close2:focus {
+.close2:focus,
+.close3:hover,
+.close3:focus {
 	color: #005f73;
 	text-decoration: none;
 	cursor: pointer;
 }
 
 .errorMsg,
-.errorMsg2 {
+.errorMsg2,
+.errorMsg3 {
 	color: rgb(158, 0, 0);
 	margin-top: 10px;
 	font-size: smaller;
