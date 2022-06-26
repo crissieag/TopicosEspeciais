@@ -56,18 +56,18 @@ function getDataAluno() {
 }
 
 function fillTable(disciplina, nota, falta) {
-// Find a <table> element with id="myTable":
+//Procura uma tabela com a ID = "tableAluno"
 var table = document.getElementById("tableAluno");
 
-// Create an empty <tr> element and add it to the 1st position of the table:
+// Cria um <tr> vazio 
 var row = table.insertRow();
 
-// Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+// Adiciona novas células
 var cell1 = row.insertCell(0);
 var cell2 = row.insertCell(1);
 var cell3 = row.insertCell(2);
 
-// Add some text to the new cells:
+// Adciona texto a tabela
 cell1.innerHTML = disciplina;
 cell2.innerHTML = nota;
 cell3.innerHTML = falta;
@@ -98,7 +98,7 @@ function getResultado(mediaGeral) {
 	return mediaGeral >= 6 ? "Aprovado!" : "Reprovado!";
 }
 
-/**Soma o total de faltas */
+/*Soma o total de faltas */
 function getTotalFaltas(aluno) {
 	let somaTotalFaltas = 0;
 
@@ -110,28 +110,23 @@ function getTotalFaltas(aluno) {
 	return somaTotalFaltas;
 }
 
-/**Preenche qtd de faltas do aluno dinamicamente*/
+/*Preenche qtd de faltas do aluno dinamicamente*/
 function preencheFaltasDinamic(totalFaltas) {
 	let alunoFaltas = document.getElementById("f1");
 	alunoFaltas.innerText = totalFaltas;
 }
 
+/*Preenche disciplinas do aluno dinamicamente*/
 function preencheDisciplinasDinamic(disciplinas) {
 	let disciplina = document.getElementById("d1");
 	disciplina.innerText = disciplinas;
 }
 
-/**Preenche media do aluno dinamicamente*/
+/*Preenche media do aluno dinamicamente*/
 function preencheMediaDinamic(mediaGeral) {
 	let alunoMedia = document.getElementById("n1");
 	alunoMedia.innerText = mediaGeral;
 }
-
-/*Preenche resultado de aprovação do aluno dinamicamente
-function preencheResultadoDinamic(resultado) {
-	let resultadoAluno = document.getElementById("r1");
-	resultadoAluno.innerText = resultado;
-}*/
 
 function mostraBotoes() {
 	if (matricula.value == "") {
