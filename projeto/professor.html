@@ -17,6 +17,7 @@
 			sizes="16x16"
 			href="assets/images/favicon-16x16.png"
 		/>
+		<link rel="stylesheet" href="src/styles/global.css" />
 		<link rel="stylesheet" href="src/styles/professor.css" />
 		<link rel="stylesheet" href="src/styles/menuLateral.css" />
 
@@ -26,6 +27,8 @@
 			href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,500;0,600;1,100&display=swap"
 			rel="stylesheet"
 		/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script
 			src="https://kit.fontawesome.com/278520f492.js"
 			crossorigin="anonymous"
@@ -34,6 +37,9 @@
 	</head>
 
 	<body>
+		<div class="menu-btn">
+			<i class="fas fa-bars"></i>
+		</div>
 		<aside id="menuLateral">
 			<nav>
 				<div>
@@ -99,6 +105,20 @@
 							class="box"
 							style="margin-left: auto; margin-right: auto; display: flex"
 						/>
+						<br>
+						<input type="time"
+						       name="hora" 
+							   id="hora" 
+							   class="box" 
+							   style="margin-left: auto; margin-right: auto; display: flex">
+						<br>
+						<label for="disciplinas">Disciplina</label>
+						<select id="disciplinas" name="disciplinas">
+							<option value="0" hidden></option>
+							<option value="1">Português</option>
+							<option value="2">Inglês</option>
+							<option value="1">Espanhol</option>
+						</select>
 						<button
 							type="button"
 							name="agendarBtn"
@@ -137,7 +157,17 @@
 							<input type="email" id="emailCont" class="box" />
 						</p>
 
+						
+							<label>Disciplina:</label>
+							<select id="disciplinas" name="disciplinas">
+								<option value="0" hidden></option>
+								<option value="1">Português</option>
+								<option value="2">Inglês</option>
+								<option value="1">Espanhol</option>
+							</select>
+						<br>
 						<label>Turmas:</label>
+						<br>
 						<label for="t1"
 							>T1
 							<input type="checkbox" id="t1" />
@@ -159,7 +189,7 @@
 							<input type="checkbox" id="t5" />
 						</label>
 						<div>
-							<button type="button" onclick="modalGeneric()" id="postarBtn">
+							<button type="button" onclick="modalAgendamento()" id="postarBtn">
 								Postar!
 							</button>
 						</div>
@@ -186,10 +216,20 @@
 							placeholder="Digite a matricula"
 							class="box"
 						/>
-						<br />
+						<br>
+						<br>
+						<br>
+						<table id="tableAluno" border="1">
+							<tr>
+								<td>Disciplina</td>
+								<td>Notas</td>
+								<td>Faltas</td>
+							</tr>
+						</table>
+						<br>
 						<button
 							type="button"
-							onclick="mostraBotoes()"
+							onclick="getDataAluno()"
 							id="matriculaBotao"
 							name="matriculaBotao"
 							value="click"
@@ -401,13 +441,13 @@
 		<div class="modal" id="modal">
 			<div class="modal-content" id="modal-content">
 				<span class="close" onclick="fechaModal()" id="close">&times;</span>
-				<p><strong>Concluido!</strong></p>
+				<p><strong>Agendamento concluído!</strong></p>
 				<br />
 			</div>
 		</div>
 
 		<script src="src/scripts/professor.js"></script>
 		<script src="src/scripts/financeiro.js"></script>
-		<script src="src/scripts/menuLateral.js"></script>
+		<script src="src/scripts/menuLateral_jQuery.js"></script>
 	</body>
 </html>

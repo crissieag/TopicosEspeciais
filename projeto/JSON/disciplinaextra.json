@@ -1,0 +1,143 @@
+[
+    {
+        "disciplinaExtra": "Judô",
+        "id": 1,
+        "preco":200,
+        "dias":[
+            {
+                "nome":"segunda-feira",
+                "horarios":[
+                    {
+                        "comeco":"14:00",
+                        "fim":"15:00"
+                    },
+                    {
+                        "comeco":"10:00",
+                        "fim":"11:00"
+                    }
+
+                ]
+            },
+            {
+                "nome":"terça-feira",
+                "horarios":[
+                    {
+                        "comeco":"14:00",
+                        "fim":"15:00"
+                    },
+                    {
+                        "comeco":"10:00",
+                        "fim":"11:00"
+                    }
+
+                ]
+            }
+        ]
+    },
+    {
+        "disciplinaExtra": "Ballet",
+        "id": 2,
+        "preco":200,
+        "dias":[
+            {
+                "nome":"quarta-feira",
+                "horarios":[
+                    {
+                        "comeco":"15:00",
+                        "fim":"16:00"
+                    },
+                    {
+                        "comeco":"10:00",
+                        "fim":"11:00"
+                    }
+
+                ]
+            },
+            {
+                "nome":"quinta-feira",
+                "horarios":[
+                    {
+                        "comeco":"15:00",
+                        "fim":"16:00"
+                    },
+                    {
+                        "comeco":"10:00",
+                        "fim":"11:00"
+                    }
+
+                ]
+            }
+        ]
+    },
+    {
+        "disciplinaExtra": "Inglês",
+        "id": 3,
+        "preco":300,
+        "dias":[
+            {
+                "nome":"terça-feira",
+                "horarios":[
+                    {
+                        "comeco":"09:00",
+                        "fim":"10:00"
+                    },
+                    {
+                        "comeco":"13:00",
+                        "fim":"14:00"
+                    }
+
+                ]
+            },
+            {
+                "nome":"quinta-feira",
+                "horarios":[
+                    {
+                        "comeco":"09:00",
+                        "fim":"10:00"
+                    },
+                    {
+                        "comeco":"13:00",
+                        "fim":"14:00"
+                    }
+
+                ]
+            }
+        ]
+    },
+    {
+        "disciplinaExtra": "Espanhol",
+        "id": 4,
+        "preco":300,
+        "dias":[
+            {
+                "nome":"terça-feira",
+                "horarios":[
+                    {
+                        "comeco":"09:00",
+                        "fim":"10:00"
+                    },
+                    {
+                        "comeco":"13:00",
+                        "fim":"14:00"
+                    }
+
+                ]
+            },
+            {
+                "nome":"quinta-feira",
+                "horarios":[
+                    {
+                        "comeco":"09:00",
+                        "fim":"10:00"
+                    },
+                    {
+                        "comeco":"13:00",
+                        "fim":"14:00"
+                    }
+
+                ]
+            }
+        ]
+    }
+]
+

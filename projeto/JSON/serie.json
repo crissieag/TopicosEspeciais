@@ -1,0 +1,163 @@
+[
+    {"serie":1,"preco":100,"id":"1","dias":[
+        {"nomeDia":"Segunda","id":"1","serieId":"1", "disciplinas":[
+            {"IdDisciplina":1,"diaSerieId":"1"},
+            {"IdDisciplina":2,"diaSerieId":"1"},
+            {"IdDisciplina":3,"diaSerieId":"1"},
+            {"IdDisciplina":4,"diaSerieId":"1"},
+            {"IdDisciplina":5,"diaSerieId":"1"}
+        ]},
+        {"nomeDia":"Terça","id":"2","serieId":"1", "disciplinas":[
+            {"IdDisciplina":5,"diaSerieId":"2"},
+            {"IdDisciplina":4,"diaSerieId":"2"},
+            {"IdDisciplina":4,"diaSerieId":"2"},
+            {"IdDisciplina":4,"diaSerieId":"2"},
+            {"IdDisciplina":2,"diaSerieId":"2"}
+        ]},
+        {"nomeDia":"Quarta","id":"3","serieId":"1", "disciplinas":[
+            {"IdDisciplina":2,"diaSerieId":"3"},
+            {"IdDisciplina":2,"diaSerieId":"3"},
+            {"IdDisciplina":3,"diaSerieId":"3"},
+            {"IdDisciplina":3,"diaSerieId":"3"},
+            {"IdDisciplina":1,"diaSerieId":"3"}
+        ]},
+        {"nomeDia":"Quinta","id":"4","serieId":"1", "disciplinas":[
+            {"IdDisciplina":2,"diaSerieId":"4"},
+            {"IdDisciplina":2,"diaSerieId":"4"},
+            {"IdDisciplina":3,"diaSerieId":"4"},
+            {"IdDisciplina":3,"diaSerieId":"4"},
+            {"IdDisciplina":1,"diaSerieId":"4"}
+        ]},
+        {"nomeDia":"Sexta","id":"5","serieId":"1","disciplinas":[
+            {"IdDisciplina":5,"diaSerieId":"5"},
+            {"IdDisciplina":6,"diaSerieId":"5"},
+            {"IdDisciplina":6,"diaSerieId":"5"},
+            {"IdDisciplina":10,"diaSerieId":"5"},
+            {"IdDisciplina":9,"diaSerieId":"5"}
+        ]}
+    ]},
+
+    {"serie":2,"preco":150,"id":"2","dias":[
+        {"nomeDia":"Segunda","id":"6","serieId":"2", "disciplinas":[
+            {"IdDisciplina":1,"diaSerieId":"6"},
+            {"IdDisciplina":2,"diaSerieId":"6"},
+            {"IdDisciplina":3,"diaSerieId":"6"},
+            {"IdDisciplina":4,"diaSerieId":"6"},
+            {"IdDisciplina":5,"diaSerieId":"6"}
+        ]},
+        {"nomeDia":"Terça","id":"7","serieId":"2", "disciplinas":[
+            {"IdDisciplina":5,"diaSerieId":"7"},
+            {"IdDisciplina":4,"diaSerieId":"7"},
+            {"IdDisciplina":4,"diaSerieId":"7"},
+            {"IdDisciplina":4,"diaSerieId":"7"},
+            {"IdDisciplina":2,"diaSerieId":"7"}
+        ]},
+        {"nomeDia":"Quarta","id":"8","serieId":"2", "disciplinas":[
+            {"IdDisciplina":2,"diaSerieId":"8"},
+            {"IdDisciplina":2,"diaSerieId":"8"},
+            {"IdDisciplina":3,"diaSerieId":"8"},
+            {"IdDisciplina":3,"diaSerieId":"8"},
+            {"IdDisciplina":1,"diaSerieId":"8"}
+        ]},
+        {"nomeDia":"Quinta","id":"9","serieId":"2", "disciplinas":[
+            {"IdDisciplina":2,"diaSerieId":"9"},
+            {"IdDisciplina":2,"diaSerieId":"9"},
+            {"IdDisciplina":3,"diaSerieId":"9"},
+            {"IdDisciplina":3,"diaSerieId":"9"},
+            {"IdDisciplina":1,"diaSerieId":"9"}
+        ]},
+        {"nomeDia":"Sexta","id":"10","serieId":"2","disciplinas":[
+            {"IdDisciplina":5,"diaSerieId":"10"},
+            {"IdDisciplina":6,"diaSerieId":"10"},
+            {"IdDisciplina":6,"diaSerieId":"10"},
+            {"IdDisciplina":10,"diaSerieId":"10"},
+            {"IdDisciplina":9,"diaSerieId":"10"}
+        ]}
+    ]},
+
+    {"serie":3,"preco":200,"id":"3","dias":[
+        {"nomeDia":"Segunda","id":"11","serieId":"3", "disciplinas":[
+            {"IdDisciplina":1,"diaSerieId":"11"},
+            {"IdDisciplina":2,"diaSerieId":"11"},
+            {"IdDisciplina":3,"diaSerieId":"11"},
+            {"IdDisciplina":4,"diaSerieId":"11"},
+            {"IdDisciplina":5,"diaSerieId":"11"}
+        ]},
+        {"nomeDia":"Terça","id":"12","serieId":"3", "disciplinas":[
+            {"IdDisciplina":5,"diaSerieId":"12"},
+            {"IdDisciplina":4,"diaSerieId":"12"},
+            {"IdDisciplina":4,"diaSerieId":"12"},
+            {"IdDisciplina":4,"diaSerieId":"12"},
+            {"IdDisciplina":2,"diaSerieId":"12"}
+        ]},
+        {"nomeDia":"Quarta","id":"13","serieId":"3", "disciplinas":[
+            {"IdDisciplina":2,"diaSerieId":"13"},
+            {"IdDisciplina":2,"diaSerieId":"13"},
+            {"IdDisciplina":3,"diaSerieId":"13"},
+            {"IdDisciplina":3,"diaSerieId":"13"},
+            {"IdDisciplina":1,"diaSerieId":"13"}
+        ]},
+        {"nomeDia":"Quinta","id":"14","serieId":"3", "disciplinas":[
+            {"IdDisciplina":2,"diaSerieId":"14"},
+            {"IdDisciplina":2,"diaSerieId":"14"},
+            {"IdDisciplina":3,"diaSerieId":"14"},
+            {"IdDisciplina":3,"diaSerieId":"14"},
+            {"IdDisciplina":1,"diaSerieId":"14"}
+        ]},
+        {"nomeDia":"Sexta","id":"15","serieId":"3","disciplinas":[
+            {"IdDisciplina":5,"diaSerieId":"14"},
+            {"IdDisciplina":6,"diaSerieId":"14"},
+            {"IdDisciplina":6,"diaSerieId":"14"},
+            {"IdDisciplina":10,"diaSerieId":"14"},
+            {"IdDisciplina":9,"diaSerieId":"14"}
+        ]}
+    ]},
+
+    {"serie":4,"preco":250,"id":"4","dias":[
+        {"nomeDia":"Segunda","id":"15","serieId":"4","disciplinas":[
+            {"IdDisciplina":8,"diaSerieId":"15"},
+            {"IdDisciplina":8,"diaSerieId":"15"},
+            {"IdDisciplina":8,"diaSerieId":"15"},
+            {"IdDisciplina":10,"diaSerieId":"15"},
+            {"IdDisciplina":9,"diaSerieId":"15"}
+        ]},
+        {"nomeDia":"Terça","id":"16","serieId":"4","disciplinas":[
+            {"IdDisciplina":5,"diaSerieId":"16"},
+            {"IdDisciplina":6,"diaSerieId":"16"},
+            {"IdDisciplina":6,"diaSerieId":"16"},
+            {"IdDisciplina":10,"diaSerieId":"16"},
+            {"IdDisciplina":9,"diaSerieId":"16"}
+        ]},
+        {"nomeDia":"Quarta","id":"17","serieId":"4","disciplinas":[
+            {"IdDisciplina":5,"diaSerieId":"17"},
+            {"IdDisciplina":6,"diaSerieId":"17"},
+            {"IdDisciplina":6,"diaSerieId":"17"},
+            {"IdDisciplina":10,"diaSerieId":"17"},
+            {"IdDisciplina":9,"diaSerieId":"17"}
+        ]},
+        {"nomeDia":"Quinta","id":"18","serieId":"4","disciplinas":[
+            {"IdDisciplina":5,"diaSerieId":"18"},
+            {"IdDisciplina":6,"diaSerieId":"18"},
+            {"IdDisciplina":6,"diaSerieId":"18"},
+            {"IdDisciplina":7,"diaSerieId":"18"},
+            {"IdDisciplina":9,"diaSerieId":"18"}
+        ]},
+        {"nomeDia":"Sexta","id":"19","serieId":"4","disciplinas":[
+            {"IdDisciplina":5,"diaSerieId":"19"},
+            {"IdDisciplina":6,"diaSerieId":"19"},
+            {"IdDisciplina":6,"diaSerieId":"19"},
+            {"IdDisciplina":7,"diaSerieId":"19"},
+            {"IdDisciplina":9,"diaSerieId":"19"}
+        ]}
+    ]},
+
+    {"serie":5,"preco":48,"id":"5","dias":[
+        {"nomeDia":"Sexta","id":"15","serieId":"3","disciplinas":[
+            {"IdDisciplina":5,"diaSerieId":"14"},
+            {"IdDisciplina":6,"diaSerieId":"14"},
+            {"IdDisciplina":6,"diaSerieId":"14"},
+            {"IdDisciplina":10,"diaSerieId":"14"},
+            {"IdDisciplina":9,"diaSerieId":"14"}
+        ]}
+    ]}
+]

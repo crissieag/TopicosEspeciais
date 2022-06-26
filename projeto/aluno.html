@@ -16,6 +16,7 @@
 			sizes="16x16"
 			href="assets/images/favicon-16x16.png"
 		/>
+		<link rel="stylesheet" href="src/styles/global.css" />
 		<link rel="stylesheet" href="src/styles/aluno.css" />
 		<link rel="stylesheet" href="src/styles/menuLateral.css"/>
 
@@ -25,6 +26,8 @@
 			href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,500;0,600;1,100&display=swap"
 			rel="stylesheet"
 		/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script
 			src="https://kit.fontawesome.com/278520f492.js"
 			crossorigin="anonymous"
@@ -33,6 +36,9 @@
 		<title>Evolvere | Área do aluno</title>
 	</head>
 	<body>
+		<div class="menu-btn">
+			<i class="fas fa-bars"></i>
+		</div>
 		<aside id="menuLateral">
 			<nav>
 				<div>
@@ -81,7 +87,6 @@
 				<button id="navIconClose">
 					<i class="fa-solid fa-angle-left" alt="botão para fechar menu"></i>
 				</button>
-				
 			</nav>
 		</aside>
 		<main id="main">
@@ -93,35 +98,23 @@
                             <div class="containerGrid3">
 								<div class="resultadoNota">
                                     <p>Resultado:</p>
-                                    <h1>Aprovado!</h1>
+                                    <h1 id="alunoResultado"></h1>
                                 </div>								
                                 <div>
                                     <p>Média Geral de Notas:</p>
-                                    <h1 class="h1-centralizado">10</h1>
+                                    <h1 class="h1-centralizado" id="alunoMedia"></h1>
                                     </p>
                                 </div>
                                 <div>
 									<p>Total de Faltas:</p>
-									<h1 class="h1-centralizado">10</h1>
+									<h1 class="h1-centralizado" id="alunoFaltas"></h1>
                                 </div>
                             </div>
                         <p class="descriptionOpt">Resultado por Disciplinas:</p>
-						    <div class="containerGrid3">
+						    <div class="containerGrid3" id="resultadoPorDisciplina">
                                 <p class="titleGrid">Disciplina</p>
                                 <p class="titleGrid">Notas</p>
 								<p class="titleGrid">Faltas</p>
-                                <p>Disciplina I</p>
-                                <p>2</p>
-								<p>2</p>
-                                <p>Disciplina II</p>
-                                <p>2</p>
-								<p>2</p>
-                                <p>Disciplina III</p>
-                                <p>2</p>
-								<p>2</p>
-                                <p>Disciplina IV</p>
-                                <p>4</p>
-								<p>2</p> 
                             </div>
 					</div> 
 				<div class="flexCard">
@@ -130,17 +123,10 @@
 						<p class="descriptionOpt">
 							Suas provas estão listadas abaixo, preste atenção as datas!
 						</p>
-						<div class="containerGrid2">
+						<div class="containerGrid3" id="agendaProvas">
 							<p class="titleGrid">Disciplina</p>
-							<p class="titleGrid">Data</p>
-							<p>Disciplina I</p>
-							<p>27/04/2022</p>
-							<p>Disciplina II</p>
-							<p>28/04/2022</p>
-							<p>Disciplina III</p>
-							<p>29/04/2022</p>
-							<p>Disciplina IV</p>
-							<p>02/05/2022</p>
+							<p class="titleGrid">Prova 1</p>	
+							<p class="titleGrid">Prova 2</p>				
 						</div>
 					</div>
 					<div class="cardsGlass">
@@ -148,15 +134,9 @@
 						<p class="descriptionOpt">
 							Essas são as atividades extra que você está matriculada :)
 						</p>
-						<div class="containerGrid2">
+						<div class="containerGrid2" id="listaAtividadesExtra">
 							<p class="titleGrid">Atividade</p>
-							<p class="titleGrid">Dia da Semana</p>
-							<p>Inglês</p>
-							<p>Segunda e Quarta | 17:30 - 18:30</p>
-							<p>Ballet</p>
-							<p>Terça e Quinta | 19:00 - 20:00</p>
-							<p>Teatro</p>
-							<p>Sexta | 17:00 - 18:00</p>
+							<p class="titleGrid">Dia da Semana</p>							
 						</div>
 					</div>
 				</div>
@@ -166,32 +146,12 @@
 						Sua grade horária está abaixo! Qualquer dúvida, você pode entrar em
 						contanto com seu professor através do <a href="#forum">fórum</a>!
 					</p>
-					<div class="containerGrid5">
+					<div class="containerGrid5" id="gradeHorariaAluno">
 						<p class="titleGrid">Segunda</p>
 						<p class="titleGrid">Terça</p>
 						<p class="titleGrid">Quarta</p>
 						<p class="titleGrid">Quinta</p>
 						<p class="titleGrid">Sexta</p>
-						<p>Disciplina I</p>
-						<p>Disciplina II</p>
-						<p>Disciplina III</p>
-						<p>Disciplina IV</p>
-						<p>Disciplina I</p>
-						<p>Disciplina I</p>
-						<p>Disciplina II</p>
-						<p>Disciplina III</p>
-						<p>Disciplina IV</p>
-						<p>Disciplina I</p>
-						<p>Disciplina II</p>
-						<p>Disciplina III</p>
-						<p>Disciplina IV</p>
-						<p>Disciplina I</p>
-						<p>Disciplina II</p>
-						<p>Disciplina II</p>
-						<p>Disciplina III</p>
-						<p>Disciplina IV</p>
-						<p>Disciplina I</p>
-						<p>Disciplina II</p>
 					</div>
 				</div>
 			</section>
@@ -371,7 +331,7 @@
 				<br />
 			</div>
 		</div>
-		<script src="src/scripts/menuLateral.js"></script>
+		<script src="src/scripts/menuLateral_jQuery.js"></script>
 		<script src="src/scripts/aluno.js"></script>
 	</body>
 </html>
