@@ -100,6 +100,20 @@
 							class="box"
 							style="margin-left: auto; margin-right: auto; display: flex"
 						/>
+						<br>
+						<input type="time"
+						       name="hora" 
+							   id="hora" 
+							   class="box" 
+							   style="margin-left: auto; margin-right: auto; display: flex">
+						<br>
+						<label for="disciplinas">Disciplina</label>
+						<select id="disciplinas" name="disciplinas">
+							<option value="0" hidden></option>
+							<option value="1">Português</option>
+							<option value="2">Inglês</option>
+							<option value="1">Espanhol</option>
+						</select>
 						<button
 							type="button"
 							name="agendarBtn"
@@ -138,7 +152,17 @@
 							<input type="email" id="emailCont" class="box" />
 						</p>
 
+						
+							<label>Disciplina:</label>
+							<select id="disciplinas" name="disciplinas">
+								<option value="0" hidden></option>
+								<option value="1">Português</option>
+								<option value="2">Inglês</option>
+								<option value="1">Espanhol</option>
+							</select>
+						<br>
 						<label>Turmas:</label>
+						<br>
 						<label for="t1"
 							>T1
 							<input type="checkbox" id="t1" />
@@ -160,7 +184,7 @@
 							<input type="checkbox" id="t5" />
 						</label>
 						<div>
-							<button type="button" onclick="modalGeneric()" id="postarBtn">
+							<button type="button" onclick="modalAgendamento()" id="postarBtn">
 								Postar!
 							</button>
 						</div>
@@ -402,7 +426,7 @@
 		<div class="modal" id="modal">
 			<div class="modal-content" id="modal-content">
 				<span class="close" onclick="fechaModal()" id="close">&times;</span>
-				<p><strong>Concluido!</strong></p>
+				<p><strong>Agendamento concluído!</strong></p>
 				<br />
 			</div>
 		</div>
