@@ -5,7 +5,7 @@
 }
 
 .menu-btn{
-    position: absolute;
+    position: fixed;
     color: #001219;
     font-size: 20px;
     margin: 25px;
@@ -86,7 +86,7 @@ aside ul {
 }
 
 #logoutBtn {
-	display: block;
+	display: inline-block;
 	color: #001219;
 	background-color: #ee9b00;
 	margin: 0;
@@ -97,7 +97,6 @@ aside ul {
 	transform:rotate(180deg);
 }
 
-
 .divEspaco {
 	display: none;
 }
@@ -107,25 +106,30 @@ aside ul {
 @media screen and (max-width: 1024px) {
 	/*menu lateral*/
 	aside {
-		width: 15px;
+		width: 115px;
 	}
-	nav {
+	 nav {
 		align-items: center;
 	}
-	nav ul,
+	/* nav ul,
 	nav p {
 		display: none;
-	}
+	} */
 	.logoEscola {
-		width: 47px;
+		width: 50px;
 	}
 
-	.divEspaco {
+	.image{
+		margin: 0 auto;
+	}
+
+	/* .divEspaco {
 		display: block;
 		height: 100%;
-	}
+	} */
+	
 
-	#navIconOpen {
+	/* #navIconOpen {
 		display: block;
 		color: #001219;
 		background-color: #ee9b00;
@@ -134,25 +138,25 @@ aside ul {
 		width: auto;
 		position: relative;
 		bottom: 10px;
-	}
+	} */
 
-	#navIconClose {
+	/* #navIconClose {
 		color: #001219;
 		background-color: #ee9b00;
 		margin: 0;
 		padding: 0;
 		width: auto;
-	}
+	}*/
 
 	#logoutBtn{
-		display: none;
+		display: inline-block;
 	}
 
 	#navIconOpen:hover,
 	#navIconClose:hover
 	#navIconClose2:hover {
 		color: #003c4a;
-	}
+	} 
 
 	/*Seção principal*/
 	main {
