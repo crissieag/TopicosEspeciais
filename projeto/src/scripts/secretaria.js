@@ -73,10 +73,7 @@ function buscaResultados(){
                                     <h1 class="h1-centralizado">${alunos[i].idSerie} Série</h1>
                                     </p>
                                 </div>
-                                <div>
-									<p>Total de Faltas:</p>
-									<h1 class="h1-centralizado">19</h1>
-                                </div>
+
                             </div>
                         <p class="descriptionOpt">Resultado por Disciplinas:</p>
 						    <div class="containerGrid3">
@@ -147,55 +144,26 @@ function buscaResultados(){
 						<div class="containerGrid2">
 							<p class="titleGrid">Atividade</p>
 							<p class="titleGrid">Dia da Semana</p>
-							<p>Inglês</p>
-							<p>Segunda e Quarta | 17:30 - 18:30</p>
-							<p>Ballet</p>
-							<p>Terça e Quinta | 19:00 - 20:00</p>
-							<p>Teatro</p>
-							<p>Sexta | 17:00 - 18:00</p>
+                            ${montaDisciplina(alunos[i])}
+
 						</div>
 					
 				</div>
 			</div>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
                 `;
             }
         }
     }
 }
 
-function somarValores(aluno){
-    let valorTotal = 0;
-
-    for (let index = 0; index < aluno.disciplinasExtra.length; index++) {
-        valorTotal = valorTotal + disciplinasExtras.find(de => de.id === aluno.disciplinasExtra[index].IdDisciplinaExtra).preco;
-    }
-
-    valorTotal = valorTotal + series.find(s => s.serie === aluno.idSerie).preco;
-
-    return valorTotal;
-}
-
 function montaDisciplina(aluno) {
     const serie = series.find(s => s.serie === aluno.idSerie);
-    let htmlDisciplinas = `<p>${serie?.serie}ª Série</p>`;
+    let htmlDisciplinas = ``;
 
     for (let index = 0; index < aluno.disciplinasExtra.length; index++) {
         const disciplinaExtra = disciplinasExtras.find(de => de.id === aluno.disciplinasExtra[index].IdDisciplinaExtra);
         htmlDisciplinas = htmlDisciplinas + 
-        `<p>${disciplinaExtra.disciplinaExtra}</p>
-        <p>R$ ${disciplinaExtra.preco}</p>`;
+        `<p>${disciplinaExtra.disciplinaExtra}</p> Segunda-feira`;
     }
     return htmlDisciplinas;
 }
