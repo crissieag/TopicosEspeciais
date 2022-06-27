@@ -20,6 +20,114 @@ let close = document.getElementById("close");
 let modalContent = document.querySelector(".modal-content");
 let errorMsg = document.querySelector(".errorMsg");
 
+
+function getDataAluno() {
+	let disciplinas = [];
+	let aluno = null;
+
+	var parametro = document.getElementById("matricula").value;
+	var tableHeaderRowCount = 1;
+	var table = document.getElementById('tableAluno');
+	var rowCount = table.rows.length;
+	for (var i = tableHeaderRowCount; i < rowCount; i++) {
+		table.deleteRow(tableHeaderRowCount);
+	}
+	if(parametro != null && parametro != undefined)
+	fetch("./JSON/disciplinas.json")
+		.then((res) => {
+			return res.json();
+		}).then((res) => {
+			disciplinas = res;
+			fetch("./JSON/aluno.json")
+				.then((res) => {
+					return res.json();
+				})
+				.then((alunos) => {
+					aluno = alunos.find(
+						(a)=>a.Matricula === parametro 
+					);
+
+					for (i = 0; i < disciplinas.length; i++){
+						fillTable(disciplinas[i].disciplina,aluno.notas[i].nota, aluno.faltas[i].Faltas)
+					}
+
+				});
+		});
+}
+
+function fillTable(disciplina, nota, falta) {
+//Procura uma tabela com a ID = "tableAluno"
+var table = document.getElementById("tableAluno");
+
+// Cria um <tr> vazio 
+var row = table.insertRow();
+
+// Adiciona novas células
+var cell1 = row.insertCell(0);
+var cell2 = row.insertCell(1);
+var cell3 = row.insertCell(2);
+
+// Adciona texto a tabela
+cell1.innerHTML = disciplina;
+cell2.innerHTML = nota;
+cell3.innerHTML = falta;
+
+}
+
+function calculaMediaGeral(aluno) {
+	let somaTotalNotas = 0;
+	let qtdeNotas = 0;
+
+	//percorre todas as notas do aluno
+	aluno.notas.forEach((nota) => {
+		//soma o total de notas já encontrado com o total da nota atual
+		somaTotalNotas = somaTotalNotas + nota.nota;
+		//conta a quantidade de notas que ele encontrar
+		qtdeNotas = qtdeNotas + 1;
+	});
+
+	let mediaGeral = Number((somaTotalNotas / qtdeNotas).toFixed(1));
+	return mediaGeral;
+}
+
+/**Busca o resultado de aprovação do aluno
+ * @returns {string} "Aprovado!" se mediaGeral >= 6
+ * @returns {string} "Reprovado!" se mediaGeral < 6
+ */
+function getResultado(mediaGeral) {
+	return mediaGeral >= 6 ? "Aprovado!" : "Reprovado!";
+}
+
+/*Soma o total de faltas */
+function getTotalFaltas(aluno) {
+	let somaTotalFaltas = 0;
+
+	//percorre todas as faltas do aluno
+	aluno.faltas.forEach((falta) => {
+		somaTotalFaltas = somaTotalFaltas + falta.Faltas;
+	});
+
+	return somaTotalFaltas;
+}
+
+/*Preenche qtd de faltas do aluno dinamicamente*/
+function preencheFaltasDinamic(totalFaltas) {
+	let alunoFaltas = document.getElementById("f1");
+	alunoFaltas.innerText = totalFaltas;
+}
+
+/*Preenche disciplinas do aluno dinamicamente*/
+function preencheDisciplinasDinamic(disciplinas) {
+	let disciplina = document.getElementById("d1");
+	disciplina.innerText = disciplinas;
+}
+
+/*Preenche media do aluno dinamicamente*/
+function preencheMediaDinamic(mediaGeral) {
+	let alunoMedia = document.getElementById("n1");
+	alunoMedia.innerText = mediaGeral;
+}
+
 function mostraBotoes() {
 	if (matricula.value == "") {
 		modal("Matricula não informada!");
